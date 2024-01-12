@@ -1,17 +1,23 @@
-import fetchHelper from "../../utils/fetchHelper"
+import fetchHelper from "../../utils/fetchHelper";
 
 export const AchievementsPage = () => {
+  async function onButtonClick() {
+    try {
+      const response = await fetchHelper("/", "get");
+      const data = await response.text();
+      console.log("Raw response:", data);
 
-  async function onbuttonclick() {
-    const response = await fetchHelper(`/`, "get");
-    const data = await response.json();
-    console.log(data)
+      const jsonData = JSON.parse(data);
+      console.log("Parsed JSON:", jsonData);
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
   }
 
   return (
     <div className="achievements-wrapper">
       <header className="achievements-header">Your achievements</header>
-      <button onClick={onbuttonclick}>test</button>
+      <button onClick={onButtonClick}>test</button>
     </div>
-  )
+  );
 };
