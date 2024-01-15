@@ -1,3 +1,25 @@
+import { useNavigate } from "react-router-dom";
+
 export const LandingPage = () => {
-  return <div>LandingPage</div>;
+  const navigate = useNavigate();
+  return (
+    <>
+      <div className="container">
+        <div className="Logo-container">
+          <img src="" alt="Logo" />
+        </div>
+        <h2>
+          Welcome to Lunch<span>Connect!</span>
+        </h2>
+        <div className="btn-container">
+          <button type="submit" className="login-btn">
+            Login
+          </button>
+          <button type="submit" className="SignUp-btn">
+            Sign Up
+          </button>
+        </div>
+      </div>
+    </>
+  );
 };
