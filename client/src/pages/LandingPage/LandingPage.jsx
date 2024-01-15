@@ -12,10 +12,22 @@ export const LandingPage = () => {
           Welcome to Lunch<span>Connect!</span>
         </h2>
         <div className="btn-container">
-          <button type="submit" className="login-btn">
+          <button
+            type="submit"
+            className="login-btn"
+            onClick={() => {
+              navigate("/");
+            }}
+          >
             Login
           </button>
-          <button type="submit" className="SignUp-btn">
+          <button
+            type="submit"
+            className="SignUp-btn"
+            onClick={() => {
+              navigate("/");
+            }}
+          >
             Sign Up
           </button>
         </div>
