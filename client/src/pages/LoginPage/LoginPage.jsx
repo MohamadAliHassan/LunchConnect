@@ -1,5 +1,6 @@
 import React from "react";
+import { Loginform } from "./components/Loginform";
 
 export const LoginPage = () => {
-  return <div>LoginPage</div>;
+  return <Loginform />;
 };

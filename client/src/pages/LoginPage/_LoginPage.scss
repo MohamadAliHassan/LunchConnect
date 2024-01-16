@@ -1,0 +1,70 @@
+@use "../../Sass/abstract/variables" as *;
+.login-container {
+  // background-color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 98vh;
+  margin-bottom: 2em;
+}
+h2 {
+  text-align: center;
+  font-weight: 500;
+}
+p {
+  text-align: center;
+  padding: 15px 0;
+}
+
+form {
+  background-color: $darkAccent;
+  padding: 5rem 4rem;
+  border-radius: 7px;
+}
+.form-control {
+  margin-bottom: 1em;
+  padding-bottom: 1.4em;
+}
+.form-control input {
+  border: none;
+  background-color: #d3d3d3;
+  padding: 1.2em 1.5em;
+  font-weight: 700;
+  outline: none;
+  border-radius: 5px;
+  &::placeholder {
+    color: $lightAccent;
+  }
+}
+.Login-btn {
+  display: flex;
+  margin: 0 auto;
+  color: $fontColor;
+  font-size: 15px;
+  font-weight: 600;
+}
+.bold-txt {
+  color: $fontColor;
+  font-weight: 700;
+}
+.social-login {
+  margin: 20px 0;
+}
+
+.social-login .overlay {
+  background-color: #d3d3d3;
+  border-radius: 20px;
+  color: #000;
+}
+.social-login .overlay-2 {
+  margin: 15px 0;
+  background-color: #d3d3d3;
+  border-radius: 20px;
+  color: #000;
+}
+.social-login .overlay-3 {
+  margin: 5px 0;
+  background-color: #d3d3d3;
+  border-radius: 20px;
+  color: #000;
+}
