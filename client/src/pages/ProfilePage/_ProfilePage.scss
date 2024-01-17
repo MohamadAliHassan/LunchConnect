@@ -1,11 +1,18 @@
 @use "../../Sass/abstract/variables" as *;
 
 .container {
-    width: 50%;
-    height: 80%;
-    background-color: $secBackground;
+  width: 50%;
+  height: 80%;
+  background-color: $secBackground;
 }
 
 .formdata {
+}
 
+// Conditional rendering classnames. Active för hover state och inactive för non-hover state.
+.active {
+  color: #000;
+}
+.inactive {
+  color: #fff;
 }
