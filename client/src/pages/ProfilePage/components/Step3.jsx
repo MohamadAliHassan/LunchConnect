@@ -1,6 +1,7 @@
 import { useState } from "react"
+import { PropTypes } from "prop-types";
 
-export const Step3 = ({ onNext }) => {
+export const Step3 = ({ onNext, onPrev }) => {
     const [description, setDescription] = useState()
 
 
@@ -13,6 +14,10 @@ export const Step3 = ({ onNext }) => {
         onNext({ description })
     };
 
+    const handlePrev = () => {
+        onPrev()
+    }
+
     return (
         <>
             <h1>3/3</h1>
@@ -24,7 +29,13 @@ export const Step3 = ({ onNext }) => {
                     <textarea rows="4" cols="50" onChange={handleDescription}></textarea>
                 </label>
             </div>
-            <button onClick={handleNext}>Next</button>
+            <button className="profile-next" onClick={handleNext}>Next</button>
+            <button className="profile-back" onClick={handlePrev}>Previous</button>
         </>
     )
 }
+
+Step3.propTypes = {
+    onNext: PropTypes.func.isRequired,
+    onPrev: PropTypes.func.isRequired,
+};

@@ -2,12 +2,16 @@ import { useNavigate } from "react-router-dom";
 import PropTypes from "prop-types";
 import { useState } from "react";
 
-export const Step2 = ({ onNext }) => {
+export const Step2 = ({ onNext, onPrev }) => {
     const [skills, setSkills] = useState(null)
 
     const handleNext = () => {
         onNext({skills})
     };
+
+    const handlePrev = () => {
+        onPrev()
+    }
 
     return (
         <>
@@ -48,11 +52,13 @@ export const Step2 = ({ onNext }) => {
                     </li>
                 </ul>
             </div>
-            <button onClick={handleNext}>Next</button>
+            <button className="profile-next" onClick={handleNext}>Next</button>
+            <button className="profile-back" onClick={handlePrev}>Previous</button>
         </>
     )
 }
 
 Step2.propTypes = {
     onNext: PropTypes.func.isRequired,
+    onPrev: PropTypes.func.isRequired,
 };
