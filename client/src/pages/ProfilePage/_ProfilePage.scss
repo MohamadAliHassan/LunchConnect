@@ -96,3 +96,11 @@ and (min-device-width : 768px) {
         margin: 0 auto;
     }
 }
+
+// Conditional rendering classnames. Active för hover state och inactive för non-hover state.
+.active {
+  color: #000;
+}
+.inactive {
+  color: #fff;
+}

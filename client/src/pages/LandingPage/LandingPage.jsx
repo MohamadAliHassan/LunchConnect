@@ -16,7 +16,7 @@ export const LandingPage = () => {
             type="submit"
             className="login-btn"
             onClick={() => {
-              navigate("/");
+              navigate("/login");
             }}
           >
             Login

@@ -1,6 +1,7 @@
-@use "./abstract/variables";
-@use "./abstract/defaultStyling";
+@use "./abstract/variables" as *;
+@use "./abstract/defaultStyling" as *;
 
-@use "../pages/AchievementsPage/AchievementsPage";
-@use "../pages/LandingPage/LandingPage";
-@use "../pages/ProfilePage/ProfilePage"
+@use "../pages/AchievementsPage/AchievementsPage" as *;
+@use "../pages/LandingPage/LandingPage" as *;
+@use "../pages/LoginPage/LoginPage" as *;
+@use "../pages/ProfilePage/ProfilePage" as *;
