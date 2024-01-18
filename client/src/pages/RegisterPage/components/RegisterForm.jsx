@@ -20,7 +20,7 @@ export const RegisterForm = () => {
               <input placeholder="Repeat password" className="reg-input" />
             </div>
             <p>Forgot Password?</p>
-            <button className="Login-btn">Login</button>
+            <button className="Login-btn">Sign Up</button>
           </div>
           <div className="social-login">
             <div className="overlay-2 ">
