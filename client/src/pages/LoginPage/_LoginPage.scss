@@ -46,6 +46,8 @@ form {
 .bold-txt {
   color: $fontColor;
   font-weight: 700;
+  cursor: pointer;
+  text-decoration: underline;
 }
 .social-login {
   margin: 20px 0;

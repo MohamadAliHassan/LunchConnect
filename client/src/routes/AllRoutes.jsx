@@ -4,6 +4,7 @@ import { AchievementsPage } from "../pages/AchievementsPage/AchievementsPage";
 import { LandingPage } from "../pages/LandingPage/LandingPage";
 import { ProfilePage } from "../pages/ProfilePage/ProfilePage";
 import { LoginPage } from "../pages/LoginPage/LoginPage";
+import { RegisterPage } from "../pages";
 
 export const AllRoutes = () => {
   return (
@@ -13,6 +14,7 @@ export const AllRoutes = () => {
         <Route path="/achievements" element={<AchievementsPage />}></Route>
         <Route path="/createprofile" element={<ProfilePage />}></Route>
         <Route path="/login" element={<LoginPage />}></Route>
+        <Route path="/register" element={<RegisterPage />}></Route>
       </Routes>
     </>
   );
