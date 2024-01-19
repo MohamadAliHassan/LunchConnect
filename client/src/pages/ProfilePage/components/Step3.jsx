@@ -20,13 +20,13 @@ export const Step3 = ({ onNext, onPrev }) => {
 
     return (
         <>
-            <h1>3/3</h1>
-            <h1>Create Profile</h1>
+            <h1 className="profile-header">3/3</h1>
+            <h1 className="profile-header">Create Profile</h1>
 
             <div className="profile-description">
                 <label>
                     Describe yourself, your background, interests, hobbies, etc.
-                    <textarea rows="4" cols="50" onChange={handleDescription}></textarea>
+                    <textarea placeholder="..." rows="4" cols="50" onChange={handleDescription}></textarea>
                 </label>
             </div>
             <button className="profile-next" onClick={handleNext}>Next</button>
