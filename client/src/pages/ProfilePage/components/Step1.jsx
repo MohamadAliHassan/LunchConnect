@@ -21,14 +21,14 @@ export const Step1 = ({ onNext }) => {
 
     return (
         <>
-            <h1>1/3</h1>
-            <h1>Create Profile</h1>
-            {profilePicture && <img src={profilePicture} alt="Profile Preview" style={{ maxWidth: "14em" }} />}
-            <label>
-                Upload Profile Picture:
-                <input type="file" accept="image/*" onChange={handleFileChange} />
-            </label>
-            <button onClick={handleNext}>Next</button>
+            <h1 className="profile-header">1/3</h1>
+            <h1 className="profile-header">Create Profile</h1>
+            {profilePicture && <img className="profile-img" src={profilePicture} alt="Profile Preview" />}
+            <div className="profile-pic">
+                <input className="hidden" type="file" id="files" accept="image/*" onChange={handleFileChange} />
+                <label htmlFor="files">Upload picture</label>
+            </div>
+            <button className="profile-next" onClick={handleNext}>Next</button>
         </>
     )
 }

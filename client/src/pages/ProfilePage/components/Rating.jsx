@@ -1,17 +1,20 @@
 import { FaStar } from "react-icons/fa";
 import { useState } from "react";
 import { func } from "prop-types";
-export const Rating = ({ numOfStars = 5 }) => {
-  const [rating, setRating] = useState(0);
+import PropTypes from "prop-types";
+
+export const Rating = ({ numOfStars = 5, rating, onRatingChange }) => {
+  const [starRating, setStarRating] = useState(0);
   const [hover, setHover] = useState(0);
 
   function handleClick(getCurrentIndex) {
-    setRating(getCurrentIndex);
+    setStarRating(getCurrentIndex);
+    onRatingChange(getCurrentIndex);
   }
   function handleMouseEnter(getCurrentIndex) {
     setHover(getCurrentIndex);
   }
-  function handleMouseLeave(getCurrentIndex) {
+  function handleMouseLeave() {
     setHover(rating);
   }
   return (
@@ -25,12 +28,18 @@ export const Rating = ({ numOfStars = 5 }) => {
             onClick={() => handleClick(index)}
             onMouseMove={() => handleMouseEnter(index)}
             onMouseLeave={() => handleMouseLeave()}
-            size={40}
+            size={30}
             //Default size. Du kan ändra sen om stjärnorna är för stora
           />
         );
       })}
     </div>
   );
+};
+
+Rating.propTypes = {
+  numOfStars: PropTypes.number,
+  rating: PropTypes.func.isRequired,
+  onRatingChange: PropTypes.func.isRequired,
 };
 // När du importerar funktionen ange prop numOfStar efter closing tag. Ange sedan antal stjärnor du önskar dig.
