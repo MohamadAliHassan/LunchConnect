@@ -1,7 +1,9 @@
 import { FaLinkedin } from "react-icons/fa";
 import { FaGoogle } from "react-icons/fa";
 import { RiBankFill } from "react-icons/ri";
+import { useNavigate } from "react-router-dom";
 export const Loginform = () => {
+  const navigate = useNavigate();
   return (
     <>
       <div className="login-container">
@@ -38,7 +40,15 @@ export const Loginform = () => {
             </div>
           </div>
           <p>
-            No account? <span className="bold-txt">Signup here</span>
+            No account?{" "}
+            <span
+              className="bold-txt"
+              onClick={() => {
+                navigate("/register");
+              }}
+            >
+              Signup here
+            </span>
           </p>
         </form>
       </div>

@@ -25,7 +25,7 @@ export const LandingPage = () => {
             type="submit"
             className="SignUp-btn"
             onClick={() => {
-              navigate("/");
+              navigate("/register");
             }}
           >
             Sign Up

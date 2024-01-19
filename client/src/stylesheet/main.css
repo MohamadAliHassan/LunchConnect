@@ -140,6 +140,8 @@ form {
 .bold-txt {
   color: #fff;
   font-weight: 700;
+  cursor: pointer;
+  text-decoration: underline;
 }
 
 .social-login {
@@ -324,4 +326,21 @@ form {
 
 .inactive {
   color: #fff;
+}
+
+.register-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin-bottom: 2em;
+}
+
+.form-control .reg-input {
+  margin: 0 auto;
+  display: flex;
+}
+
+form {
+  padding: 4.5rem 3.5rem;
 }/*# sourceMappingURL=main.css.map */
