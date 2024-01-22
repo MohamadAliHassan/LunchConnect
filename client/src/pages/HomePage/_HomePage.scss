@@ -1,0 +1,45 @@
+@use "../../Sass/abstract/variables" as *;
+.home-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  flex-direction: column;
+}
+.score-board {
+  background-color: $darkAccent;
+  padding: 1rem 5rem;
+  border-radius: 8px;
+}
+.Lunch-btn {
+  color: #fff;
+  padding: 1rem 4rem;
+  margin: 20px;
+  font-size: 20px;
+}
+.score-board p {
+  font-size: 20px;
+}
+
+// Daily mission section
+.mission-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // flex-direction: column;
+}
+.mission-task {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.overlay {
+  background-color: $darkAccent;
+  padding: 1.4rem 1.5rem;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+}
+.score-mission {
+  margin: 0 auto;
+}

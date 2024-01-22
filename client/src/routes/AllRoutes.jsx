@@ -5,6 +5,7 @@ import { LandingPage } from "../pages/LandingPage/LandingPage";
 import { ProfilePage } from "../pages/ProfilePage/ProfilePage";
 import { LoginPage } from "../pages/LoginPage/LoginPage";
 import { RegisterPage } from "../pages";
+import { HomePage } from "../pages/HomePage/HomePage";
 
 export const AllRoutes = () => {
   return (
@@ -15,6 +16,7 @@ export const AllRoutes = () => {
         <Route path="/createprofile" element={<ProfilePage />}></Route>
         <Route path="/login" element={<LoginPage />}></Route>
         <Route path="/register" element={<RegisterPage />}></Route>
+        <Route path="/home" element={<HomePage />}></Route>
       </Routes>
     </>
   );
