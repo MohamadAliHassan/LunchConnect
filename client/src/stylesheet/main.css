@@ -210,16 +210,18 @@ form {
   font-size: 20px;
 }
 
+.home-container img {
+  width: 8em;
+}
+
 .mission-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 3fr));
 }
 
 .mission-task {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
+  padding: 0.5rem 0.5rem;
+  text-align: center;
 }
 
 .overlay {
