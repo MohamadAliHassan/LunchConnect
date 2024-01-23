@@ -427,4 +427,57 @@ form {
 .network-listitem-container div img {
   width: 1.3em;
   height: 1.3em;
+}
+
+.home-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  flex-direction: column;
+}
+
+.score-board {
+  background-color: #263546;
+  padding: 1rem 5rem;
+  border-radius: 8px;
+}
+
+.Lunch-btn {
+  color: #fff;
+  padding: 1rem 4rem;
+  margin: 20px;
+  font-size: 20px;
+}
+
+.score-board p {
+  font-size: 20px;
+}
+
+.home-container img {
+  width: 8em;
+}
+
+.mission-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 3fr));
+  max-width: auto;
+}
+
+.mission-task {
+  padding: 0.5rem 1.5rem;
+  text-align: center;
+}
+
+.overlay {
+  background-color: #263546;
+  padding: 1.2rem 1rem;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.score-mission {
+  margin: 0 auto;
 }/*# sourceMappingURL=main.css.map */
