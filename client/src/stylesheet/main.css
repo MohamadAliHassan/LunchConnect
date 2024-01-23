@@ -168,6 +168,166 @@ form {
   color: #000;
 }
 
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  text-align: center;
+  width: 50%;
+  height: 80%;
+  background-color: #51596a;
+}
+
+@media only screen and (min-device-width: 320px) {
+  .profile-header {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
+  .profile-pic {
+    margin-bottom: 2em;
+  }
+  .hidden {
+    display: none;
+  }
+  .profile-pic label {
+    display: block;
+    width: 8em;
+    height: 3em;
+    line-height: 3em;
+    background-color: lightgray;
+    color: black;
+    border-radius: 20px;
+    margin: 0 auto;
+  }
+  .profile-img {
+    max-width: 10em;
+    margin: 0 auto;
+    margin-bottom: 1em;
+  }
+  .profile-next {
+    width: 10em;
+    margin: 0 auto;
+    margin-bottom: 2em;
+    color: white;
+  }
+  .profile-back {
+    width: 10em;
+    margin: 0 auto;
+    margin-bottom: 2em;
+    background-color: #840202;
+    color: white;
+  }
+  .profile-description {
+    margin-bottom: 2em;
+  }
+  .profile-description label {
+    margin-bottom: 1em;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .profile-description textarea {
+    margin-top: 1em;
+    width: 15em;
+    margin: 0 auto;
+  }
+  .profile-listitem,
+  .profile-staritem {
+    list-style-type: none;
+  }
+  .profile-listitem label,
+  .profile-staritem label {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5em;
+  }
+  .profile-listitem label input,
+  .profile-staritem label input {
+    width: 50%;
+    height: 2em;
+    margin: 0 auto;
+    margin-bottom: 1em;
+  }
+  .five-stars {
+    list-style-type: none;
+    display: flex;
+    margin: 0 auto;
+  }
+  .five-stars li {
+    margin: 5px;
+  }
+  .profile-add {
+    color: white;
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+  hr.solid {
+    border-top: 3px solid #bbb;
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 1em;
+  }
+  .profile-staritem {
+    margin-bottom: 1em;
+  }
+  .overview-skills h3 {
+    margin-bottom: 1em;
+  }
+  .overview-skills ul {
+    list-style-type: none;
+  }
+  .overview-rating {
+    margin-bottom: 1em;
+  }
+}
+@media only screen and (min-device-width: 768px) {
+  .profile-header {
+    margin-bottom: 0.5em;
+    margin-top: 0.5em;
+  }
+  .profile-label {
+    margin-bottom: 2em;
+  }
+  .profile-img {
+    max-width: 10em;
+    margin: 0 auto;
+    margin-bottom: 1em;
+  }
+  .profile-next {
+    width: 10em;
+    margin: 0 auto;
+    margin-bottom: 2em;
+    color: white;
+  }
+  .profile-back {
+    width: 10em;
+    margin: 0 auto;
+    margin-bottom: 2em;
+    background-color: #840202;
+    color: white;
+  }
+  .profile-description label {
+    margin-bottom: 1em;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .profile-description textarea {
+    margin-top: 1em;
+    width: 15em;
+    margin: 0 auto;
+  }
+}
+.active {
+  color: #000;
+}
+
+.inactive {
+  color: #fff;
+}
+
 .register-container {
   display: flex;
   justify-content: center;
