@@ -20,7 +20,7 @@ export const Loginform = () => {
             <button className="Login-btn">Login</button>
           </div>
           <div className="social-login">
-            <div className="overlay">
+            <div className="overlay-1">
               <p>
                 Sign in with BankID
                 <RiBankFill style={{ margin: "0 10px" }} />
