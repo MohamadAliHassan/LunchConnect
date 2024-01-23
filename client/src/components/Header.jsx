@@ -1,3 +1,9 @@
 export const Header = () => {
-  return <div>Header</div>;
+  return (
+    <>
+      <h3>
+        Lunch<span>Connect</span>
+      </h3>
+    </>
+  );
 };
