@@ -41,7 +41,7 @@ button {
 .container {
   display: flex;
   flex-direction: column;
-  height: 75vh;
+  height: 50vh;
   align-items: center;
   justify-content: center;
 }
@@ -493,6 +493,7 @@ form {
 }
 
 .menu-icon {
+  margin-left: 0.6rem;
   cursor: pointer;
   display: flex;
   flex-direction: column;
@@ -534,4 +535,9 @@ form {
 }
 .menu-items a:hover {
   background: #555;
+}
+
+.icons {
+  display: flex;
+  justify-content: end;
 }/*# sourceMappingURL=main.css.map */

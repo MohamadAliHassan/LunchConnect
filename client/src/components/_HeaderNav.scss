@@ -6,6 +6,7 @@
 }
 
 .menu-icon {
+  margin-left: 0.6rem;
   cursor: pointer;
   display: flex;
   flex-direction: column;
@@ -38,8 +39,6 @@
   position: absolute;
   top: 40px;
   left: 25px;
-  // right: 1px;
-  // bottom: 25px;
   z-index: 1;
   a {
     color: white;
@@ -49,4 +48,8 @@
       background: #555;
     }
   }
+}
+.icons {
+  display: flex;
+  justify-content: end;
 }

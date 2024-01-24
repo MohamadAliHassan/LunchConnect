@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { MdOutlineChat } from "react-icons/md";
+import { FaUser } from "react-icons/fa";
 export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -25,6 +27,10 @@ export const Header = () => {
             <a href="/contact">Logout</a>
           </div>
         )}
+        <div className="icons">
+          <MdOutlineChat size={45} />
+          <FaUser size={40} />
+        </div>
       </div>
     </>
   );
