@@ -22,19 +22,19 @@ export const Loginform = () => {
           <div className="social-login">
             <div className="overlay-1">
               <p>
-                Sign in with BankID
+                BankID
                 <RiBankFill style={{ margin: "0 10px" }} />
               </p>
             </div>
             <div className="overlay-2 ">
               <p>
-                Sign in with LinkedIn
+                LinkedIn
                 <FaLinkedin style={{ margin: "0 10px" }} />
               </p>
             </div>
             <div className="overlay-3 ">
               <p>
-                Sign in with Google
+                Google
                 <FaGoogle style={{ margin: "0 11px" }} />
               </p>
             </div>
