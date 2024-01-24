@@ -146,12 +146,14 @@ form {
 
 .social-login {
   margin: 20px 0;
+  padding: 2rem;
 }
 
 .social-login .overlay-1 {
   background-color: #d3d3d3;
   border-radius: 20px;
   color: #000;
+  cursor: pointer;
 }
 
 .social-login .overlay-2 {
@@ -159,6 +161,7 @@ form {
   background-color: #d3d3d3;
   border-radius: 20px;
   color: #000;
+  cursor: pointer;
 }
 
 .social-login .overlay-3 {
@@ -166,6 +169,7 @@ form {
   background-color: #d3d3d3;
   border-radius: 20px;
   color: #000;
+  cursor: pointer;
 }
 
 .profile-container {
@@ -487,7 +491,7 @@ form {
 
 .hamburger-menu {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: flex-start;
   padding: 20px;
 }
@@ -540,4 +544,8 @@ form {
 .icons {
   display: flex;
   justify-content: end;
+  align-items: center;
+  width: 100%;
+  gap: 1.5rem;
+  cursor: pointer;
 }/*# sourceMappingURL=main.css.map */

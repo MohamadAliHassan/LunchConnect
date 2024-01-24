@@ -28,8 +28,8 @@ export const Header = () => {
           </div>
         )}
         <div className="icons">
-          <MdOutlineChat size={45} />
-          <FaUser size={40} />
+          <MdOutlineChat size={50} />
+          <FaUser size={45} />
         </div>
       </div>
     </>

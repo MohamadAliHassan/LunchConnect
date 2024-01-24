@@ -1,6 +1,6 @@
 .hamburger-menu {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: flex-start;
   padding: 20px;
 }
@@ -52,4 +52,8 @@
 .icons {
   display: flex;
   justify-content: end;
+  align-items: center;
+  width: 100%;
+  gap: 1.5rem;
+  cursor: pointer;
 }
