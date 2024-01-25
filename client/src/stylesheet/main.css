@@ -148,7 +148,7 @@ form {
   margin: 20px 0;
 }
 
-.social-login .overlay {
+.social-login .overlay-1 {
   background-color: #d3d3d3;
   border-radius: 20px;
   color: #000;
@@ -343,4 +343,144 @@ form {
 
 form {
   padding: 4.5rem 3.5rem;
+}
+
+.network-container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 80%;
+  max-width: 600px;
+  min-width: 500px;
+  height: 80%;
+  background-color: #51596a;
+}
+
+.network-tab {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 5px;
+}
+
+.tab-button {
+  padding: 0;
+  margin: 0;
+  margin-top: 1.5em;
+  background-color: gray;
+  color: black;
+  height: 8em;
+  width: 8em;
+  text-align: center;
+}
+
+.tab-button.active {
+  background-color: lightgray;
+}
+
+.tab-button img {
+  width: 60%;
+}
+
+.network-list-container {
+  width: 100%;
+}
+
+.network-listitem {
+  background-color: #263546;
+  width: 60%;
+  max-width: 300px;
+  height: 5em;
+  list-style-type: none;
+  margin: 0 auto;
+  margin-bottom: 1em;
+  display: flex;
+  flex-direction: row;
+}
+
+.network-listitem img {
+  height: 5em;
+  width: 5em;
+}
+
+.network-listitem-container {
+  top: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.network-listitem-container p,
+.network-listitem-container div p {
+  margin: 0;
+  padding: 0;
+}
+
+.network-listitem-container div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10px;
+}
+
+.network-listitem-container div img {
+  width: 1.3em;
+  height: 1.3em;
+}
+
+.home-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  flex-direction: column;
+}
+
+.score-board {
+  background-color: #263546;
+  padding: 1rem 5rem;
+  border-radius: 8px;
+}
+
+.Lunch-btn {
+  color: #fff;
+  padding: 1rem 4rem;
+  margin: 20px;
+  font-size: 20px;
+}
+
+.score-board p {
+  font-size: 20px;
+}
+
+.home-container img {
+  width: 8em;
+}
+
+.mission-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 3fr));
+  max-width: auto;
+}
+
+.mission-task {
+  padding: 0.5rem 1.5rem;
+  text-align: center;
+}
+
+.overlay {
+  background-color: #263546;
+  padding: 1.2rem 1rem;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.score-mission {
+  margin: 0 auto;
 }/*# sourceMappingURL=main.css.map */
