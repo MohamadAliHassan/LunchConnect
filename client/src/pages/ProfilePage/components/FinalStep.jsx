@@ -14,22 +14,22 @@ export const FinalStep = ({ formData, onConfirm, onPrev }) => {
 
       <div className="formdata">
         {formData.profilePicture && (
-          <div>
+          <div className="overview-pic">
             <img
               src={formData.profilePicture}
               alt="Profile Preview"
-              style={{ maxWidth: "14em" }}
             />
           </div>
         )}
         {formData.description && (
-          <div>
+          <div className="overview-desc">
+            <h2>Bio:</h2>
             <p>{formData.description}</p>
           </div>
         )}
         {formData.skills && (
           <div className="overview-skills">
-            <h3>Skills:</h3>
+            <h2>Skills:</h2>
             <ul>
               {formData.skills.map((skill, index) => (
                 <li className="overview-rating" key={index}>
@@ -38,6 +38,12 @@ export const FinalStep = ({ formData, onConfirm, onPrev }) => {
                 </li>
               ))}
             </ul>
+          </div>
+        )}
+        {formData.company && (
+          <div className="overview-company">
+            <h2>Company:</h2>
+            <p>{formData.company}, {formData.position}</p>
           </div>
         )}
       </div>

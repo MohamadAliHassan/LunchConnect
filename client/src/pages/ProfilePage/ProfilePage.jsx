@@ -1,10 +1,13 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Step1 } from "./components/Step1";
 import { Step2 } from "./components/Step2";
 import { Step3 } from "./components/Step3";
+import { Step4 } from "./components/Step4";
 import { FinalStep } from "./components/FinalStep";
 
 export const ProfilePage = () => {
+    const navigate = useNavigate();
     const [step, setStep] = useState(1);
     const [formData, setFormData] = useState({});
 
@@ -15,6 +18,8 @@ export const ProfilePage = () => {
 
     const handleConfirm = () => {
         console.log("Profile successfully created, data:", formData)
+        navigate("/homepage")
+
     }
 
     const handlePrev = () => {
@@ -26,7 +31,8 @@ export const ProfilePage = () => {
             {step === 1 && <Step1 onNext={handleNext} />}
             {step === 2 && <Step2 onNext={handleNext} onPrev={handlePrev} />}
             {step === 3 && <Step3 onNext={handleNext} onPrev={handlePrev} />}
-            {step === 4 && <FinalStep formData={formData} onConfirm={handleConfirm} onPrev={handlePrev} />}
+            {step === 4 && <Step4 onNext={handleNext} onPrev={handlePrev} />}
+            {step === 5 && <FinalStep formData={formData} onConfirm={handleConfirm} onPrev={handlePrev} />}
         </div>
     )
 }
