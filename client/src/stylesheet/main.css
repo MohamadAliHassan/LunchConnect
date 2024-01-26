@@ -275,14 +275,28 @@ form {
   .profile-staritem {
     margin-bottom: 1em;
   }
-  .overview-skills h3 {
-    margin-bottom: 1em;
+  .overview-pic img {
+    width: 10em;
+  }
+  .overview-desc p {
+    font-size: 1.5em;
+  }
+  .overview-skills h2,
+  .overview-company h2,
+  .overview-desc h2 {
+    margin-bottom: 0.5em;
   }
   .overview-skills ul {
     list-style-type: none;
   }
   .overview-rating {
     margin-bottom: 1em;
+  }
+  .overview-rating label {
+    font-size: 1.5em;
+  }
+  .overview-company p {
+    font-size: 1.5em;
   }
 }
 @media only screen and (min-device-width: 768px) {
