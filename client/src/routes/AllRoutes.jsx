@@ -7,7 +7,7 @@ import { LoginPage } from "../pages/LoginPage/LoginPage";
 import { RegisterPage } from "../pages";
 import { NetworkPage } from "../pages/NetworkPage/NetworkPage";
 import { HomePage } from "../pages/HomePage/HomePage";
-
+import { ChatPage } from "../pages/ChatPage/ChatPage";
 export const AllRoutes = () => {
   return (
     <>
@@ -19,6 +19,7 @@ export const AllRoutes = () => {
         <Route path="/register" element={<RegisterPage />}></Route>
         <Route path="/network" element={<NetworkPage />}></Route>
         <Route path="/home" element={<HomePage />}></Route>
+        <Route path="/chat" element={<ChatPage />}></Route>
       </Routes>
     </>
   );
