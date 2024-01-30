@@ -44,19 +44,21 @@ export const Step2 = ({ onNext, onPrev }) => {
           <Rating
             rating={newSkill.rating}
             onRatingChange={(value) => handleSkillChange("rating", value)}
+            numOfStars={5}
+            editable={true}
           />
         </li>
         <button className="profile-add" onClick={handleAddSkill}>
           Add
         </button>
-        <hr className="solid"></hr>
+        {skills.length > 0 && <hr className="solid"></hr>}
         {skills.map((skill, index) => (
           <React.Fragment key={index}>
             <li className="profile-listitem">
               <label>Skill: {skill.name}</label>
             </li>
             <li className="profile-staritem">
-              <Rating rating={skill.rating} />
+              <Rating rating={skill.rating} numOfStars={5} editable={false} />
             </li>
           </React.Fragment>
         ))}
