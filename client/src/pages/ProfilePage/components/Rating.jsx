@@ -3,20 +3,30 @@ import { useState } from "react";
 import { func } from "prop-types";
 import PropTypes from "prop-types";
 
-export const Rating = ({ numOfStars = 5, rating, onRatingChange }) => {
-  const [starRating, setStarRating] = useState(0);
+export const Rating = ({
+  numOfStars = 5,
+  rating,
+  onRatingChange,
+  editable,
+}) => {
   const [hover, setHover] = useState(0);
 
   function handleClick(getCurrentIndex) {
-    setStarRating(getCurrentIndex);
-    onRatingChange(getCurrentIndex);
+    if (editable) {
+      onRatingChange(getCurrentIndex);
+    }
   }
+
   function handleMouseEnter(getCurrentIndex) {
-    setHover(getCurrentIndex);
+    if (editable) {
+      setHover(getCurrentIndex);
+    }
   }
+
   function handleMouseLeave() {
     setHover(rating);
   }
+
   return (
     <div className="star-rating">
       {[...Array(numOfStars)].map((_, index) => {
@@ -29,7 +39,7 @@ export const Rating = ({ numOfStars = 5, rating, onRatingChange }) => {
             onMouseMove={() => handleMouseEnter(index)}
             onMouseLeave={() => handleMouseLeave()}
             size={30}
-            //Default size. Du kan ändra sen om stjärnorna är för stora
+            style={{ cursor: editable ? "pointer" : "default" }}
           />
         );
       })}
@@ -39,7 +49,8 @@ export const Rating = ({ numOfStars = 5, rating, onRatingChange }) => {
 
 Rating.propTypes = {
   numOfStars: PropTypes.number,
-  rating: PropTypes.func.isRequired,
+  rating: PropTypes.number.isRequired,
   onRatingChange: PropTypes.func.isRequired,
+  editable: PropTypes.bool.isRequired,
 };
 // När du importerar funktionen ange prop numOfStar efter closing tag. Ange sedan antal stjärnor du önskar dig.
