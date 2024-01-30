@@ -1,5 +1,5 @@
 @use "../../Sass/abstract/variables" as *;
-
+// Header section
 .Header-chat {
   display: flex;
   justify-content: space-between;
@@ -7,6 +7,12 @@
   margin: 0 auto;
   align-items: center;
   height: 10vh;
+}
+.bio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 10px;
 }
 .rounded {
   background-color: green;

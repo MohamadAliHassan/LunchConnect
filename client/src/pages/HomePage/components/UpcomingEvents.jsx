@@ -9,10 +9,22 @@ export const UpcomingEvents = () => {
         </section>
         <section className="upcomingEvent">
           <div className="overlay-event">
-            <img src="" alt="image" />
-            <small>Marknadsföring med Anders</small>
-            <small>14/12 2023</small>
-            <small>Nackademin, Stockholm</small>
+            <div className="description">
+              <img src="" alt="image" />
+              <small>Marknadsföring med Anders</small>
+              <small>14/12 2023</small>
+              <small>Nackademin, Stockholm</small>
+            </div>
+          </div>
+        </section>
+        <section className="upcomingEvent">
+          <div className="overlay-event">
+            <div className="description">
+              <img src="" alt="image" />
+              <small>Marknadsföring med Anders</small>
+              <small>14/12 2023</small>
+              <small>Nackademin, Stockholm</small>
+            </div>
           </div>
         </section>
       </div>
