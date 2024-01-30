@@ -579,20 +579,34 @@ form {
   font-weight: 600;
 }
 
-.upcomingEvent {
+.upcomingContainer {
   display: flex;
-  flex-direction: column;
-  width: 100%;
+  flex-direction: row;
+  margin-bottom: 1em;
+}
+
+.upcomingEvent {
+  width: 45%;
+  margin: 0 auto;
 }
 
 .overlay-event {
   background-color: #263546;
-  padding: 2rem 1.5rem;
-  width: 40%;
+  padding: 1rem 1rem;
+  width: 100%;
   display: flex;
   overflow: hidden;
   justify-content: flex-start;
   margin: 0 auto;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+}
+
+.description img {
+  width: 100%;
 }
 
 .description small {
