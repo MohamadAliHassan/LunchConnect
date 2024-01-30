@@ -1,0 +1,57 @@
+@use "../../Sass/abstract/variables" as *;
+
+.Header-chat {
+  display: flex;
+  justify-content: space-between;
+  width: 85%;
+  margin: 0 auto;
+  align-items: center;
+  height: 10vh;
+}
+.rounded {
+  background-color: green;
+  padding: 8px 8px;
+  border-radius: 50%;
+}
+.lunch-tag {
+  display: flex;
+  justify-content: end;
+  width: 92%;
+  align-items: center;
+  margin: -1.2rem 0;
+}
+// Message section
+.msg-container {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 3rem 0;
+}
+.flex-container {
+  display: flex;
+  width: 20%;
+  margin: 0 auto;
+  justify-content: center;
+  gap: 10px;
+}
+.input-msg {
+  margin: 0 auto;
+  display: flex;
+  background-color: $lightAccent;
+  color: #fff;
+  border-radius: 8px;
+  outline: none;
+  border: none;
+  padding: 0.9rem 3rem;
+}
+.msg-sendBtn {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  width: 80%;
+}
+.send-btn {
+  padding: 11px;
+  color: #fff;
+  border-radius: 50%;
+}

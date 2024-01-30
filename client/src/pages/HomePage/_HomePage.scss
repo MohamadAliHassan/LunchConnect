@@ -45,3 +45,21 @@
 .score-mission {
   margin: 0 auto;
 }
+
+// Events section
+.nav-events {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.nav-events p {
+  font-weight: 600;
+}
+.upcomingEvent {
+  display: flex;
+  flex-direction: column;
+}
+.overlay-event {
+  background-color: $darkAccent;
+  padding: 2rem 1.5rem;
+}
