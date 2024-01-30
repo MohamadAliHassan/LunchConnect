@@ -31,13 +31,13 @@ export const RegisterForm = () => {
           <div className="social-login">
             <div className="overlay-2 ">
               <p>
-                Sign up with LinkedIn
+                LinkedIn
                 <FaLinkedin style={{ margin: "0 10px" }} />
               </p>
             </div>
             <div className="overlay-3 ">
               <p>
-                Sign up with Google
+                Google
                 <FaGoogle style={{ margin: "0 11px" }} />
               </p>
             </div>

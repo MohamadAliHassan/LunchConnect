@@ -7,8 +7,12 @@ import { LoginPage } from "../pages/LoginPage/LoginPage";
 import { RegisterPage } from "../pages";
 import { NetworkPage } from "../pages/NetworkPage/NetworkPage";
 import { HomePage } from "../pages/HomePage/HomePage";
+<<<<<<< HEAD
 import { UserPage } from "../pages/UserPage/UserPage";
 
+=======
+import { ChatPage } from "../pages/ChatPage/ChatPage";
+>>>>>>> fbcfc2f2de4250948748658b2707f0b8d56dfcca
 export const AllRoutes = () => {
   return (
     <>
@@ -20,7 +24,11 @@ export const AllRoutes = () => {
         <Route path="/register" element={<RegisterPage />}></Route>
         <Route path="/network" element={<NetworkPage />}></Route>
         <Route path="/home" element={<HomePage />}></Route>
+<<<<<<< HEAD
         <Route path="/user" element={<UserPage />}></Route>
+=======
+        <Route path="/chat" element={<ChatPage />}></Route>
+>>>>>>> fbcfc2f2de4250948748658b2707f0b8d56dfcca
       </Routes>
     </>
   );
