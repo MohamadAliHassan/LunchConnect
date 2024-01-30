@@ -248,10 +248,22 @@ form {
   }
   .profile-listitem label input,
   .profile-staritem label input {
-    width: 50%;
-    height: 2em;
+    border: none;
+    background-color: #d3d3d3;
+    padding: 0.5em;
+    width: 70%;
+    font-weight: 700;
+    outline: none;
+    border-radius: 5px;
     margin: 0 auto;
     margin-bottom: 1em;
+  }
+  .profile-listitem label input::-moz-placeholder, .profile-staritem label input::-moz-placeholder {
+    color: #8f9ca6;
+  }
+  .profile-listitem label input::placeholder,
+  .profile-staritem label input::placeholder {
+    color: #8f9ca6;
   }
   .five-stars {
     list-style-type: none;
@@ -277,6 +289,7 @@ form {
   }
   .overview-pic img {
     width: 10em;
+    border-radius: 50%;
   }
   .overview-desc p {
     font-size: 1.5em;
@@ -297,6 +310,41 @@ form {
   }
   .overview-company p {
     font-size: 1.5em;
+  }
+  .profile-fullname label p {
+    font-weight: bold;
+  }
+  .profile-fullname label input {
+    border: none;
+    background-color: #d3d3d3;
+    padding: 0.5em 1em;
+    font-weight: 700;
+    outline: none;
+    border-radius: 5px;
+    margin-bottom: 1em;
+  }
+  .profile-fullname label input::-moz-placeholder {
+    color: #8f9ca6;
+  }
+  .profile-fullname label input::placeholder {
+    color: #8f9ca6;
+  }
+  .profile-description textarea {
+    border: none;
+    background-color: #d3d3d3;
+    padding: 0.5em;
+    width: 70%;
+    font-weight: 700;
+    outline: none;
+    border-radius: 5px;
+    margin: 0 auto;
+    margin-bottom: 1em;
+  }
+  .profile-description textarea::-moz-placeholder {
+    color: #8f9ca6;
+  }
+  .profile-description textarea::placeholder {
+    color: #8f9ca6;
   }
 }
 @media only screen and (min-device-width: 768px) {
@@ -333,9 +381,21 @@ form {
     text-align: center;
   }
   .profile-description textarea {
-    margin-top: 1em;
-    width: 15em;
+    border: none;
+    background-color: #d3d3d3;
+    padding: 0.5em;
+    width: 70%;
+    font-weight: 700;
+    outline: none;
+    border-radius: 5px;
     margin: 0 auto;
+    margin-bottom: 1em;
+  }
+  .profile-description textarea::-moz-placeholder {
+    color: #8f9ca6;
+  }
+  .profile-description textarea::placeholder {
+    color: #8f9ca6;
   }
 }
 .active {
@@ -420,8 +480,9 @@ form {
 }
 
 .network-listitem img {
-  height: 5em;
-  width: 5em;
+  height: 4em;
+  width: 4em;
+  border-radius: 50%;
 }
 
 .network-listitem-container {
@@ -443,6 +504,11 @@ form {
   flex-direction: row;
   justify-content: center;
   gap: 10px;
+  margin-left: 1em;
+}
+
+.network-listitem-container h3 {
+  margin-left: 1em;
 }
 
 .network-listitem-container div img {
@@ -523,6 +589,44 @@ form {
   padding: 2rem 1.5rem;
 }
 
+.userpage-container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  text-align: center;
+  width: 50%;
+  height: 80%;
+  background-color: #51596a;
+}
+
+@media only screen and (min-device-width: 320px) {
+  .userpage-profile img {
+    max-width: 10em;
+    margin: 0 auto;
+    margin-bottom: 1em;
+    margin-top: 1em;
+    border-radius: 50%;
+  }
+  .userpage-connect {
+    margin-bottom: 1em;
+  }
+  .userpage-connect button {
+    color: white;
+  }
+  .userpage-info-general {
+    list-style-type: none;
+  }
+  .userpage-info-bio div {
+    margin: 0 auto;
+    width: 50%;
+    height: 10em;
+    background-color: #263546;
+    margin-bottom: 1em;
+  }
+  .userpage-info-skills ul {
+    list-style-type: none;
+  }
+}
 .hamburger-menu {
   display: flex;
   flex-direction: row;

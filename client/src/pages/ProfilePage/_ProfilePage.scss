@@ -89,10 +89,18 @@ and (min-device-width : 320px) {
 
     .profile-listitem label input,
     .profile-staritem label input {
-        width: 50%;
-        height: 2em;
+        border: none;
+        background-color: #d3d3d3;
+        padding: 0.5em;
+        width: 70%;
+        font-weight: 700;
+        outline: none;
+        border-radius: 5px;
         margin: 0 auto;
         margin-bottom: 1em;
+        &::placeholder {
+          color: $lightAccent;
+        }
     }
 
     .five-stars {
@@ -124,6 +132,7 @@ and (min-device-width : 320px) {
 
     .overview-pic img {
         width: 10em;
+        border-radius: 50%;
     }
 
     .overview-desc p {
@@ -150,6 +159,38 @@ and (min-device-width : 320px) {
 
     .overview-company p {
         font-size: 1.5em;
+    }
+
+    .profile-fullname label p {
+        font-weight: bold;
+    }
+
+    .profile-fullname label input {
+        border: none;
+        background-color: #d3d3d3;
+        padding: 0.5em 1em;
+        font-weight: 700;
+        outline: none;
+        border-radius: 5px;
+        margin-bottom: 1em;
+        &::placeholder {
+          color: $lightAccent;
+        }
+    }
+    
+    .profile-description textarea {
+        border: none;
+        background-color: #d3d3d3;
+        padding: 0.5em;
+        width: 70%;
+        font-weight: 700;
+        outline: none;
+        border-radius: 5px;
+        margin: 0 auto;
+        margin-bottom: 1em;
+        &::placeholder {
+          color: $lightAccent;
+        }
     }
 }
 
@@ -194,9 +235,18 @@ and (min-device-width : 768px) {
     }
     
     .profile-description textarea {
-        margin-top: 1em;
-        width: 15em;
+        border: none;
+        background-color: #d3d3d3;
+        padding: 0.5em;
+        width: 70%;
+        font-weight: 700;
+        outline: none;
+        border-radius: 5px;
         margin: 0 auto;
+        margin-bottom: 1em;
+        &::placeholder {
+          color: $lightAccent;
+        }
     }
 }
 

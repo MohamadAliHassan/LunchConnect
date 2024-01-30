@@ -57,8 +57,9 @@
 }
 
 .network-listitem img {
-    height: 5em;
-    width: 5em;
+    height: 4em;
+    width: 4em;
+    border-radius: 50%;
 }
 
 .network-listitem-container {
@@ -80,6 +81,11 @@
     flex-direction: row;
     justify-content: center;
     gap: 10px;
+    margin-left: 1em;
+}
+
+.network-listitem-container h3 {
+    margin-left: 1em;
 }
 
 .network-listitem-container div img {

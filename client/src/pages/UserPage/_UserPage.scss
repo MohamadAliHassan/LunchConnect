@@ -1,0 +1,51 @@
+@use "../../Sass/abstract/variables" as *;
+
+.userpage-container {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    text-align: center;
+    width: 50%;
+    height: 80%;
+    background-color: $secBackground;
+}
+
+@media only screen 
+and (min-device-width : 320px) {
+    .userpage-profile img {
+        max-width: 10em;
+        margin: 0 auto;
+        margin-bottom: 1em;
+        margin-top: 1em;
+        border-radius: 50%;
+    }
+    
+    .userpage-connect {
+        margin-bottom: 1em;
+    }
+
+
+    .userpage-connect button {
+        color: white;
+    }
+
+    .userpage-info-general {
+        list-style-type: none;
+    }
+
+    .userpage-info-bio div {
+        margin: 0 auto;
+        width: 50%;
+        height: 10em;
+        background-color: $darkAccent;
+        margin-bottom: 1em;
+    }
+
+    .userpage-info-skills ul {
+        list-style-type: none;
+    }
+}
+@media only screen 
+and (min-device-width : 768px) {
+
+}
