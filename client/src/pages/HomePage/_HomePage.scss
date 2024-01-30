@@ -58,8 +58,17 @@
 .upcomingEvent {
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 .overlay-event {
   background-color: $darkAccent;
   padding: 2rem 1.5rem;
+  width: 40%;
+  display: flex;
+  overflow: hidden;
+  justify-content: flex-start;
+  margin: 0 auto;
+}
+.description small {
+  padding: 5px 0;
 }

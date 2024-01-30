@@ -582,11 +582,21 @@ form {
 .upcomingEvent {
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
 .overlay-event {
   background-color: #263546;
   padding: 2rem 1.5rem;
+  width: 40%;
+  display: flex;
+  overflow: hidden;
+  justify-content: flex-start;
+  margin: 0 auto;
+}
+
+.description small {
+  padding: 5px 0;
 }
 
 .userpage-container {
@@ -695,6 +705,13 @@ form {
   margin: 0 auto;
   align-items: center;
   height: 10vh;
+}
+
+.bio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 10px;
 }
 
 .rounded {
