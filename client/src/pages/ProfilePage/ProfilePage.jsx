@@ -1,44 +1,37 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { Step1 } from "./components/Step1";
-import { Step2 } from "./components/Step2";
-import { Step3 } from "./components/Step3";
-import { Step4 } from "./components/Step4";
-import { FinalStep } from "./components/FinalStep";
+import dummyImg from "./assets/dummyImg.png";
+import { LunchPlans } from "./components/LunchPlans";
 
 export const ProfilePage = () => {
-  const navigate = useNavigate();
-  const [step, setStep] = useState(1);
-  const [formData, setFormData] = useState({});
-
-  const handleNext = (data) => {
-    setFormData({ ...formData, ...data });
-    setStep(step + 1);
-  };
-
-  const handleConfirm = () => {
-    console.log("Profile successfully created, data:", formData);
-    localStorage.setItem("profileData", JSON.stringify(formData));
-    navigate("/homepage");
-  };
-
-  const handlePrev = () => {
-    setStep(step - 1);
-  };
-
   return (
     <div className="profile-container">
-      {step === 1 && <Step1 onNext={handleNext} />}
-      {step === 2 && <Step2 onNext={handleNext} onPrev={handlePrev} />}
-      {step === 3 && <Step3 onNext={handleNext} onPrev={handlePrev} />}
-      {step === 4 && <Step4 onNext={handleNext} onPrev={handlePrev} />}
-      {step === 5 && (
-        <FinalStep
-          formData={formData}
-          onConfirm={handleConfirm}
-          onPrev={handlePrev}
-        />
-      )}
+      <div className="profile-header">
+        <img src={dummyImg}></img>
+        <h2>Hello Albin Larsson!</h2>
+      </div>
+      <div className="profile-complete">
+        <ul>
+          <li>
+            <p>Profile completed: 1/5</p>
+            <p>
+              Upload profile picture: <input type="checkbox"></input>
+            </p>
+            <p>List your interests: 1/3</p>
+            <p>
+              Name your company: <input type="checkbox"></input>
+            </p>
+            <p>
+              Name your position: <input type="checkbox"></input>
+            </p>
+            <p>
+              Name your favourite meal: <input type="checkbox"></input>
+            </p>
+          </li>
+        </ul>
+      </div>
+      <div className="profile-achievements"></div>
+      <LunchPlans />
+      <div className="profile-favorite"></div>
     </div>
   );
 };

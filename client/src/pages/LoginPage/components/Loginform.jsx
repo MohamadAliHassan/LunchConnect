@@ -4,6 +4,10 @@ import { RiBankFill } from "react-icons/ri";
 import { useNavigate } from "react-router-dom";
 export const Loginform = () => {
   const navigate = useNavigate();
+
+  const handleNavigate = () => {
+    navigate("/home");
+  };
   return (
     <>
       <div className="login-container">
@@ -17,7 +21,9 @@ export const Loginform = () => {
               <input placeholder="Password" />
             </div>
             <p>Forgot Password?</p>
-            <button className="Login-btn">Login</button>
+            <button className="Login-btn" onClick={handleNavigate}>
+              Login
+            </button>
           </div>
           <div className="social-login">
             <div className="overlay-1">
@@ -45,8 +51,7 @@ export const Loginform = () => {
               className="bold-txt"
               onClick={() => {
                 navigate("/register");
-              }}
-            >
+              }}>
               Signup here
             </span>
           </p>

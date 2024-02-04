@@ -1,8 +1,14 @@
 import React from "react";
 import { CiStar } from "react-icons/ci";
 import dummyImg from "../assets/dummyIMG.png";
+import { useNavigate } from "react-router-dom";
 
 export const Score = () => {
+  const navigate = useNavigate();
+
+  const handleNav = () => {
+    navigate("/network");
+  };
   return (
     <>
       <div className="home-container">
@@ -12,7 +18,9 @@ export const Score = () => {
           <CiStar size={50} style={{ margin: "0 20px" }} />
           <p>125 points</p>
         </div>
-        <button className="Lunch-btn">Lunch</button>
+        <button className="Lunch-btn" onClick={handleNav}>
+          Lunch
+        </button>
       </div>
     </>
   );

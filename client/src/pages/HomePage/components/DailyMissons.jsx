@@ -35,36 +35,6 @@ export const DailyMissons = () => {
             <small>Steps: 576/1000</small>
           </div>
         </div>
-        <div className="mission-task">
-          <div className="overlay">
-            <FaPersonRunning size={25} style={{ margin: "0 auto" }} />
-            <div className="score-mission">
-              <CiStar />
-              <small>{15}</small>
-            </div>
-            <small>Steps: 576/1000</small>
-          </div>
-        </div>
-        <div className="mission-task">
-          <div className="overlay">
-            <FaPersonRunning size={25} style={{ margin: "0 auto" }} />
-            <div className="score-mission">
-              <CiStar />
-              <small>{15}</small>
-            </div>
-            <small>Steps: 576/1000</small>
-          </div>
-        </div>
-        <div className="mission-task">
-          <div className="overlay">
-            <FaPersonRunning size={25} style={{ margin: "0 auto" }} />
-            <div className="score-mission">
-              <CiStar />
-              <small>{15}</small>
-            </div>
-            <small>Steps: 576/1000</small>
-          </div>
-        </div>
       </div>
     </>
   );
