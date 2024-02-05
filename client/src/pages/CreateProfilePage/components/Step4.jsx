@@ -16,12 +16,12 @@ export const Step4 = ({ onNext, onPrev }) => {
 
   return (
     <>
-      <h1 className="profile-header">4/4</h1>
-      <h1 className="profile-header">Work Experience</h1>
-      <div className="profilewrapper">
-        <h3 className="profile-header">Where do you work?</h3>
-        <ul className="profile-list">
-          <li className="profile-listitem">
+      <h1 className="createprofile-header">4/4</h1>
+      <h1 className="createprofile-header">Work Experience</h1>
+      <div className="createprofilewrapper">
+        <h3 className="createprofile-header">Where do you work?</h3>
+        <ul className="createprofile-list">
+          <li className="createprofile-listitem">
             <label>
               Company:
               <input
@@ -31,7 +31,7 @@ export const Step4 = ({ onNext, onPrev }) => {
               />
             </label>
           </li>
-          <li className="profile-listitem">
+          <li className="createprofile-listitem">
             <label>
               Position:
               <input
@@ -43,10 +43,10 @@ export const Step4 = ({ onNext, onPrev }) => {
           </li>
         </ul>
       </div>
-      <button className="profile-next" onClick={handleNext}>
+      <button className="createprofile-next" onClick={handleNext}>
         Next
       </button>
-      <button className="profile-back" onClick={handlePrev}>
+      <button className="createprofile-back" onClick={handlePrev}>
         Previous
       </button>
     </>

@@ -1,259 +1,89 @@
 @use "../../Sass/abstract/variables" as *;
 
 .profile-container {
+    width: 60vw;
+    margin: 0 auto;
+}
+
+.profile-header {
+    text-align: center;
+}
+
+.profile-header img {
+    width: 15em;
+}
+
+.profile-header {
+    margin-bottom: 1em;
+}
+
+.profile-complete ul {
+    list-style-type: none;
+}
+
+.profile-complete ul li {
+    margin-bottom: 0;
+    padding: 0px 0 !important;
+    text-align: center;
+}
+
+.achievements {
+    width: 100%;
+}
+
+.achievements-list {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    width: 60%;
+    margin: 0 auto;
+}
+
+.achievements-list li {
+    background-color: white;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.profile-plans-container {
     display: flex;
     flex-direction: column;
-    margin: 0 auto;
-    text-align: center;
     width: 50%;
-    height: 80%;
-    background-color: $secBackground;
+    height: 24em;
 }
 
-@media only screen 
-and (min-device-width : 320px) {
-    .profile-header {
-        margin-top: .5em;
-        margin-bottom: .5em;
-    }
-
-    .profile-pic {
-        margin-bottom: 2em;
-    }
-    
-    .hidden {
-        display: none;
-    }
-
-    .profile-pic label {
-        display: block;
-        width: 8em;
-        height: 3em;
-        line-height: 3em;
-        background-color: lightgray;
-        color: black;
-        border-radius: 20px;
-        margin: 0 auto;
-    }
-
-    .profile-img {
-        max-width: 10em;
-        margin: 0 auto;
-        margin-bottom: 1em;
-    }
-
-    .profile-next {
-        width: 10em;
-        margin: 0 auto;
-        margin-bottom: 2em;
-        color: white;
-    }
-
-    .profile-back {
-        width: 10em;
-        margin: 0 auto;
-        margin-bottom: 2em;
-        background-color: $secButton;
-        color: white;
-    }
-
-    .profile-description {
-        margin-bottom: 2em;
-    }
-
-    .profile-description label {
-        margin-bottom: 1em;
-        display: flex;
-        flex-direction: column;
-        margin: 0 auto;
-        text-align: center;
-    }
-    
-    .profile-description textarea {
-        margin-top: 1em;
-        width: 15em;
-        margin: 0 auto;
-    }
-
-    .profile-listitem,
-    .profile-staritem {
-        list-style-type: none;
-    }
-
-    .profile-listitem label,
-    .profile-staritem label {
-        display: flex;
-        flex-direction: column;
-        font-size: 1.5em;
-    }
-
-    .profile-listitem label input,
-    .profile-staritem label input {
-        border: none;
-        background-color: #d3d3d3;
-        padding: 0.5em;
-        width: 70%;
-        font-weight: 700;
-        outline: none;
-        border-radius: 5px;
-        margin: 0 auto;
-        margin-bottom: 1em;
-        &::placeholder {
-          color: $lightAccent;
-        }
-    }
-
-    .five-stars {
-        list-style-type: none;
-        display: flex;
-        margin: 0 auto;
-    }
-
-    .five-stars li {
-        margin: 5px;
-    }
-
-    .profile-add {
-        color: white;
-        margin-top: 1em;
-        margin-bottom: 1em;
-    }
-
-    hr.solid {
-        border-top: 3px solid #bbb;
-        width: 80%;
-        margin: 0 auto;
-        margin-bottom: 1em;
-    }
-
-    .profile-staritem {
-        margin-bottom: 1em;
-    }
-
-    .overview-pic img {
-        width: 10em;
-        border-radius: 50%;
-    }
-
-    .overview-desc p {
-        font-size: 1.5em;
-    }
-
-    .overview-skills h2,
-    .overview-company h2,
-    .overview-desc h2 {
-        margin-bottom: 0.5em;
-    }
-
-    .overview-skills ul {
-        list-style-type: none;
-    }
-
-    .overview-rating {
-        margin-bottom: 1em;  
-    }
-
-    .overview-rating label {
-        font-size: 1.5em;
-    }
-
-    .overview-company p {
-        font-size: 1.5em;
-    }
-
-    .profile-fullname label p {
-        font-weight: bold;
-    }
-
-    .profile-fullname label input {
-        border: none;
-        background-color: #d3d3d3;
-        padding: 0.5em 1em;
-        font-weight: 700;
-        outline: none;
-        border-radius: 5px;
-        margin-bottom: 1em;
-        &::placeholder {
-          color: $lightAccent;
-        }
-    }
-    
-    .profile-description textarea {
-        border: none;
-        background-color: #d3d3d3;
-        padding: 0.5em;
-        width: 70%;
-        font-weight: 700;
-        outline: none;
-        border-radius: 5px;
-        margin: 0 auto;
-        margin-bottom: 1em;
-        &::placeholder {
-          color: $lightAccent;
-        }
-    }
+.profile-plans-wrap {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
 }
 
-@media only screen 
-and (min-device-width : 768px) {
-    .profile-header {
-        margin-bottom: .5em;
-        margin-top: .5em;
-    }
-    
-    .profile-label {
-        margin-bottom: 2em;
-    }
-    
-    .profile-img {
-        max-width: 10em;
-        margin: 0 auto;
-        margin-bottom: 1em;
-    }
-    
-    .profile-next {
-        width: 10em;
-        margin: 0 auto;
-        margin-bottom: 2em;
-        color: white;
-    }
-    
-    .profile-back {
-        width: 10em;
-        margin: 0 auto;
-        margin-bottom: 2em;
-        background-color: $secButton;
-        color: white;
-    }
-    
-    .profile-description label {
-        margin-bottom: 1em;
-        display: flex;
-        flex-direction: column;
-        margin: 0 auto;
-        text-align: center;
-    }
-    
-    .profile-description textarea {
-        border: none;
-        background-color: #d3d3d3;
-        padding: 0.5em;
-        width: 70%;
-        font-weight: 700;
-        outline: none;
-        border-radius: 5px;
-        margin: 0 auto;
-        margin-bottom: 1em;
-        &::placeholder {
-          color: $lightAccent;
-        }
-    }
+.profile-plans-description {
+    background-color: $darkAccent;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
 }
 
-// Conditional rendering classnames. Active för hover state och inactive för non-hover state.
-.active {
-  color: #000;
+.profile-plans-description img {
+    width: 100%;
+    height: 250px;
 }
-.inactive {
-  color: #fff;
+
+.profile-plans {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    margin-bottom: 2em;
+}
+
+.nav-events {
+    width: 100%;
+    text-align: left;
+}
+
+.nav-events p {
+    font-size: 1.5em;
 }

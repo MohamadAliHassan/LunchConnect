@@ -2,12 +2,20 @@ import React from "react";
 import { FaBriefcase } from "react-icons/fa";
 import { FaHome } from "react-icons/fa";
 import { IoIosPin } from "react-icons/io";
-import { Rating } from "../ProfilePage/components/Rating";
+import { Rating } from "../CreateProfilePage/components/Rating";
+import { useNavigate } from "react-router-dom";
 
 export const UserPage = () => {
   const storedData = JSON.parse(localStorage.getItem("profileData")) || {};
   const { profilePicture, fullName, company, position, description, skills } =
     storedData;
+
+  const navigate = useNavigate();
+
+  const handleNavigate = () => {
+    navigate("/chat");
+  };
+
   return (
     <div className="userpage-container">
       <div className="userpage-profile">
@@ -16,7 +24,7 @@ export const UserPage = () => {
         <h2>{position}</h2>
       </div>
       <div className="userpage-connect">
-        <button>Connect</button>
+        <button onClick={handleNavigate}>Connect</button>
       </div>
       <div className="userpage-info">
         <ul className="userpage-info-general">

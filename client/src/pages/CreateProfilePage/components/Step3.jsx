@@ -19,10 +19,10 @@ export const Step3 = ({ onNext, onPrev }) => {
 
   return (
     <>
-      <h1 className="profile-header">3/3</h1>
-      <h1 className="profile-header">Create Profile</h1>
+      <h1 className="createprofile-header">3/3</h1>
+      <h1 className="createprofile-header">Create Profile</h1>
 
-      <div className="profile-description">
+      <div className="createprofile-description">
         <label>
           <p>Describe yourself, your background, interests, hobbies, etc.</p>
           <textarea
@@ -32,10 +32,10 @@ export const Step3 = ({ onNext, onPrev }) => {
             onChange={handleDescription}></textarea>
         </label>
       </div>
-      <button className="profile-next" onClick={handleNext}>
+      <button className="createprofile-next" onClick={handleNext}>
         Next
       </button>
-      <button className="profile-back" onClick={handlePrev}>
+      <button className="createprofile-back" onClick={handlePrev}>
         Previous
       </button>
     </>

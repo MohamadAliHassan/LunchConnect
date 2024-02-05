@@ -26,16 +26,16 @@ export const Step1 = ({ onNext }) => {
 
   return (
     <>
-      <h1 className="profile-header">1/3</h1>
-      <h1 className="profile-header">Create Profile</h1>
+      <h1 className="createprofile-header">1/3</h1>
+      <h1 className="createprofile-header">Create Profile</h1>
       {profilePicture && (
         <img
-          className="profile-img"
+          className="createprofile-img"
           src={profilePicture}
           alt="Profile Preview"
         />
       )}
-      <div className="profile-pic">
+      <div className="createprofile-pic">
         <input
           className="hidden"
           type="file"
@@ -45,13 +45,13 @@ export const Step1 = ({ onNext }) => {
         />
         <label htmlFor="files">Upload picture</label>
       </div>
-      <div className="profile-fullname">
+      <div className="createprofile-fullname">
         <label>
           <p>Full Name</p>
           <input type="text" value={fullName} onChange={handleFullNameChange} />
         </label>
       </div>
-      <button className="profile-next" onClick={handleNext}>
+      <button className="createprofile-next" onClick={handleNext}>
         Next
       </button>
     </>

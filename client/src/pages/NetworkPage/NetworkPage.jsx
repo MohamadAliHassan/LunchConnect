@@ -16,22 +16,20 @@ export const NetworkPage = () => {
     <div className="network-container">
       <div className="network-tab">
         <button
-          className={`tab-button ${activeTab === "Networking" ? "active" : ""}`}
-          onClick={() => handleTabClick("Networking")}
-        >
-          <img src={company}/>
-          Networking
+          className={`tab-button ${activeTab === "Onboarding" ? "active" : ""}`}
+          onClick={() => handleTabClick("Onboarding")}>
+          <img src={company} />
+          Company
         </button>
         <button
-          className={`tab-button ${activeTab === "Onboarding" ? "active" : ""}`}
-          onClick={() => handleTabClick("Onboarding")}
-        >
-          <img src={onboarding}/>
-          Onboarding
+          className={`tab-button ${activeTab === "Networking" ? "active" : ""}`}
+          onClick={() => handleTabClick("Networking")}>
+          <img src={onboarding} />
+          Networking
         </button>
       </div>
-      {activeTab === "Networking" && <Networking />}
       {activeTab === "Onboarding" && <Onboarding />}
+      {activeTab === "Networking" && <Networking />}
     </div>
   );
 };
