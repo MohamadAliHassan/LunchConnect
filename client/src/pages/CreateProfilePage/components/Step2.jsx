@@ -25,12 +25,12 @@ export const Step2 = ({ onNext, onPrev }) => {
 
   return (
     <>
-      <h1 className="profile-header">2/3</h1>
-      <h1 className="profile-header">Create Profile</h1>
-      <div className="profilewrapper">
-        <h3 className="profile-header">What are your skills? (Max 5)</h3>
-        <ul className="profile-list"></ul>
-        <li className="profile-listitem">
+      <h1 className="createprofile-header">2/3</h1>
+      <h1 className="createprofile-header">Create Profile</h1>
+      <div className="createprofilewrapper">
+        <h3 className="createprofile-header">What are your skills? (Max 5)</h3>
+        <ul className="createprofile-list"></ul>
+        <li className="createprofile-listitem">
           <label>
             Skill:
             <input
@@ -40,7 +40,7 @@ export const Step2 = ({ onNext, onPrev }) => {
             />
           </label>
         </li>
-        <li className="profile-staritem">
+        <li className="createprofile-staritem">
           <Rating
             rating={newSkill.rating}
             onRatingChange={(value) => handleSkillChange("rating", value)}
@@ -48,26 +48,26 @@ export const Step2 = ({ onNext, onPrev }) => {
             editable={true}
           />
         </li>
-        <button className="profile-add" onClick={handleAddSkill}>
+        <button className="createprofile-add" onClick={handleAddSkill}>
           Add
         </button>
         {skills.length > 0 && <hr className="solid"></hr>}
         {skills.map((skill, index) => (
           <React.Fragment key={index}>
-            <li className="profile-listitem">
+            <li className="createprofile-listitem">
               <label>Skill: {skill.name}</label>
             </li>
-            <li className="profile-staritem">
+            <li className="createprofile-staritem">
               <Rating rating={skill.rating} numOfStars={5} editable={false} />
             </li>
           </React.Fragment>
         ))}
         <hr className="solid"></hr>
       </div>
-      <button className="profile-next" onClick={handleNext}>
+      <button className="createprofile-next" onClick={handleNext}>
         Next
       </button>
-      <button className="profile-back" onClick={handlePrev}>
+      <button className="createprofile-back" onClick={handlePrev}>
         Previous
       </button>
     </>

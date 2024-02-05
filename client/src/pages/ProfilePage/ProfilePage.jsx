@@ -1,37 +1,43 @@
 import React, { useState } from "react";
 import dummyImg from "./assets/dummyImg.png";
 import { LunchPlans } from "./components/LunchPlans";
+import { Achievements } from "./components/Achievements";
+import { FavoriteMeal } from "./components/FavoriteMeal";
 
 export const ProfilePage = () => {
   return (
     <div className="profile-container">
       <div className="profile-header">
         <img src={dummyImg}></img>
-        <h2>Hello Albin Larsson!</h2>
+        <h1>Hello Albin Larsson!</h1>
       </div>
       <div className="profile-complete">
         <ul>
           <li>
-            <p>Profile completed: 1/5</p>
-            <p>
+            Profile completed: 1/5
+          </li>
+          <li>
               Upload profile picture: <input type="checkbox"></input>
-            </p>
-            <p>List your interests: 1/3</p>
-            <p>
+          </li>
+          <li>
+            List your interests: 1/3
+          </li>
+          <li>
               Name your company: <input type="checkbox"></input>
-            </p>
-            <p>
+          </li>
+          <li>
               Name your position: <input type="checkbox"></input>
-            </p>
-            <p>
+          </li>
+          <li>
               Name your favourite meal: <input type="checkbox"></input>
-            </p>
           </li>
         </ul>
       </div>
-      <div className="profile-achievements"></div>
-      <LunchPlans />
-      <div className="profile-favorite"></div>
+      <Achievements /> 
+      <div className="profile-plans">
+        <LunchPlans />
+        <FavoriteMeal />
+      </div>
     </div>
   );
 };

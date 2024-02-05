@@ -1,6 +1,6 @@
 @use "../../Sass/abstract/variables" as *;
 
-.profile-container {
+.createprofile-container {
     display: flex;
     flex-direction: column;
     margin: 0 auto;
@@ -12,12 +12,12 @@
 
 @media only screen 
 and (min-device-width : 320px) {
-    .profile-header {
+    .createprofile-header {
         margin-top: .5em;
         margin-bottom: .5em;
     }
 
-    .profile-pic {
+    .createprofile-pic {
         margin-bottom: 2em;
     }
     
@@ -25,7 +25,7 @@ and (min-device-width : 320px) {
         display: none;
     }
 
-    .profile-pic label {
+    .createprofile-pic label {
         display: block;
         width: 8em;
         height: 3em;
@@ -36,20 +36,20 @@ and (min-device-width : 320px) {
         margin: 0 auto;
     }
 
-    .profile-img {
+    .createprofile-img {
         max-width: 10em;
         margin: 0 auto;
         margin-bottom: 1em;
     }
 
-    .profile-next {
+    .createprofile-next {
         width: 10em;
         margin: 0 auto;
         margin-bottom: 2em;
         color: white;
     }
 
-    .profile-back {
+    .createprofile-back {
         width: 10em;
         margin: 0 auto;
         margin-bottom: 2em;
@@ -57,11 +57,11 @@ and (min-device-width : 320px) {
         color: white;
     }
 
-    .profile-description {
+    .createprofile-description {
         margin-bottom: 2em;
     }
 
-    .profile-description label {
+    .createprofile-description label {
         margin-bottom: 1em;
         display: flex;
         flex-direction: column;
@@ -69,26 +69,26 @@ and (min-device-width : 320px) {
         text-align: center;
     }
     
-    .profile-description textarea {
+    .createprofile-description textarea {
         margin-top: 1em;
         width: 15em;
         margin: 0 auto;
     }
 
-    .profile-listitem,
-    .profile-staritem {
+    .createprofile-listitem,
+    .createprofile-staritem {
         list-style-type: none;
     }
 
-    .profile-listitem label,
-    .profile-staritem label {
+    .createprofile-listitem label,
+    .createprofile-staritem label {
         display: flex;
         flex-direction: column;
         font-size: 1.5em;
     }
 
-    .profile-listitem label input,
-    .profile-staritem label input {
+    .createprofile-listitem label input,
+    .createprofile-staritem label input {
         border: none;
         background-color: #d3d3d3;
         padding: 0.5em;
@@ -113,7 +113,7 @@ and (min-device-width : 320px) {
         margin: 5px;
     }
 
-    .profile-add {
+    .createprofile-add {
         color: white;
         margin-top: 1em;
         margin-bottom: 1em;
@@ -126,7 +126,7 @@ and (min-device-width : 320px) {
         margin-bottom: 1em;
     }
 
-    .profile-staritem {
+    .createprofile-staritem {
         margin-bottom: 1em;
     }
 
@@ -161,11 +161,11 @@ and (min-device-width : 320px) {
         font-size: 1.5em;
     }
 
-    .profile-fullname label p {
+    .createprofile-fullname label p {
         font-weight: bold;
     }
 
-    .profile-fullname label input {
+    .createprofile-fullname label input {
         border: none;
         background-color: #d3d3d3;
         padding: 0.5em 1em;
@@ -178,7 +178,7 @@ and (min-device-width : 320px) {
         }
     }
     
-    .profile-description textarea {
+    .createprofile-description textarea {
         border: none;
         background-color: #d3d3d3;
         padding: 0.5em;
@@ -196,29 +196,29 @@ and (min-device-width : 320px) {
 
 @media only screen 
 and (min-device-width : 768px) {
-    .profile-header {
+    .createprofile-header {
         margin-bottom: .5em;
         margin-top: .5em;
     }
     
-    .profile-label {
+    .createprofile-label {
         margin-bottom: 2em;
     }
     
-    .profile-img {
+    .createprofile-img {
         max-width: 10em;
         margin: 0 auto;
         margin-bottom: 1em;
     }
     
-    .profile-next {
+    .createprofile-next {
         width: 10em;
         margin: 0 auto;
         margin-bottom: 2em;
         color: white;
     }
     
-    .profile-back {
+    .createprofile-back {
         width: 10em;
         margin: 0 auto;
         margin-bottom: 2em;
@@ -226,7 +226,7 @@ and (min-device-width : 768px) {
         color: white;
     }
     
-    .profile-description label {
+    .createprofile-description label {
         margin-bottom: 1em;
         display: flex;
         flex-direction: column;
@@ -234,7 +234,7 @@ and (min-device-width : 768px) {
         text-align: center;
     }
     
-    .profile-description textarea {
+    .createprofile-description textarea {
         border: none;
         background-color: #d3d3d3;
         padding: 0.5em;

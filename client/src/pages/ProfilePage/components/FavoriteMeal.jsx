@@ -1,24 +1,19 @@
 import { FaEdit } from "react-icons/fa";
-import event from "../assets/event.jpg";
+import meal from "../assets/meal.jpg";
 
-export const LunchPlans = () => {
+export const FavoriteMeal = () => {
   return (
     <>
-      <div className="eventsContainer">
+      <div className="profile-plans-container">
         <section className="nav-events">
-          <p>Lunch plans</p>
+          <p>Favorite Meal</p>
           <FaEdit size={26} />
         </section>
-        <div className="upcomingContainer">
-          <section className="upcomingEvent">
-            <div className="overlay-event">
-              <div className="description">
-                <img src={event} alt="image" />
-                <small>15/12/2024 12:20</small>
-                <small>Dirty Coco, Stockholm</small>
-              </div>
-            </div>
-          </section>
+        <div className="profile-plans-wrap">
+          <div className="profile-plans-description">
+            <img src={meal} alt="image" />
+            <h3>Spaghetti Bolognese</h3>
+          </div>
         </div>
       </div>
     </>

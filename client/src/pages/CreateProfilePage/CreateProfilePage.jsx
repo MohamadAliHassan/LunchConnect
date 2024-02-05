@@ -27,7 +27,7 @@ export const CreateProfilePage = () => {
   };
 
   return (
-    <div className="profile-container">
+    <div className="createprofile-container">
       {step === 1 && <Step1 onNext={handleNext} />}
       {step === 2 && <Step2 onNext={handleNext} onPrev={handlePrev} />}
       {step === 3 && <Step3 onNext={handleNext} onPrev={handlePrev} />}
