@@ -8,6 +8,7 @@ import { RegisterPage } from "../pages";
 import { NetworkPage } from "../pages/NetworkPage/NetworkPage";
 import { HomePage } from "../pages/HomePage/HomePage";
 import { UserPage } from "../pages/UserPage/UserPage";
+import { EventsPage } from "../pages/EventsPage/EventsPage";
 
 import { ChatPage } from "../pages/ChatPage/ChatPage";
 import { ProfilePage } from "../pages/ProfilePage/ProfilePage";
@@ -25,6 +26,7 @@ export const AllRoutes = () => {
         <Route path="/user" element={<UserPage />}></Route>
         <Route path="/chat" element={<ChatPage />}></Route>
         <Route path="/profile" element={<ProfilePage />}></Route>
+        <Route path="/event" element={<EventsPage />}></Route>
       </Routes>
     </>
   );

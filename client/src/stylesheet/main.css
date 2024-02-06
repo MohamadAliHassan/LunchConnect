@@ -122,6 +122,9 @@ form {
   outline: none;
   border-radius: 5px;
 }
+.form-control input::-moz-placeholder {
+  color: #8f9ca6;
+}
 .form-control input::placeholder {
   color: #8f9ca6;
 }
@@ -255,6 +258,9 @@ form {
     margin: 0 auto;
     margin-bottom: 1em;
   }
+  .createprofile-listitem label input::-moz-placeholder, .createprofile-staritem label input::-moz-placeholder {
+    color: #8f9ca6;
+  }
   .createprofile-listitem label input::placeholder,
   .createprofile-staritem label input::placeholder {
     color: #8f9ca6;
@@ -317,6 +323,9 @@ form {
     border-radius: 5px;
     margin-bottom: 1em;
   }
+  .createprofile-fullname label input::-moz-placeholder {
+    color: #8f9ca6;
+  }
   .createprofile-fullname label input::placeholder {
     color: #8f9ca6;
   }
@@ -330,6 +339,9 @@ form {
     border-radius: 5px;
     margin: 0 auto;
     margin-bottom: 1em;
+  }
+  .createprofile-description textarea::-moz-placeholder {
+    color: #8f9ca6;
   }
   .createprofile-description textarea::placeholder {
     color: #8f9ca6;
@@ -378,6 +390,9 @@ form {
     border-radius: 5px;
     margin: 0 auto;
     margin-bottom: 1em;
+  }
+  .createprofile-description textarea::-moz-placeholder {
+    color: #8f9ca6;
   }
   .createprofile-description textarea::placeholder {
     color: #8f9ca6;
@@ -852,4 +867,45 @@ form {
 
 .nav-events p {
   font-size: 1.5em;
+}
+
+.eventcontainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  height: 80vh;
+}
+
+.event-form-control h3 {
+  text-align: center;
+}
+
+.event-form-control {
+  padding: 10px 0;
+}
+
+.event-form-control input {
+  margin: 0 auto;
+  display: flex;
+  padding: 5px;
+  border: none;
+  outline: none;
+}
+
+.Event-btns {
+  display: flex;
+  flex-direction: column;
+}
+
+.Event-btns button {
+  font-size: 15px;
+  font-weight: 600;
+  margin: 10px 0;
+}
+
+.Event-btns .cancel-event {
+  background-color: #840202;
+  color: #fff;
 }/*# sourceMappingURL=main.css.map */
