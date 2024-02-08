@@ -1,5 +1,7 @@
 import { FaPersonRunning } from "react-icons/fa6";
+import { LuPodcast } from "react-icons/lu";
 import { CiStar } from "react-icons/ci";
+import { MdOutlineEmojiFoodBeverage } from "react-icons/md";
 export const DailyMissons = () => {
   return (
     <>
@@ -17,22 +19,25 @@ export const DailyMissons = () => {
         </div>
         <div className="mission-task">
           <div className="overlay">
-            <FaPersonRunning size={25} style={{ margin: "0 auto" }} />
+            <LuPodcast size={25} style={{ margin: "0 auto" }} />
             <div className="score-mission">
               <CiStar />
               <small>{15}</small>
             </div>
-            <small>Steps: 576/1000</small>
+            <small>Goal: Listen to 2 podcast</small>
           </div>
         </div>
         <div className="mission-task">
           <div className="overlay">
-            <FaPersonRunning size={25} style={{ margin: "0 auto" }} />
+            <MdOutlineEmojiFoodBeverage
+              size={25}
+              style={{ margin: "0 auto" }}
+            />
             <div className="score-mission">
               <CiStar />
               <small>{15}</small>
             </div>
-            <small>Steps: 576/1000</small>
+            <small>Goal: Eat 3 meals</small>
           </div>
         </div>
       </div>

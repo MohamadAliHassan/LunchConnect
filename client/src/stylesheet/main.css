@@ -698,6 +698,7 @@ form {
   color: white;
   text-decoration: none;
   padding: 10px 20px;
+  font-size: 1.5rem;
 }
 .menu-items a:hover {
   background: #555;
