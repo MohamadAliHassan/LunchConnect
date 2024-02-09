@@ -7,6 +7,11 @@ export const Header = () => {
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
+
+  const clearStorage = () => {
+    localStorage.clear();
+  }
+
   return (
     <>
       <div className="hamburger-menu">
@@ -24,7 +29,9 @@ export const Header = () => {
             <a href="/">Home</a>
             <a href="/about">Achievements</a>
             <a href="/contact">Profile</a>
-            <a href="/contact">Logout</a>
+            <a href="/">Logout</a>
+            <a href="/" onClick={clearStorage}>Clear storage</a>
+
           </div>
         )}
         <div className="icons">
