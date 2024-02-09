@@ -10,6 +10,9 @@ export const Header = () => {
     setIsOpen(!isOpen);
   };
 
+  const clearStorage = () => {
+    localStorage.clear();
+  }
   const handleClickOutside = (event) => {
     if (menuRef.current && !menuRef.current.contains(event.target)) {
       setIsOpen(false);
@@ -40,7 +43,9 @@ export const Header = () => {
             <a href="/">Home</a>
             <a href="/about">Achievements</a>
             <a href="/contact">Profile</a>
-            <a href="/contact">Logout</a>
+            <a href="/">Logout</a>
+            <a href="/" onClick={clearStorage}>Clear storage</a>
+
           </div>
         )}
         <div className="icons">

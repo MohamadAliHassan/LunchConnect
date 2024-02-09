@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { Step1 } from "./components/Step1";
 import { Step2 } from "./components/Step2";
@@ -11,8 +11,13 @@ export const CreateProfilePage = () => {
   const [step, setStep] = useState(1);
   const [formData, setFormData] = useState({});
 
+  useEffect(() => {
+    const existingData = JSON.parse(localStorage.getItem("profileData")) || {};
+    setFormData(existingData);
+  }, []);
+
   const handleNext = (data) => {
-    setFormData({ ...formData, ...data });
+    setFormData((prevData) => ({ ...prevData, ...data }));
     setStep(step + 1);
   };
 
