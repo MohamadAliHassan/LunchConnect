@@ -27,12 +27,9 @@ export const AllRoutes = () => {
         <Route path="/user" element={<UserPage />}></Route>
         <Route path="/chat" element={<ChatPage />}></Route>
         <Route path="/profile" element={<ProfilePage />}></Route>
-<<<<<<< HEAD
         <Route path="/add-event" element={<EventsPage />}></Route>
-=======
         <Route path="/event" element={<EventsPage />}></Route>
         <Route path="/settings" element={<SettingsPage />}></Route>
->>>>>>> dev
       </Routes>
     </>
   );
