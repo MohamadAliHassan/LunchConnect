@@ -122,9 +122,6 @@ form {
   outline: none;
   border-radius: 5px;
 }
-.form-control input::-moz-placeholder {
-  color: #8f9ca6;
-}
 .form-control input::placeholder {
   color: #8f9ca6;
 }
@@ -258,9 +255,6 @@ form {
     margin: 0 auto;
     margin-bottom: 1em;
   }
-  .createprofile-listitem label input::-moz-placeholder, .createprofile-staritem label input::-moz-placeholder {
-    color: #8f9ca6;
-  }
   .createprofile-listitem label input::placeholder,
   .createprofile-staritem label input::placeholder {
     color: #8f9ca6;
@@ -323,9 +317,6 @@ form {
     border-radius: 5px;
     margin-bottom: 1em;
   }
-  .createprofile-fullname label input::-moz-placeholder {
-    color: #8f9ca6;
-  }
   .createprofile-fullname label input::placeholder {
     color: #8f9ca6;
   }
@@ -339,9 +330,6 @@ form {
     border-radius: 5px;
     margin: 0 auto;
     margin-bottom: 1em;
-  }
-  .createprofile-description textarea::-moz-placeholder {
-    color: #8f9ca6;
   }
   .createprofile-description textarea::placeholder {
     color: #8f9ca6;
@@ -390,9 +378,6 @@ form {
     border-radius: 5px;
     margin: 0 auto;
     margin-bottom: 1em;
-  }
-  .createprofile-description textarea::-moz-placeholder {
-    color: #8f9ca6;
   }
   .createprofile-description textarea::placeholder {
     color: #8f9ca6;
@@ -909,4 +894,64 @@ form {
 .Event-btns .cancel-event {
   background-color: #840202;
   color: #fff;
+}
+
+.settings-container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  text-align: center;
+  width: 50%;
+  height: 80%;
+  background-color: #51596a;
+}
+
+.settings-header {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.settings-header img {
+  width: 10em;
+  border-radius: 50%;
+}
+
+.settings-main {
+  display: flex;
+  flex-direction: column;
+}
+
+.settings-inputs {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 3fr));
+  list-style-type: none;
+  gap: 15px;
+}
+
+.settings-listitem {
+  display: flex;
+  flex-direction: column;
+}
+
+.settings-listitem input {
+  width: 60%;
+  height: 2.5em;
+  margin: 0 auto;
+}
+
+#description-label {
+  margin-top: 1em;
+}
+
+#description {
+  width: 50%;
+  height: 8em;
+  margin: 0 auto;
+}
+
+.settings-save-btn {
+  width: 30%;
+  margin: 0 auto;
+  margin-top: 1em;
+  margin-bottom: 1em;
 }/*# sourceMappingURL=main.css.map */
