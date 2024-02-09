@@ -24,7 +24,6 @@
 .Event-btns {
   display: flex;
   flex-direction: column;
-  // margin: 10px 0;
 }
 .Event-btns button {
   font-size: 15px;
@@ -33,5 +32,8 @@
 }
 .Event-btns .cancel-event {
   background-color: $secButton;
+  color: $fontColor;
+}
+.Event-btns .request-event {
   color: $fontColor;
 }

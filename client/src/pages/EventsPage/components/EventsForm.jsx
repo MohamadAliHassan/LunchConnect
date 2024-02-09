@@ -28,7 +28,7 @@ export const EventsForm = () => {
           </div>
         </div>
         <div className="Event-btns">
-          <button>Request</button>
+          <button className="request-event">Request</button>
           <button className="cancel-event">Cancel</button>
         </div>
       </div>
