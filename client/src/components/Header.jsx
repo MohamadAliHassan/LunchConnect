@@ -1,8 +1,10 @@
-import { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { MdOutlineChat } from "react-icons/md";
 import { FaUser } from "react-icons/fa";
+
 export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const menuRef = useRef(null);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -11,10 +13,22 @@ export const Header = () => {
   const clearStorage = () => {
     localStorage.clear();
   }
+  const handleClickOutside = (event) => {
+    if (menuRef.current && !menuRef.current.contains(event.target)) {
+      setIsOpen(false);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   return (
     <>
-      <div className="hamburger-menu">
+      <div className="hamburger-menu" ref={menuRef}>
         <div
           className={`menu-icon ${isOpen ? "open" : ""}`}
           onClick={toggleMenu}
