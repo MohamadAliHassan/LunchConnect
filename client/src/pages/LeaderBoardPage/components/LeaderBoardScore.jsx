@@ -21,7 +21,7 @@ export const LeaderBoardScore = () => {
                 alt="image"
                 className="leaderboard-image"
               ></img>
-              <small className="leaderboard-name">User</small>
+              <small className="leaderboard-name">Albin Andersson</small>
             </div>
             <div className="icons-fa">
               <FaRegStar size={45} />
