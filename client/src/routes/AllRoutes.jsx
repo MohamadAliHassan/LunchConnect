@@ -9,10 +9,11 @@ import { NetworkPage } from "../pages/NetworkPage/NetworkPage";
 import { HomePage } from "../pages/HomePage/HomePage";
 import { UserPage } from "../pages/UserPage/UserPage";
 import { EventsPage } from "../pages/EventsPage/EventsPage";
-
 import { ChatPage } from "../pages/ChatPage/ChatPage";
 import { ProfilePage } from "../pages/ProfilePage/ProfilePage";
 import { SettingsPage } from "../pages/SettingsPage/SettingsPage";
+import { LeaderBoardPage } from "../pages/LeaderBoardPage/LeaderBoardPage";
+
 export const AllRoutes = () => {
   return (
     <>
@@ -29,6 +30,7 @@ export const AllRoutes = () => {
         <Route path="/profile" element={<ProfilePage />}></Route>
         <Route path="/add-event" element={<EventsPage />}></Route>
         <Route path="/settings" element={<SettingsPage />}></Route>
+        <Route path="/leaderboard" element={<LeaderBoardPage />}></Route>
       </Routes>
     </>
   );
