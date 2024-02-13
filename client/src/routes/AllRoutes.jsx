@@ -13,6 +13,7 @@ import { ChatPage } from "../pages/ChatPage/ChatPage";
 import { ProfilePage } from "../pages/ProfilePage/ProfilePage";
 import { SettingsPage } from "../pages/SettingsPage/SettingsPage";
 import { LeaderBoardPage } from "../pages/LeaderBoardPage/LeaderBoardPage";
+import { LunchesPage } from "../pages/LunchesPage/LunchesPage";
 
 export const AllRoutes = () => {
   return (
@@ -31,6 +32,7 @@ export const AllRoutes = () => {
         <Route path="/add-event" element={<EventsPage />}></Route>
         <Route path="/settings" element={<SettingsPage />}></Route>
         <Route path="/leaderboard" element={<LeaderBoardPage />}></Route>
+        <Route path="/lunches" element={<LunchesPage />}></Route>
       </Routes>
     </>
   );

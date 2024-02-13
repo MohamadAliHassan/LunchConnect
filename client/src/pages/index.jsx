@@ -6,3 +6,4 @@ export { HomePage } from "./HomePage/HomePage";
 export { ChatPage } from "./ChatPage/ChatPage";
 export { EventsPage } from "./EventsPage/EventsPage";
 export { LeaderBoardPage } from "./LeaderBoardPage/LeaderBoardPage";
+export { LunchesPage } from "./LunchesPage/LunchesPage";
