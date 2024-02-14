@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
+import { Link } from "react-router-dom"; // Import Link from react-router-dom
 import { MdOutlineChat } from "react-icons/md";
 import { FaUser } from "react-icons/fa";
 
@@ -12,7 +13,7 @@ export const Header = () => {
 
   const clearStorage = () => {
     localStorage.clear();
-  }
+  };
   const handleClickOutside = (event) => {
     if (menuRef.current && !menuRef.current.contains(event.target)) {
       setIsOpen(false);
@@ -40,12 +41,13 @@ export const Header = () => {
 
         {isOpen && (
           <div className="menu-items">
-            <a href="/">Home</a>
-            <a href="/about">Achievements</a>
-            <a href="/contact">Profile</a>
-            <a href="/">Logout</a>
-            <a href="/" onClick={clearStorage}>Clear storage</a>
-
+            <Link to="/">Home</Link>
+            <Link to="/achievements">Achievements</Link>
+            <Link to="/contact">Profile</Link>
+            <Link to="/">Logout</Link>
+            <Link to="/" onClick={clearStorage}>
+              Clear storage
+            </Link>
           </div>
         )}
         <div className="icons">
