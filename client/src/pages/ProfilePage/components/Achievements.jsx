@@ -14,15 +14,23 @@ export const Achievements = () => {
           <p>Achievements</p>
           <FaArrowRight size={26} />
         </section>
-        <div className="achievements">
-            <ul className="achievements-list">
-                <IconContext.Provider value={{ color: 'black', size: '100%' }}>
-                    <li><FaWalking /></li>    
-                    <li><CgGym /></li>    
-                    <li><FaMedal /></li>    
-                    <li><IoTimeOutline /></li>
-                </IconContext.Provider>   
-            </ul>
+        <div className="profile-achievements">
+          <ul className="profile-achievements-list">
+            <IconContext.Provider value={{ color: "black", size: "100%" }}>
+              <li>
+                <FaWalking />
+              </li>
+              <li>
+                <CgGym />
+              </li>
+              <li>
+                <FaMedal />
+              </li>
+              <li>
+                <IoTimeOutline />
+              </li>
+            </IconContext.Provider>
+          </ul>
         </div>
       </div>
     </>

@@ -27,11 +27,11 @@
     text-align: center;
 }
 
-.achievements {
+.profile-achievements {
     width: 100%;
 }
 
-.achievements-list {
+.profile-achievements-list {
     display: flex;
     flex-direction: row;
     list-style-type: none;
@@ -39,7 +39,7 @@
     margin: 0 auto;
 }
 
-.achievements-list li {
+.profile-achievements-list li {
     background-color: white;
     width: 100px;
     height: 100px;
