@@ -1,0 +1,47 @@
+@use "../../Sass/abstract/variables" as *;
+.LunchesPage-container {
+  display: flex;
+  flex-direction: column;
+  height: 100dvh;
+  width: 100%;
+}
+.icon-fa-left {
+  width: 90%;
+  margin: 0 auto;
+  cursor: pointer;
+}
+.lunches-text {
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 2rem;
+  font-weight: 400;
+}
+.lunch-overlay {
+  background-color: $darkAccent;
+  padding: 2rem 8rem;
+  width: 90%;
+  margin: 0 auto;
+  border-radius: 5px;
+}
+.lunch-flexContainer {
+  display: flex;
+  justify-content: space-around;
+  gap: 1rem;
+  width: 80%;
+}
+.column-direction {
+  display: flex;
+  flex-direction: column;
+}
+.column-direction small {
+  line-height: 1.5;
+}
+.close-lunchbtn {
+  background-color: $secButton;
+  color: $fontColor;
+  border-radius: 24px;
+  margin: 10px 0;
+}
+.lunchesIMG {
+  width: 10rem;
+}
