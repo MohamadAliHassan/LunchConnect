@@ -1,0 +1,57 @@
+@use "../../Sass/abstract/variables" as *;
+
+.contacts-container {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    max-width: 800px;
+    min-width: 500px;
+    height: 80%;
+    background-color: $secBackground;
+}
+
+.contacts-list {
+    list-style-type: none;
+    width: 100%;
+}
+
+.contacts-listitem {
+    background-color: $darkAccent;
+    width: 35%;
+    max-width: 500px;
+    height: 6em;
+    margin: 0 auto;
+    margin-bottom: 1em;
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+}
+
+.contacts-listitem-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contacts-listitem-container p,
+.contacts-listitem-container div p {
+    margin: 0;
+    padding: 0;
+}
+
+.contacts-listitem-container div {
+    display: flex; 
+    flex-direction: row;
+    justify-content: center;
+    gap: 5px;
+    margin-left: 1em;
+}
+
+.contacts-listitem-container h3 {
+    margin-left: 1em;
+}
