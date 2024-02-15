@@ -1,9 +1,11 @@
 import express from "express";
+import insertDummyData from "../controllers/TestUser.js";
 
 import { RegisterUser } from "../controllers/RegisterUser.js";
 import { fetchAllAchievements } from "../controllers/fetchAchievements.js";
 
 const router = express.Router();
+insertDummyData();
 
 router.get("/achievements", fetchAllAchievements);
 
