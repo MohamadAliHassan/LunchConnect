@@ -14,12 +14,14 @@ const skills = [
   },
 ];
 
-const insertDummyData = async (req) => {
+const insertDummyData = async () => {
   try {
-    const newUser = new User(skills);
+    for (const skill of skills) {
+      const newUser = new User(skill);
 
-    await newUser.save();
-    console.log("Gick igenom");
+      await newUser.save();
+      console.log("User created:", newUser);
+    }
   } catch (error) {
     console.error("Error creating user:", error);
   }
