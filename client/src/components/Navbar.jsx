@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom"; // Import Link from react-router-dom
 import { MdOutlineChat } from "react-icons/md";
 import { FaUser } from "react-icons/fa";
+import lunchconnect_logo from "../assets/lunchconnect_logo.png";
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -49,6 +50,7 @@ export const Navbar = () => {
             </Link>
           </div>
         )}
+        <img className="lunchconnect-logo" src={lunchconnect_logo} />
         <div className="icons">
           <MdOutlineChat size={50} />
           <FaUser size={45} />
