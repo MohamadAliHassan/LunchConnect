@@ -23,8 +23,8 @@ const achievements = [
     {
       title: "Morning Person",
       description: "Achieve a 7-day streak of exercising before 7:00 AM.",
-      reward: "points",
-      amount: 50,
+      reward: "giftCard",
+      amount: 10,
     },
     {
       title: "Weekend Warrior",
