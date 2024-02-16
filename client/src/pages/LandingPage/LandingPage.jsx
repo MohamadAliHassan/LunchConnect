@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import lunchconnect_mini_logo from "./assets/lunchconnect_mini_logo.png";
 
 export const LandingPage = () => {
   const navigate = useNavigate();
@@ -6,7 +7,7 @@ export const LandingPage = () => {
     <>
       <div className="container">
         <div className="Logo-container">
-          <img src="" alt="Logo" />
+          <img src={lunchconnect_mini_logo} alt="Logo" />
         </div>
         <h2>
           Welcome to Lunch<span>Connect!</span>
@@ -17,8 +18,7 @@ export const LandingPage = () => {
             className="login-btn"
             onClick={() => {
               navigate("/login");
-            }}
-          >
+            }}>
             Login
           </button>
           <button
@@ -26,8 +26,7 @@ export const LandingPage = () => {
             className="SignUp-btn"
             onClick={() => {
               navigate("/register");
-            }}
-          >
+            }}>
             Sign Up
           </button>
         </div>

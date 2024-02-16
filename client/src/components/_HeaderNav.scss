@@ -1,8 +1,14 @@
-.hamburger-menu {
+.hamburger-menu,
+.first-header {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   padding: 20px;
+}
+
+
+.first-header img {
+  width: 14em;
 }
 
 .menu-icon {
