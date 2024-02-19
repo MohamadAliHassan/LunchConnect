@@ -12,11 +12,9 @@ const achievementSchema = new mongoose.Schema({
     required: true
   },
   reward: {
-    type: {
-        type: String,
-        enum: ["points", "giftCard"],
-        required: false
-    }
+    type: String,
+    enum: ["points", "giftCard"],
+    required: false
   },
   amount: {
     type: Number,

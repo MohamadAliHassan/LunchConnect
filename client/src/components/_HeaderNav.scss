@@ -1,8 +1,15 @@
-.hamburger-menu {
+.hamburger-menu,
+.first-header {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   padding: 20px;
+}
+
+
+.lunchconnect-logo {
+  width: 14em;
+  margin-left: 2em;
 }
 
 .menu-icon {
