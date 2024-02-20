@@ -51,6 +51,9 @@ export const DailyMissions = () => {
             <small>Goal: Eat 3 meals</small>
           </div>
         </div>
+        {isModalOpen && (
+          <Modal handleClose={handleCloseModal} />
+        )}
       </div>
     </>
   );
