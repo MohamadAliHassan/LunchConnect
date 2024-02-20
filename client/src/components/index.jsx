@@ -1,2 +1,2 @@
 //Den här filen är avsedd för att exportera färdiga komponenter.
-export { Header } from "./Header";
+export { Navbar } from "./Navbar";

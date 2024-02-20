@@ -1,0 +1,50 @@
+@use "../../Sass/abstract/variables" as *;
+.Leaderboard-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.filter {
+  display: flex;
+  justify-content: end;
+  width: 80%;
+  cursor: pointer;
+}
+.leaderboard-overlay {
+  background-color: $darkAccent;
+  margin: 2rem 0;
+}
+.leaderboard-desc {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 0 auto;
+}
+.leaderboard-bio {
+  padding: 2.4rem 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.icons-fa {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+}
+.icons-fa small {
+  margin: 5px 0;
+}
+.leader-score {
+  font-size: 25px;
+}
+.leaderboard-image {
+  width: 5rem;
+}
+.leaderboard-name {
+  font-size: 20px;
+}
