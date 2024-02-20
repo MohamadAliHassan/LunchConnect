@@ -41,6 +41,10 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  points: {
+    type: Number,
+    required: true,
+  },
 });
 
 const User = mongoose.model("User", userSchema);

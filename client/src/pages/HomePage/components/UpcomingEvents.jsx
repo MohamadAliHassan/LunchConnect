@@ -1,13 +1,19 @@
 import { FaArrowRight } from "react-icons/fa6";
 import event from "../assets/event.jpg";
+import { useNavigate } from "react-router-dom";
 
 export const UpcomingEvents = () => {
+  const navigate = useNavigate();
   return (
     <>
       <div className="eventsContainer">
         <section className="nav-events">
           <p>Upcoming events</p>
-          <FaArrowRight size={26} />
+          <FaArrowRight
+            size={26}
+            onClick={() => navigate("/evenspage")}
+            style={{ cursor: "pointer" }}
+          />
         </section>
         <div className="upcomingContainer">
           <section className="upcomingEvent">

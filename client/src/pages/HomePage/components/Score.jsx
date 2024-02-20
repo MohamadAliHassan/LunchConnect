@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { CiStar } from "react-icons/ci";
 import dummyImg from "../assets/dummyIMG.png";
 import { useNavigate } from "react-router-dom";
@@ -16,7 +16,7 @@ export const Score = () => {
         <h2>Welcome, User</h2>
         <div className="score-board">
           <CiStar size={50} style={{ margin: "0 20px" }} />
-          <p>125 points</p>
+          <p> 12 points</p>
         </div>
         <button className="Lunch-btn" onClick={handleNav}>
           Lunch
