@@ -684,6 +684,10 @@ form {
   border: none;
 }
 
+close-modal-btn {
+  background-color: #51596a;
+}
+
 .button-container button:hover {
   background-color: #0056b3;
 }

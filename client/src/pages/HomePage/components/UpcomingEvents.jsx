@@ -11,7 +11,7 @@ export const UpcomingEvents = () => {
           <p>Upcoming events</p>
           <FaArrowRight
             size={26}
-            onClick={() => navigate("/evenspage")}
+            onClick={() => navigate("/EvensPage")}
             style={{ cursor: "pointer" }}
           />
         </section>
