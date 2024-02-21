@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 export const Modal = ({ handleClose }) => {
   return (
@@ -19,4 +20,8 @@ export const Modal = ({ handleClose }) => {
       </div>
     </>
   );
+};
+
+Modal.propTypes = {
+  handleClose: PropTypes.object.isRequired,
 };
