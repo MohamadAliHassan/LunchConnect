@@ -3,6 +3,7 @@ import express from "express";
 import { RegisterUser } from "../controllers/RegisterUser.js";
 import { loginHandler } from "../controllers/LoginUser.js";
 import { fetchAllAchievements } from "../controllers/fetchAchievements.js";
+import insertDummyData from "../controllers/TestUser.js";
 
 const router = express.Router();
 
