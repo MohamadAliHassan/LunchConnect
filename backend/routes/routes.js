@@ -1,13 +1,15 @@
 import express from "express";
 
 import { RegisterUser } from "../controllers/RegisterUser.js";
+import { loginHandler } from "../controllers/LoginUser.js";
 import { fetchAllAchievements } from "../controllers/fetchAchievements.js";
-import insertAchievements from "../controllers/achievementSeeder.js"
 
 const router = express.Router();
 
-router.get("/achievements", fetchAllAchievements);
+router.post("/register", RegisterUser);
 
-router.post("/test", RegisterUser);
+router.post("/login", loginHandler)
+
+router.get("/achievements", fetchAllAchievements);
 
 export default router;
