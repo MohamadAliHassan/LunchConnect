@@ -1,4 +1,6 @@
+import bcrypt from "bcrypt";
 import User from "../models/user.model.js";
+
 const skills = [
   {
     username: "superuser",
@@ -17,9 +19,13 @@ const skills = [
 
 const insertDummyData = async () => {
   try {
-    console.log("inserting")
+    console.log("inserting");
     for (const skill of skills) {
-      const newUser = new User(skill);
+      const { username, password } = skill;
+
+      const hashedPassword = await bcrypt.hash(password, 10);
+
+      const newUser = new User({ username, password: hashedPassword, ...skill });
 
       await newUser.save();
       console.log("User created:", newUser);
@@ -28,4 +34,17 @@ const insertDummyData = async () => {
     console.error("Error creating user:", error);
   }
 };
-export default insertDummyData;
+
+const hashPasswords = async () => {
+  try {
+    for (const skill of skills) {
+      const hashedPassword = await bcrypt.hash(skill.password, 10);
+      skill.password = hashedPassword;
+    }
+    await insertDummyData();
+  } catch (error) {
+    console.error("Error hashing passwords:", error);
+  }
+};
+
+export default hashPasswords;
