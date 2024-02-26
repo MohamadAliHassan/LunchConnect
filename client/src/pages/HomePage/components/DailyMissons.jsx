@@ -2,12 +2,23 @@ import { FaPersonRunning } from "react-icons/fa6";
 import { LuPodcast } from "react-icons/lu";
 import { CiStar } from "react-icons/ci";
 import { MdOutlineEmojiFoodBeverage } from "react-icons/md";
-export const DailyMissons = () => {
+import { Modal } from "./Modal";
+import { useState } from "react";
+
+export const DailyMissions = () => {
+  const [isModalOpen, setisModalOpen] = useState(false);
+
+  const handleModalOpen = () => {
+    setisModalOpen(true);
+  };
+  const handleCloseModal = () => {
+    setisModalOpen(false);
+  };
   return (
     <>
       <p>Daily mission for today</p>
       <div className="mission-container">
-        <div className="mission-task">
+        <div className="mission-task" onClick={() => handleModalOpen()}>
           <div className="overlay">
             <FaPersonRunning size={25} style={{ margin: "0 auto" }} />
             <div className="score-mission">
@@ -40,6 +51,9 @@ export const DailyMissons = () => {
             <small>Goal: Eat 3 meals</small>
           </div>
         </div>
+        {isModalOpen && (
+          <Modal handleClose={handleCloseModal} />
+        )}
       </div>
     </>
   );

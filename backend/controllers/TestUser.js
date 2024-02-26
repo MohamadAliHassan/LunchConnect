@@ -19,6 +19,8 @@ const skills = [
 
 const insertDummyData = async () => {
   try {
+    for (const skill of skills) {
+      const newUser = new User(skill);
     console.log("inserting");
     for (const skill of skills) {
       const { username, password } = skill;
@@ -34,6 +36,7 @@ const insertDummyData = async () => {
     console.error("Error creating user:", error);
   }
 };
+export default insertDummyData;
 
 const hashPasswords = async () => {
   try {

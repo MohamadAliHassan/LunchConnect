@@ -9,7 +9,7 @@ const router = express.Router();
 
 router.post("/register", RegisterUser);
 
-router.post("/login", loginHandler)
+router.post("/login", loginHandler);
 
 router.get("/achievements", fetchAllAchievements);
 
