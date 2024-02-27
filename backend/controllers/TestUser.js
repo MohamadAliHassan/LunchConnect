@@ -6,9 +6,7 @@ const skills = [
     username: "superuser",
     password: "admin",
     fullName: "Super User",
-    skills: [
-      { skillName: "Administration", skillNumber: 5 }
-    ],
+    skills: [{ skillName: "Administration", skillNumber: 5 }],
     description: "Super admin of LunchConnect",
     company: "LunchConnect",
     position: "Super Admin",
@@ -20,15 +18,13 @@ const skills = [
 const insertDummyData = async () => {
   try {
     for (const skill of skills) {
-      const newUser = new User(skill);
-    console.log("inserting");
-    for (const skill of skills) {
       const { username, password } = skill;
-
       const hashedPassword = await bcrypt.hash(password, 10);
-
-      const newUser = new User({ username, password: hashedPassword, ...skill });
-
+      const newUser = new User({
+        username,
+        password: hashedPassword,
+        ...skill,
+      });
       await newUser.save();
       console.log("User created:", newUser);
     }
@@ -36,7 +32,6 @@ const insertDummyData = async () => {
     console.error("Error creating user:", error);
   }
 };
-export default insertDummyData;
 
 const hashPasswords = async () => {
   try {
@@ -50,4 +45,4 @@ const hashPasswords = async () => {
   }
 };
 
-export default hashPasswords;
+export default { insertDummyData, hashPasswords };

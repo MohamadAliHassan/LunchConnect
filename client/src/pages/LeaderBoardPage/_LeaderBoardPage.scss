@@ -48,3 +48,35 @@
 .leaderboard-name {
   font-size: 20px;
 }
+
+// Filter modal css
+.filter-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: $darkAccent;
+  width: 300px;
+  padding: 20px;
+  border-radius: 8px;
+  z-index: 1000;
+}
+
+.modalContent {
+  text-align: center;
+}
+
+.select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+.filterModal-btn {
+  color: #fff;
+  font-weight: 500;
+  font-size: 1rem;
+  margin: 10px 0;
+}

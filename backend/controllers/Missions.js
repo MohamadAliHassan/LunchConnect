@@ -1,3 +1,5 @@
+import Mission from "../models/missions.model.js";
+
 const missions = [
   {
     requirement: [
@@ -33,3 +35,17 @@ const missions = [
     description: "Listen to two of your desired podcast for a week",
   },
 ];
+
+const insertMissions = async () => {
+  try {
+    for (const missionData of missions) {
+      const newMission = new Mission(missionData);
+
+      await newMission.save();
+    }
+    console.log("Missions inserted successfully");
+  } catch (error) {
+    console.error("Error inserting missions:", error);
+  }
+};
+export default insertMissions;
