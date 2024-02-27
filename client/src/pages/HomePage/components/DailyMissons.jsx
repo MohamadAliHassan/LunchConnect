@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import fetchHelper from "../../../utils/fetchHelper.js";
 import { Modal } from "./Modal.jsx";
+import { Mission } from "./Mission.jsx";
 
 export const DailyMissions = () => {
   const [missions, setMissions] = useState([]);
@@ -12,7 +13,12 @@ export const DailyMissions = () => {
       try {
         const response = await fetchHelper("/api/Missions", "GET");
         const data = await response.json();
-        setMissions(data);
+
+        console.log(response);
+        console.log(data);
+        if (response.ok) {
+          setMissions(data);
+        }
       } catch (error) {
         console.error("Error fetching missions:", error);
       }
@@ -35,22 +41,11 @@ export const DailyMissions = () => {
       <p>Daily mission for today</p>
       <div className="mission-container">
         {missions.map((mission) => (
-          <div
-            className="mission-task"
-            key={mission.id}
-            onClick={() => handleModalOpen(mission)}
-          >
-            <div className="overlay">
-              <img
-                src={`http://localhost:5173/src/pages/HomePage/assets/${mission.id}.jpg`}
-                alt="image"
-              />
-              <div className="score-mission">
-                <small>{mission.score}</small>
-              </div>
-              <small>Steps: {mission.steps}/1000</small>
-            </div>
-          </div>
+          <Mission
+            key={mission._id}
+            mission={mission}
+            onClick={handleModalOpen}
+          />
         ))}
       </div>
       {isModalOpen && (

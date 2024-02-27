@@ -27,21 +27,34 @@
 // Daily mission section
 .mission-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 3fr));
-  max-width: auto;
+  grid-template-columns: repeat(3, 1fr);
+  min-width: 500px;
+  max-width: 700px;
+  margin: 0 auto;
 }
 .mission-task {
-  padding: 0.5rem 1.5rem;
   text-align: center;
+  width: 50%;
+  height: 15em;
+  margin: 0 auto;
 }
 .overlay {
   background-color: $darkAccent;
   padding: 1.2rem 1rem;
   border-radius: 8px;
+  margin: 0 auto;
+  width: 10em;
+  height: 10em;
   display: flex;
   flex-direction: column;
-  cursor: pointer;
+  cursor: pointer; 
 }
+
+.overlay img {
+  width: 60%;
+  margin: 0 auto;
+}
+
 .score-mission {
   margin: 0 auto;
 }
