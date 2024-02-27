@@ -1,30 +1,37 @@
-import { useState, useEffect } from "react";
+import { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { Step1 } from "./components/Step1";
 import { Step2 } from "./components/Step2";
 import { Step3 } from "./components/Step3";
 import { Step4 } from "./components/Step4";
 import { FinalStep } from "./components/FinalStep";
+import { TokenContext } from "../../App";
+
+import fetchHelper from "../../utils/fetchHelper";
 
 export const CreateProfilePage = () => {
+  const { token, setToken } = useContext(TokenContext);
   const navigate = useNavigate();
   const [step, setStep] = useState(1);
   const [formData, setFormData] = useState({});
-
-  useEffect(() => {
-    const existingData = JSON.parse(localStorage.getItem("profileData")) || {};
-    setFormData(existingData);
-  }, []);
 
   const handleNext = (data) => {
     setFormData((prevData) => ({ ...prevData, ...data }));
     setStep(step + 1);
   };
 
-  const handleConfirm = () => {
-    console.log("Profile successfully created, data:", formData);
-    localStorage.setItem("profileData", JSON.stringify(formData));
-    navigate("/home");
+  const handleConfirm = async () => {
+    try {
+      const response = await fetchHelper("/user", "put", formData);
+
+      const data = await response.json();
+      if (response.ok) {
+        console.log(data);
+        console.log(response);
+      }
+    } catch (error) {
+      console.error("Error updating profile:", error);
+    }
   };
 
   const handlePrev = () => {

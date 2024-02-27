@@ -21,7 +21,8 @@ export const Step1 = ({ onNext }) => {
   };
 
   const handleNext = () => {
-    onNext({ profilePicture, fullName });
+    localStorage.setItem("profilePicture", profilePicture);
+    onNext({ fullName });
   };
 
   return (

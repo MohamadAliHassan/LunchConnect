@@ -1,24 +1,24 @@
 // fetchHelper.js
 
-const fetchHelper = async (url, method, body = null) => {
-  try {
-    const response = await fetch(url, {
-      method,
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: body ? JSON.stringify(body) : null,
-    });
+import sessionService from "./sessionService";
 
-    if (!response.ok) {
-      throw new Error(`HTTP error! Status: ${response.status}`);
-    }
+export default function fetchHelper(url, method, body) {
+  const fetchOptions = {
+    method,
+    headers: { "Content-Type": "application/json" },
+  };
 
-    return response;
-  } catch (error) {
-    console.error("Error in fetchHelper:", error);
-    throw error;
+  if (method.toLowerCase() !== "get") {
+    fetchOptions.body = JSON.stringify(body);
   }
-};
 
-export default fetchHelper;
+  const token = sessionService.getToken();
+
+  console.log(token)
+
+  if (token !== null) {
+    fetchOptions.headers.authorization = `${token}`;
+  }
+
+  return fetch("/api" + url, fetchOptions);
+}

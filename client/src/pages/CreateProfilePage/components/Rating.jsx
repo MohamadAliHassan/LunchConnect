@@ -50,7 +50,7 @@ export const Rating = ({
 Rating.propTypes = {
   numOfStars: PropTypes.number,
   rating: PropTypes.number.isRequired,
-  onRatingChange: PropTypes.func.isRequired,
+  onRatingChange: PropTypes.func,
   editable: PropTypes.bool.isRequired,
 };
 // När du importerar funktionen ange prop numOfStar efter closing tag. Ange sedan antal stjärnor du önskar dig.

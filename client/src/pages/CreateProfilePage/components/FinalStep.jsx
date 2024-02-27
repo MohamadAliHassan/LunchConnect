@@ -34,9 +34,9 @@ export const FinalStep = ({ formData, onConfirm, onPrev }) => {
             <ul>
               {formData.skills.map((skill, index) => (
                 <li className="overview-rating" key={index}>
-                  <label>{skill.name}</label>
+                  <label>{skill.skillName}</label>
                   <Rating
-                    rating={skill.rating}
+                    rating={skill.skillNumber}
                     numOfStars={5}
                     editable={false}
                   />
@@ -55,10 +55,10 @@ export const FinalStep = ({ formData, onConfirm, onPrev }) => {
         )}
       </div>
 
-      <button className="profile-next" onClick={handleConfirm}>
+      <button className="createprofile-next" onClick={handleConfirm}>
         Confirm
       </button>
-      <button className="profile-back" onClick={onPrev}>
+      <button className="createprofile-back" onClick={onPrev}>
         Back
       </button>
     </>
