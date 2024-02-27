@@ -14,6 +14,7 @@ const skills = [
     position: "Super Admin",
     points: 0,
     role: "superadmin",
+    profileCompleted: false,
   },
 ];
 
@@ -21,22 +22,22 @@ const insertDummyData = async () => {
   try {
     for (const skill of skills) {
       const newUser = new User(skill);
-    console.log("inserting");
-    for (const skill of skills) {
-      const { username, password } = skill;
+      console.log("inserting");
+      for (const skill of skills) {
+        const { username, password } = skill;
 
-      const hashedPassword = await bcrypt.hash(password, 10);
+        const hashedPassword = await bcrypt.hash(password, 10);
 
-      const newUser = new User({ username, password: hashedPassword, ...skill });
+        const newUser = new User({ username, password: hashedPassword, ...skill });
 
-      await newUser.save();
-      console.log("User created:", newUser);
+        await newUser.save();
+        console.log("User created:", newUser);
+      }
     }
   } catch (error) {
     console.error("Error creating user:", error);
   }
 };
-export default insertDummyData;
 
 const hashPasswords = async () => {
   try {

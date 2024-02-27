@@ -1,8 +1,10 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { FaLinkedin } from "react-icons/fa";
 import { FaGoogle } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
+
 import fetchHelper from "../../../utils/fetchHelper";
+
 export const RegisterForm = () => {
   const navigate = useNavigate();
   const [username, setUsername] = useState("");
@@ -26,9 +28,13 @@ export const RegisterForm = () => {
     try {
       const response = await fetchHelper("/api/register", "POST", userData);
       const data = await response.json();
-      setServerMsg(data);
+
+      if (response.ok) {
+        setServerMsg(data);
+        navigate("/login");
+      }
     } catch (error) {
-      console.error("Error creating user:", error);
+      setServerMsg("Error creating user:", error);
     }
   }
 
