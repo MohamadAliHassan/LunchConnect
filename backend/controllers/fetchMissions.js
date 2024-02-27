@@ -1,4 +1,4 @@
-import Mission from "../models/mission.model.js";
+import Mission from "../models/missions.model.js";
 
 export const fetchAllMissions = async (req, res) => {
   try {
