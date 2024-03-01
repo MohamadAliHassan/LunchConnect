@@ -38,7 +38,7 @@ export const Loginform = () => {
         if (userResponse.ok) {
           const userData = await userResponse.json();
           console.log("User data:", userData);
-          if (userData.profileCompleted) {
+          if (userData.user.profileCompleted) {
             navigate("/home");
           } else {
             navigate("/createprofile");
