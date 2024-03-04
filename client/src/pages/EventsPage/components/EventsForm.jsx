@@ -1,6 +1,8 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 export const EventsForm = () => {
+  const navigate = useNavigate();
   return (
     <>
       <div className="eventcontainer">
@@ -29,7 +31,9 @@ export const EventsForm = () => {
         </div>
         <div className="Event-btns">
           <button className="request-event">Request</button>
-          <button className="cancel-event">Cancel</button>
+          <button className="cancel-event" onClick={() => navigate(-1)}>
+            Cancel
+          </button>
         </div>
       </div>
     </>

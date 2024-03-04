@@ -14,8 +14,6 @@ export default function fetchHelper(url, method, body) {
 
   const token = sessionService.getToken();
 
-  console.log(token)
-
   if (token !== null) {
     fetchOptions.headers.authorization = `${token}`;
   }

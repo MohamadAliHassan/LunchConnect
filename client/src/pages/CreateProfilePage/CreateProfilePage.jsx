@@ -26,8 +26,7 @@ export const CreateProfilePage = () => {
 
       const data = await response.json();
       if (response.ok) {
-        console.log(data);
-        console.log(response);
+        navigate("/home");
       }
     } catch (error) {
       console.error("Error updating profile:", error);
