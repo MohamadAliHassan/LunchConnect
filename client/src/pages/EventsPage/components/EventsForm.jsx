@@ -1,6 +1,14 @@
-import React from "react";
-
+import { useState } from "react";
+import { EventsConfirmModal } from "./EventsConfirmModal";
 export const EventsForm = () => {
+  const [showConfirmModal, setshowConfirmModal] = useState(false);
+
+  const handleOpenConfirmModal = () => {
+    setshowConfirmModal(true);
+  };
+  const handleCloseConfirmModal = () => {
+    setshowConfirmModal(false);
+  };
   return (
     <>
       <div className="eventcontainer">
@@ -28,10 +36,16 @@ export const EventsForm = () => {
           </div>
         </div>
         <div className="Event-btns">
-          <button className="request-event">Request</button>
+          <button className="request-event" onClick={handleOpenConfirmModal}>
+            Request
+          </button>
           <button className="cancel-event">Cancel</button>
         </div>
       </div>
+      <EventsConfirmModal
+        handleCloseConfirmModal={handleCloseConfirmModal}
+        showConfirmModal={showConfirmModal}
+      />
     </>
   );
 };

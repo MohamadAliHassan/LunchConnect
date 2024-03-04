@@ -2,6 +2,8 @@ import express from "express";
 import router from "./routes/routes.js";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
+import { Server } from "socket.io";
+import { createServer } from "node:http";
 
 dotenv.config();
 
@@ -14,7 +16,8 @@ const app = express();
 app.use(express.json());
 const port = 3000;
 
-app.use("/api", router);
+// Initialize socket
+const server = app.use("/api", router);
 
 app.listen(port, () => {
   console.log(`Server is running on port http://localhost:${port}`);
