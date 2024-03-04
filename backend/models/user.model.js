@@ -50,9 +50,19 @@ const userSchema = new mongoose.Schema({
     enum: ["user", "admin", "partner", "superadmin"],
     required: true,
   },
-  profileCompleted : {
+  profileCompleted: {
     type: Boolean,
     required: true,
+  },
+  friends: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'User'
+    }
+  ],
+  location: {
+    country: String,
+    city: String
   }
 });
 
