@@ -3,15 +3,15 @@ import User from "../models/user.model.js";
 
 const skills = [
   {
-    username: "superuser",
-    password: "admin",
-    fullName: "Super User",
-    skills: [{ skillName: "Administration", skillNumber: 5 }],
-    description: "Super admin of LunchConnect",
-    company: "LunchConnect",
-    position: "Super Admin",
+    username: "elonmusk",
+    password: "earthisnotflat",
+    fullName: "Elon Musk",
+    skills: [{ skillName: "Rocket Science", skillNumber: 1 }],
+    description: "i am very rich yes and autistic",
+    company: "SpaceX, Tesla, X, The Boring Company",
+    position: "the motherfucking boss",
     points: 0,
-    role: "superadmin",
+    role: "user",
   },
 ];
 
@@ -33,7 +33,7 @@ const insertDummyData = async () => {
   }
 };
 
-const hashPasswords = async () => {
+export const hashPasswords = async () => {
   try {
     for (const skill of skills) {
       const hashedPassword = await bcrypt.hash(skill.password, 10);
@@ -44,5 +44,3 @@ const hashPasswords = async () => {
     console.error("Error hashing passwords:", error);
   }
 };
-
-export default { insertDummyData, hashPasswords };

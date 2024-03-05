@@ -5,27 +5,42 @@ import { ChatBox } from "./components/ChatBox";
 import { Message } from "./components/Message";
 import io from "socket.io-client";
 
-export const ChatPage = () => {
-  const socket = io("http://localhost:3000");
+const socket = io("http://localhost:3000"); // Replace with your server URL
 
-  const [message, setMessage] = useState([]);
+export const ChatPage = () => {
+  const [messages, setMessages] = useState([]);
   const [messageInput, setMessageInput] = useState("");
 
   useEffect(() => {
-    socket.on("message", (message) => {
-      setMessage([...message, message]);
+    // Listen for incoming messages from the server
+    socket.on("NEW_MESSAGE", (data) => {
+      // Update UI with the new message
+      setMessages((prevMessages) => [...prevMessages, data]);
     });
 
     return () => {
-      socket.off("message");
+      socket.off("NEW_MESSAGE");
     };
   }, []);
+
+  // Function to send message to the server
+  const sendMessage = () => {
+    // Emit the message to the server
+    socket.emit("MESSAGE_SEND", { message: messageInput });
+
+    // Clear the message input
+    setMessageInput("");
+  };
 
   return (
     <>
       <HeaderChat />
-      {/* <ChatBox /> */}
-      <Message messageInput={messageInput} setMessageInput={setMessageInput} />
+      <ChatBox messages={messages} />
+      <Message
+        messageInput={messageInput}
+        setMessageInput={setMessageInput}
+        sendMessage={sendMessage}
+      />
       <LunchModal />
     </>
   );
