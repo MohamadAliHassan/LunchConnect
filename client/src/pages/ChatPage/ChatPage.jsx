@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { HeaderChat } from "./components/HeaderChat";
 import { LunchModal } from "./components/LunchModal";
-// import { ChatBox } from "./components/ChatBox";
+import { ChatBox } from "./components/ChatBox";
 import { Message } from "./components/Message";
 import io from "socket.io-client";
 
