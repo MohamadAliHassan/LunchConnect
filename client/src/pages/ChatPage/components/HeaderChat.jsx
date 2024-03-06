@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { FaArrowLeft } from "react-icons/fa6";
 import { MdFastfood } from "react-icons/md";
 import { LunchModal } from "./LunchModal";
@@ -14,13 +15,14 @@ export const HeaderChat = () => {
     setShowLunchModal(false);
   };
 
+  const navigate = useNavigate();
   const storedData = JSON.parse(localStorage.getItem("profileData")) || {};
   const { profilePicture } = storedData;
 
   return (
     <>
       <div className="Header-chat">
-        <FaArrowLeft size={90} />
+        <FaArrowLeft size={40} onClick={() => navigate(-1)} />
         <div className="bio">
           <img src={profilePicture} alt="Img" className="profile-img" />
           <p>Stefan</p>

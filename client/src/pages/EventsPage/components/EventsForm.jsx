@@ -1,6 +1,9 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { EventsConfirmModal } from "./EventsConfirmModal";
+
 export const EventsForm = () => {
+  const navigate = useNavigate();
   const [showConfirmModal, setshowConfirmModal] = useState(false);
 
   const handleOpenConfirmModal = () => {
@@ -39,7 +42,9 @@ export const EventsForm = () => {
           <button className="request-event" onClick={handleOpenConfirmModal}>
             Request
           </button>
-          <button className="cancel-event">Cancel</button>
+          <button className="cancel-event" onClick={() => navigate(-1)}>
+            Cancel
+          </button>
         </div>
       </div>
       <EventsConfirmModal

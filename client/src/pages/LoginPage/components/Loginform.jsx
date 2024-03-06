@@ -5,6 +5,7 @@ import { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 
 import { TokenContext } from "../../../App";
+import fetchHelper from "../../../utils/fetchHelper";
 
 export const Loginform = () => {
   const { token, setToken } = useContext(TokenContext);
@@ -23,18 +24,26 @@ export const Loginform = () => {
     };
 
     try {
-      const response = await fetch("/api/login", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(userData),
-      });
+      const response = await fetchHelper("/login", "POST", userData);
 
       const data = await response.json();
       if (response.ok) {
         setToken(data.token);
-        navigate("/home");
+
+        console.log("fetching user");
+        const userResponse = await fetchHelper("/user", "get");
+
+        console.log(userResponse);
+
+        if (userResponse.ok) {
+          const userData = await userResponse.json();
+          console.log("User data:", userData);
+          if (userData.user.profileCompleted) {
+            navigate("/home");
+          } else {
+            navigate("/createprofile");
+          }
+        }
       } else {
         setServerError(data.error);
         console.error("Inloggning misslyckades");

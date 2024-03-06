@@ -11,22 +11,26 @@ const skills = [
     company: "SpaceX, Tesla, X, The Boring Company",
     position: "the motherfucking boss",
     points: 0,
-    role: "user",
+    role: "superadmin",
+    profileCompleted: false,
   },
 ];
 
 const insertDummyData = async () => {
   try {
     for (const skill of skills) {
-      const { username, password } = skill;
-      const hashedPassword = await bcrypt.hash(password, 10);
-      const newUser = new User({
-        username,
-        password: hashedPassword,
-        ...skill,
-      });
-      await newUser.save();
-      console.log("User created:", newUser);
+      const newUser = new User(skill);
+      console.log("inserting");
+      for (const skill of skills) {
+        const { username, password } = skill;
+
+        const hashedPassword = await bcrypt.hash(password, 10);
+
+        const newUser = new User({ username, password: hashedPassword, ...skill });
+
+        await newUser.save();
+        console.log("User created:", newUser);
+      }
     }
   } catch (error) {
     console.error("Error creating user:", error);

@@ -11,7 +11,7 @@ const privateKey = fs.readFileSync(keysDir + "private.pem");
 const publicKey = fs.readFileSync(keysDir + "public.pem");
 
 function createToken(payload) {
-  return Jwt.sign(payload, privateKey, { algorithm: "RS256" });
+  return Jwt.sign(payload, privateKey, { algorithm: "RS256", expiresIn: "15d" });
 }
 
 function validateToken(token) {

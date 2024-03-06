@@ -5,7 +5,7 @@ import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
-import { FaStar } from "react-icons/fa";
+import { FaStar, FaArrowLeft } from "react-icons/fa";
 
 const style = {
   position: "absolute",
@@ -24,6 +24,7 @@ const Achievement = ({ achievement }) => {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
+  console.log(achievement);
   return (
     <li>
       <Button onClick={handleOpen}>

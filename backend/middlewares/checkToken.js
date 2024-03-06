@@ -2,11 +2,9 @@ import jwtUtil from "../utils/jwtUtil.js";
 
 export function checkToken(req, res, next) {
   const token = req.headers.authorization;
-
   if (token) {
     try {
       const payload = jwtUtil.validateToken(token.replace("Bearer ", ""));
-
       if (payload) {
         res.locals.jwtPayload = payload;
       }
