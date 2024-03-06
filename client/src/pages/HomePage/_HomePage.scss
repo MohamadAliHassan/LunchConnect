@@ -34,7 +34,7 @@
 }
 .mission-task {
   text-align: center;
-  width: 50%;
+  // width: 50%;
   height: 15em;
   margin: 0 auto;
 }
@@ -47,14 +47,16 @@
   height: 10em;
   display: flex;
   flex-direction: column;
-  cursor: pointer; 
+  cursor: pointer;
 }
 
 .overlay img {
-  width: 60%;
+  width: 55%;
   margin: 0 auto;
 }
-
+.icons-image {
+  filter: invert(100);
+}
 .score-mission {
   margin: 0 auto;
 }

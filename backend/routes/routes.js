@@ -5,6 +5,7 @@ import { loginHandler } from "../controllers/LoginUser.js";
 import { fetchAllAchievements } from "../controllers/fetchAchievements.js";
 import { fetchAllMissions } from "../controllers/fetchMissions.js";
 import hashPasswords from "../controllers/TestUser.js";
+import fetchCompletedUsers from "../controllers/fetchUsers.js";
 
 const router = express.Router();
 
@@ -14,5 +15,6 @@ router.post("/login", loginHandler);
 
 router.get("/achievements", fetchAllAchievements);
 router.get("/Missions", fetchAllMissions);
+router.get("/users", fetchCompletedUsers);
 
 export default router;

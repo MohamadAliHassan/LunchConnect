@@ -17,6 +17,7 @@ app.use(express.json());
 const port = 3000;
 
 // Initialize socket
+
 const server = app.use("/api", router);
 
 app.listen(port, () => {

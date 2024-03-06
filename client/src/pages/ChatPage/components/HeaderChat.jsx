@@ -20,7 +20,7 @@ export const HeaderChat = () => {
   return (
     <>
       <div className="Header-chat">
-        <FaArrowLeft size={90} />
+        <FaArrowLeft size={45} />
         <div className="bio">
           <img src={profilePicture} alt="Img" className="profile-img" />
           <p>Stefan</p>

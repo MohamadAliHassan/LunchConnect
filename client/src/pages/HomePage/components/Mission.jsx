@@ -5,11 +5,13 @@ export const Mission = ({ mission, onClick }) => {
     <div
       className="mission-task"
       key={mission._id}
-      onClick={() => onClick(mission)}>
+      onClick={() => onClick(mission)}
+    >
       <div className="overlay">
         <img
           src={`http://localhost:5173/src/pages/HomePage/assets/${mission._id}.png`}
           alt="image"
+          className="icons-image"
         />
         <div className="score-mission">
           <small>{mission.points}</small>
