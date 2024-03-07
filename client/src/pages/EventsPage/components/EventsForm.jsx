@@ -9,6 +9,7 @@ export const EventsForm = () => {
   const handleCloseConfirmModal = () => {
     setshowConfirmModal(false);
   };
+  const navigate = useNavigate();
   return (
     <>
       <div className="eventcontainer">
@@ -36,6 +37,10 @@ export const EventsForm = () => {
           </div>
         </div>
         <div className="Event-btns">
+          <button className="request-event">Request</button>
+          <button className="cancel-event" onClick={() => navigate(-1)}>
+            Cancel
+          </button>
           <button className="request-event" onClick={handleOpenConfirmModal}>
             Request
           </button>

@@ -1,11 +1,17 @@
 import { FaArrowLeft } from "react-icons/fa";
 import DiryCoco from "../assets/dirtyCoco.jpg";
+import { useNavigate } from "react-router-dom";
 export const Lunches = () => {
+  const navigate = useNavigate();
   return (
     <>
       <div className="LunchesPage-container">
         <div className="icon-fa-left">
-          <FaArrowLeft size={45} />
+          <FaArrowLeft
+            size={45}
+            onClick={() => navigate(-1)}
+            style={{ cursor: "pointer" }}
+          />
         </div>
         <div className="lunch-section">
           <h3 className="lunches-text">Your Lunches</h3>

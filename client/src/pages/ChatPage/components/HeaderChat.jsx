@@ -1,9 +1,12 @@
+import React from "react";
+import { useNavigate } from "react-router-dom";
 import React, { useState } from "react";
 import { FaArrowLeft } from "react-icons/fa6";
 import { MdFastfood } from "react-icons/md";
 import { LunchModal } from "./LunchModal";
 
 export const HeaderChat = () => {
+  const navigate = useNavigate();
   const [showLunchModal, setShowLunchModal] = useState(false);
 
   const handleOpenLunchModal = () => {
@@ -20,7 +23,7 @@ export const HeaderChat = () => {
   return (
     <>
       <div className="Header-chat">
-        <FaArrowLeft size={45} />
+        <FaArrowLeft size={40} onClick={() => navigate(-1)} />
         <div className="bio">
           <img src={profilePicture} alt="Img" className="profile-img" />
           <p>Stefan</p>

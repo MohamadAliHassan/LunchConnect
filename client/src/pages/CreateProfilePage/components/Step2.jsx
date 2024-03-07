@@ -4,7 +4,7 @@ import { Rating } from "./Rating";
 
 export const Step2 = ({ onNext, onPrev }) => {
   const [skills, setSkills] = useState([]);
-  const [newSkill, setNewSkill] = useState({ name: "", rating: 0 });
+  const [newSkill, setNewSkill] = useState({ skillName: "", skillNumber: 0 });
 
   const handleSkillChange = (propertyName, value) => {
     setNewSkill((prevSkill) => ({ ...prevSkill, [propertyName]: value }));
@@ -12,7 +12,7 @@ export const Step2 = ({ onNext, onPrev }) => {
 
   const handleAddSkill = () => {
     setSkills((prevSkills) => [...prevSkills, newSkill]);
-    setNewSkill({ name: "", rating: 0 });
+    setNewSkill({ skillName: "", skillNumber: 0 });
   };
 
   const handleNext = () => {
@@ -35,15 +35,15 @@ export const Step2 = ({ onNext, onPrev }) => {
             Skill:
             <input
               type="text"
-              value={newSkill.name}
-              onChange={(e) => handleSkillChange("name", e.target.value)}
+              value={newSkill.skillName}
+              onChange={(e) => handleSkillChange("skillName", e.target.value)}
             />
           </label>
         </li>
         <li className="createprofile-staritem">
           <Rating
-            rating={newSkill.rating}
-            onRatingChange={(value) => handleSkillChange("rating", value)}
+            rating={newSkill.skillNumber}
+            onRatingChange={(value) => handleSkillChange("skillNumber", value)}
             numOfStars={5}
             editable={true}
           />
@@ -55,10 +55,14 @@ export const Step2 = ({ onNext, onPrev }) => {
         {skills.map((skill, index) => (
           <React.Fragment key={index}>
             <li className="createprofile-listitem">
-              <label>Skill: {skill.name}</label>
+              <label>Skill: {skill.skillName}</label>
             </li>
             <li className="createprofile-staritem">
-              <Rating rating={skill.rating} numOfStars={5} editable={false} />
+              <Rating
+                rating={skill.skillNumber}
+                numOfStars={5}
+                editable={false}
+              />
             </li>
           </React.Fragment>
         ))}

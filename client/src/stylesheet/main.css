@@ -216,7 +216,7 @@ form {
   text-align: center;
   width: 50%;
   height: 80%;
-  background-color: #51596a;
+  background-color: #263546;
 }
 
 @media only screen and (min-device-width: 320px) {
@@ -955,7 +955,8 @@ close-modal-btn {
 }
 
 .profile-container {
-  width: 60vw;
+  max-width: 850px;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -989,12 +990,13 @@ close-modal-btn {
   display: flex;
   flex-direction: row;
   list-style-type: none;
-  width: 60%;
+  width: 30em;
   margin: 0 auto;
 }
 
 .profile-achievements-list li {
   background-color: white;
+  min-width: 100px;
   width: 100px;
   height: 100px;
   margin: 0 auto;
@@ -1005,7 +1007,9 @@ close-modal-btn {
   display: flex;
   flex-direction: column;
   width: 50%;
+  max-width: 350px;
   height: 24em;
+  margin: 0 auto;
 }
 
 .profile-plans-wrap {
@@ -1034,8 +1038,9 @@ close-modal-btn {
 }
 
 .nav-events {
-  width: 100%;
+  width: 30em;
   text-align: left;
+  margin: 0 auto;
 }
 
 .nav-events p {

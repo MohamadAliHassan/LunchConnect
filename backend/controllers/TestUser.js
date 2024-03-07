@@ -12,6 +12,7 @@ const skills = [
     position: "Super Admin",
     points: 0,
     role: "superadmin",
+    profileCompleted: false,
   },
 ];
 

@@ -1,32 +1,41 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { FaLinkedin } from "react-icons/fa";
 import { FaGoogle } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
+
+import fetchHelper from "../../../utils/fetchHelper";
+
 export const RegisterForm = () => {
   const navigate = useNavigate();
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [rptPassword, setRptPassword] = useState("");
+  const [serverMsg, setServerMsg] = useState("");
 
   async function handleSubmit(e) {
     e.preventDefault();
 
-    console.log(
-      "Username: " +
-        username +
-        ", Password: " +
-        password +
-        ", Repeat: " +
-        rptPassword
-    );
     if (password !== rptPassword) {
       alert("Passwords do not match!");
       return;
     }
 
-    localStorage.setItem("profileData", JSON.stringify({ username, password }));
+    const userData = {
+      username,
+      password,
+    };
 
-    navigate("/createprofile");
+    try {
+      const response = await fetchHelper("/api/register", "POST", userData);
+      const data = await response.json();
+
+      if (response.ok) {
+        setServerMsg(data);
+        navigate("/login");
+      }
+    } catch (error) {
+      setServerMsg("Error creating user:", error);
+    }
   }
 
   return (
@@ -96,8 +105,7 @@ export const RegisterForm = () => {
               className="bold-txt"
               onClick={() => {
                 navigate("/login");
-              }}
-            >
+              }}>
               Sign in here
             </span>
           </p>
