@@ -2,7 +2,7 @@ import User from "../models/user.model.js";
 
 const fetchCompletedUsers = async (req, res) => {
   const payload = res.locals.jwtPayload;
-  console.log(payload);
+
   const currentUserId = payload.id;
   try {
     const users = await User.find({
@@ -10,7 +10,7 @@ const fetchCompletedUsers = async (req, res) => {
       profileCompleted: true,
     });
 
-    return users;
+    res.json(users);
   } catch (error) {
     console.error("Error fetching completed users:", error);
     throw error;

@@ -19,9 +19,9 @@ router.post("/login", loginHandler);
 
 router.get("/achievements", fetchAllAchievements);
 router.get("/Missions", fetchAllMissions);
-router.get("/users", fetchCompletedUsers);
 
 router.use(checkToken);
+router.get("/users", fetchCompletedUsers);
 
 router.put("/user", updateProfile);
 

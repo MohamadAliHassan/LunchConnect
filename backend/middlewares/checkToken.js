@@ -2,7 +2,6 @@ import jwtUtil from "../utils/jwtUtil.js";
 
 export function checkToken(req, res, next) {
   const token = req.headers.authorization;
-  console.log(token);
 
   if (token) {
     try {
