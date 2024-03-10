@@ -6,9 +6,10 @@ import { useNavigate } from "react-router-dom";
 
 import { TokenContext } from "../../../App";
 import fetchHelper from "../../../utils/fetchHelper";
+import { AuthContext } from "../../../context/AuthContext";
 
 export const Loginform = () => {
-  const { token, setToken } = useContext(TokenContext);
+  const { setAuthUser } = useContext(AuthContext);
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [serverError, setServerError] = useState("");
@@ -26,11 +27,10 @@ export const Loginform = () => {
     try {
       const response = await fetchHelper("/login", "POST", userData);
 
-      const data = await response.json();
       if (response.ok) {
-        setToken(data.token);
-
-        console.log("fetching user");
+        const data = await response.json();
+        setAuthUser(data.user);
+        localStorage.setItem("user", JSON.stringify(data.user));
         const userResponse = await fetchHelper("/user", "get");
 
         console.log(userResponse);

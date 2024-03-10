@@ -12,6 +12,7 @@ const publicKey = fs.readFileSync(keysDir + "public.pem");
 
 function createToken(payload) {
   return Jwt.sign(payload, privateKey, { algorithm: "RS256", expiresIn: "15d" });
+
 }
 
 function validateToken(token) {
