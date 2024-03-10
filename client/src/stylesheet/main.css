@@ -1020,6 +1020,46 @@ close-modal-btn {
   color: #fff;
 }
 
+.Confirm-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.center-modal {
+  background-color: #263546;
+  padding: 20px 40px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.center-modal p {
+  font-size: 1.3rem;
+}
+
+.center-modal h3 {
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.modal-buttons button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px auto;
+  color: #fff;
+  font-size: 20px;
+}
+
+.close-btn-modal {
+  background-color: #840202;
+}
+
 .settings-container {
   display: flex;
   flex-direction: column;
