@@ -10,7 +10,7 @@ export const UpcomingEvents = () => {
         <section className="nav-events">
           <p>Upcoming events</p>
           <FaArrowRight
-            size={26}
+            size={27}
             onClick={() => navigate("/add-event")}
             style={{ cursor: "pointer" }}
           />

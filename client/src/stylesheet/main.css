@@ -214,9 +214,10 @@ form {
   flex-direction: column;
   margin: 0 auto;
   text-align: center;
-  width: 50%;
-  height: 80%;
+  width: 55%;
+  height: 95%;
   background-color: #263546;
+  padding: 0 2rem;
 }
 
 @media only screen and (min-device-width: 320px) {
@@ -467,10 +468,9 @@ form {
   align-items: center;
   justify-content: center;
   text-align: center;
-  width: 80%;
-  max-width: 600px;
-  min-width: 500px;
-  height: 80%;
+  width: 97%;
+  max-width: 450px;
+  min-width: 350px;
   background-color: #51596a;
 }
 
@@ -479,6 +479,18 @@ form {
   flex-direction: row;
   justify-content: space-between;
   gap: 5px;
+}
+
+.network-listitem-container h3 {
+  font-size: 16px;
+}
+
+.network-listitem-container p {
+  font-size: 13px;
+}
+
+.network-list {
+  padding: 1rem 0;
 }
 
 .tab-button {
@@ -623,7 +635,7 @@ form {
 
 .nav-events {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
 }
 
@@ -645,7 +657,7 @@ form {
 .overlay-event {
   background-color: #263546;
   padding: 1rem 1rem;
-  width: 100%;
+  max-width: 12rem;
   display: flex;
   overflow: hidden;
   justify-content: flex-start;
@@ -658,7 +670,9 @@ form {
 }
 
 .description img {
-  width: 100%;
+  max-width: 10rem;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .description small {
@@ -754,7 +768,7 @@ close-modal-btn {
 }
 
 .lunchconnect-logo {
-  width: 14em;
+  width: 10em;
   margin-left: 2em;
 }
 
@@ -1065,14 +1079,17 @@ close-modal-btn {
   flex-direction: column;
   margin: 0 auto;
   text-align: center;
-  width: 50%;
-  height: 80%;
+  width: 70%;
   background-color: #51596a;
 }
 
 .settings-header {
   margin-top: 0.5em;
   margin-bottom: 0.5em;
+}
+
+.settings-header h1 {
+  font-size: 1.5rem;
 }
 
 .settings-header img {
@@ -1101,6 +1118,7 @@ close-modal-btn {
   width: 60%;
   height: 2.5em;
   margin: 0 auto;
+  outline: none;
 }
 
 #description-label {
@@ -1114,10 +1132,12 @@ close-modal-btn {
 }
 
 .settings-save-btn {
-  width: 30%;
+  width: 40%;
   margin: 0 auto;
   margin-top: 1em;
   margin-bottom: 1em;
+  text-align: center;
+  color: #fff;
 }
 
 .contacts-container {
@@ -1125,12 +1145,10 @@ close-modal-btn {
   flex-direction: column;
   margin: 0 auto;
   align-items: center;
+  height: 50dvh;
   justify-content: center;
   text-align: center;
-  width: 100%;
-  max-width: 800px;
-  min-width: 500px;
-  height: 80%;
+  width: 85%;
   background-color: #51596a;
 }
 
@@ -1141,9 +1159,9 @@ close-modal-btn {
 
 .contacts-listitem {
   background-color: #263546;
-  width: 35%;
+  width: 65%;
   max-width: 500px;
-  height: 6em;
+  height: 5em;
   margin: 0 auto;
   margin-bottom: 1em;
   padding: 15px;
@@ -1174,6 +1192,7 @@ close-modal-btn {
 
 .contacts-listitem-container h3 {
   margin-left: 1em;
+  font-size: 15px;
 }
 
 .Leaderboard-container {
@@ -1233,6 +1252,38 @@ close-modal-btn {
 
 .leaderboard-name {
   font-size: 20px;
+}
+
+.filter-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #263546;
+  width: 300px;
+  padding: 20px;
+  border-radius: 8px;
+  z-index: 1000;
+}
+
+.modalContent {
+  text-align: center;
+}
+
+.select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.filterModal-btn {
+  color: #fff;
+  font-weight: 500;
+  font-size: 1rem;
+  margin: 10px 0;
 }
 
 .LunchesPage-container {

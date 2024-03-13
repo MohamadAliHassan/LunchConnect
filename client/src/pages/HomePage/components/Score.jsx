@@ -16,7 +16,7 @@ export const Score = () => {
         <h2>Welcome, User</h2>
         <div className="score-board">
           <CiStar size={50} style={{ margin: "0 20px" }} />
-          <p> 12 points</p>
+          <p> 0 points</p>
         </div>
         <button className="Lunch-btn" onClick={handleNav}>
           Lunch
