@@ -1,9 +1,10 @@
 import User from "../models/user.model.js";
 
-const fetchCompletedUsers = async (req, res) => {
+export const fetchCompletedUsers = async (req, res) => {
   const payload = res.locals.jwtPayload;
 
   const currentUserId = payload.id;
+  console.log("Current user ID: ", currentUserId);
 
   try {
     const users = await User.find({
@@ -17,5 +18,3 @@ const fetchCompletedUsers = async (req, res) => {
     throw error;
   }
 };
-
-export default fetchCompletedUsers;

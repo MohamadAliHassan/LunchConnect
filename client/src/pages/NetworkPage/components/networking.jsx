@@ -14,11 +14,11 @@ export const Networking = () => {
   useEffect(() => {
     const fetchUser = async () => {
       try {
-        const response = await fetchHelper("/api/user", "GET");
+        const response = await fetchHelper("/users", "GET");
         const data = await response.json();
-        console.log(data);
         if (response.ok) {
           setUsers(data);
+          console.log(users);
         }
       } catch (error) {
         console.log("Error while fetching user", error);
@@ -31,9 +31,8 @@ export const Networking = () => {
     <div className="network-list-container">
       <p>Connect with other people:</p>
       <ul className="network-list">
-        {users.map((user) => (
-          <User key={user._id} user={user} />
-        ))}
+        {users.length > 0 &&
+          users.map((user) => <User key={user._id} user={user} />)}
       </ul>
     </div>
   );
