@@ -1,3 +1,4 @@
+import React from "react";
 import PropTypes from "prop-types";
 
 export const EventsConfirmModal = ({
@@ -12,9 +13,10 @@ export const EventsConfirmModal = ({
           <div className="center-modal">
             <h3>Are you sure?</h3>
             <p>
-              You have chosen the following details: {formData.title} on{" "}
-              {formData.date} at {formData.location} with a capacity of{" "}
-              {formData.capacity}.
+              You have chose this following date; in Stockholm at Sushi Yama
+              around 12.30pm You have chosen the following details:{" "}
+              {formData.title} on {formData.date} at {formData.location} with a
+              capacity of {formData.capacity}.
             </p>
             <div className="modal-buttons">
               <button onClick={handleCloseConfirmModal}>Yes</button>
