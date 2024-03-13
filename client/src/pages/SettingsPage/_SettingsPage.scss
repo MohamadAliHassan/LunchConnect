@@ -1,61 +1,67 @@
 @use "../../Sass/abstract/variables" as *;
 
 .settings-container {
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
-    text-align: center;
-    width: 50%;
-    height: 80%;
-    background-color: $secBackground;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  text-align: center;
+  width: 70%;
+  //   height: 80%;
+  background-color: $secBackground;
 }
 
 .settings-header {
-    margin-top: .5em;
-    margin-bottom: .5em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+.settings-header h1 {
+  font-size: 1.5rem;
 }
 
 .settings-header img {
-    width: 10em;
-    border-radius: 50%;
+  width: 10em;
+  border-radius: 50%;
 }
 
 .settings-main {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .settings-inputs {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 3fr));
-    list-style-type: none;
-    gap: 15px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 3fr));
+  list-style-type: none;
+  gap: 15px;
 }
 
 .settings-listitem {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .settings-listitem input {
-    width: 60%;
-    height: 2.5em;
-    margin: 0 auto;
+  width: 60%;
+  height: 2.5em;
+  margin: 0 auto;
+  outline: none;
 }
 
 #description-label {
-    margin-top: 1em;
+  margin-top: 1em;
 }
 
 #description {
-    width: 50%;
-    height: 8em;
-    margin: 0 auto;
+  width: 50%;
+  height: 8em;
+  margin: 0 auto;
 }
 
 .settings-save-btn {
-    width: 30%;
-    margin: 0 auto;
-    margin-top: 1em;
-    margin-bottom: 1em;
+  width: 40%;
+  margin: 0 auto;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  text-align: center;
+  color: $fontColor;
 }

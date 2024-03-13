@@ -1,253 +1,251 @@
 @use "../../Sass/abstract/variables" as *;
 
 .createprofile-container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  text-align: center;
+  width: 55%;
+  height: 95%;
+  background-color: $darkAccent;
+  padding: 0 2rem;
+}
+
+@media only screen and (min-device-width: 320px) {
+  .createprofile-header {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
+
+  .createprofile-pic {
+    margin-bottom: 2em;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .createprofile-pic label {
+    display: block;
+    width: 8em;
+    height: 3em;
+    line-height: 3em;
+    background-color: lightgray;
+    color: black;
+    border-radius: 20px;
+    margin: 0 auto;
+  }
+
+  .createprofile-img {
+    max-width: 10em;
+    margin: 0 auto;
+    margin-bottom: 1em;
+  }
+
+  .createprofile-next {
+    width: 10em;
+    margin: 0 auto;
+    margin-bottom: 2em;
+    color: white;
+  }
+
+  .createprofile-back {
+    width: 10em;
+    margin: 0 auto;
+    margin-bottom: 2em;
+    background-color: $secButton;
+    color: white;
+  }
+
+  .createprofile-description {
+    margin-bottom: 2em;
+  }
+
+  .createprofile-description label {
+    margin-bottom: 1em;
     display: flex;
     flex-direction: column;
     margin: 0 auto;
     text-align: center;
-    width: 50%;
-    height: 80%;
-    background-color: $darkAccent;
+  }
+
+  .createprofile-description textarea {
+    margin-top: 1em;
+    width: 15em;
+    margin: 0 auto;
+  }
+
+  .createprofile-listitem,
+  .createprofile-staritem {
+    list-style-type: none;
+  }
+
+  .createprofile-listitem label,
+  .createprofile-staritem label {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5em;
+  }
+
+  .createprofile-listitem label input,
+  .createprofile-staritem label input {
+    border: none;
+    background-color: #d3d3d3;
+    padding: 0.5em;
+    width: 70%;
+    font-weight: 700;
+    outline: none;
+    border-radius: 5px;
+    margin: 0 auto;
+    margin-bottom: 1em;
+    &::placeholder {
+      color: $lightAccent;
+    }
+  }
+
+  .five-stars {
+    list-style-type: none;
+    display: flex;
+    margin: 0 auto;
+  }
+
+  .five-stars li {
+    margin: 5px;
+  }
+
+  .createprofile-add {
+    color: white;
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+
+  hr.solid {
+    border-top: 3px solid #bbb;
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 1em;
+  }
+
+  .createprofile-staritem {
+    margin-bottom: 1em;
+  }
+
+  .overview-pic img {
+    width: 10em;
+    border-radius: 50%;
+  }
+
+  .overview-desc p {
+    font-size: 1.5em;
+  }
+
+  .overview-skills h2,
+  .overview-company h2,
+  .overview-desc h2 {
+    margin-bottom: 0.5em;
+  }
+
+  .overview-skills ul {
+    list-style-type: none;
+  }
+
+  .overview-rating {
+    margin-bottom: 1em;
+  }
+
+  .overview-rating label {
+    font-size: 1.5em;
+  }
+
+  .overview-company p {
+    font-size: 1.5em;
+  }
+
+  .createprofile-fullname label p {
+    font-weight: bold;
+  }
+
+  .createprofile-fullname label input {
+    border: none;
+    background-color: #d3d3d3;
+    padding: 0.5em 1em;
+    font-weight: 700;
+    outline: none;
+    border-radius: 5px;
+    margin-bottom: 1em;
+    &::placeholder {
+      color: $lightAccent;
+    }
+  }
+
+  .createprofile-description textarea {
+    border: none;
+    background-color: #d3d3d3;
+    padding: 0.5em;
+    width: 70%;
+    font-weight: 700;
+    outline: none;
+    border-radius: 5px;
+    margin: 0 auto;
+    margin-bottom: 1em;
+    &::placeholder {
+      color: $lightAccent;
+    }
+  }
 }
 
-@media only screen 
-and (min-device-width : 320px) {
-    .createprofile-header {
-        margin-top: .5em;
-        margin-bottom: .5em;
-    }
+@media only screen and (min-device-width: 768px) {
+  .createprofile-header {
+    margin-bottom: 0.5em;
+    margin-top: 0.5em;
+  }
 
-    .createprofile-pic {
-        margin-bottom: 2em;
-    }
-    
-    .hidden {
-        display: none;
-    }
+  .createprofile-label {
+    margin-bottom: 2em;
+  }
 
-    .createprofile-pic label {
-        display: block;
-        width: 8em;
-        height: 3em;
-        line-height: 3em;
-        background-color: lightgray;
-        color: black;
-        border-radius: 20px;
-        margin: 0 auto;
-    }
+  .createprofile-img {
+    max-width: 10em;
+    margin: 0 auto;
+    margin-bottom: 1em;
+  }
 
-    .createprofile-img {
-        max-width: 10em;
-        margin: 0 auto;
-        margin-bottom: 1em;
-    }
+  .createprofile-next {
+    width: 10em;
+    margin: 0 auto;
+    margin-bottom: 2em;
+    color: white;
+  }
 
-    .createprofile-next {
-        width: 10em;
-        margin: 0 auto;
-        margin-bottom: 2em;
-        color: white;
-    }
+  .createprofile-back {
+    width: 10em;
+    margin: 0 auto;
+    margin-bottom: 2em;
+    background-color: $secButton;
+    color: white;
+  }
 
-    .createprofile-back {
-        width: 10em;
-        margin: 0 auto;
-        margin-bottom: 2em;
-        background-color: $secButton;
-        color: white;
+  .createprofile-description label {
+    margin-bottom: 1em;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .createprofile-description textarea {
+    border: none;
+    background-color: #d3d3d3;
+    padding: 0.5em;
+    width: 70%;
+    font-weight: 700;
+    outline: none;
+    border-radius: 5px;
+    margin: 0 auto;
+    margin-bottom: 1em;
+    &::placeholder {
+      color: $lightAccent;
     }
-
-    .createprofile-description {
-        margin-bottom: 2em;
-    }
-
-    .createprofile-description label {
-        margin-bottom: 1em;
-        display: flex;
-        flex-direction: column;
-        margin: 0 auto;
-        text-align: center;
-    }
-    
-    .createprofile-description textarea {
-        margin-top: 1em;
-        width: 15em;
-        margin: 0 auto;
-    }
-
-    .createprofile-listitem,
-    .createprofile-staritem {
-        list-style-type: none;
-    }
-
-    .createprofile-listitem label,
-    .createprofile-staritem label {
-        display: flex;
-        flex-direction: column;
-        font-size: 1.5em;
-    }
-
-    .createprofile-listitem label input,
-    .createprofile-staritem label input {
-        border: none;
-        background-color: #d3d3d3;
-        padding: 0.5em;
-        width: 70%;
-        font-weight: 700;
-        outline: none;
-        border-radius: 5px;
-        margin: 0 auto;
-        margin-bottom: 1em;
-        &::placeholder {
-          color: $lightAccent;
-        }
-    }
-
-    .five-stars {
-        list-style-type: none;
-        display: flex;
-        margin: 0 auto;
-    }
-
-    .five-stars li {
-        margin: 5px;
-    }
-
-    .createprofile-add {
-        color: white;
-        margin-top: 1em;
-        margin-bottom: 1em;
-    }
-
-    hr.solid {
-        border-top: 3px solid #bbb;
-        width: 80%;
-        margin: 0 auto;
-        margin-bottom: 1em;
-    }
-
-    .createprofile-staritem {
-        margin-bottom: 1em;
-    }
-
-    .overview-pic img {
-        width: 10em;
-        border-radius: 50%;
-    }
-
-    .overview-desc p {
-        font-size: 1.5em;
-    }
-
-    .overview-skills h2,
-    .overview-company h2,
-    .overview-desc h2 {
-        margin-bottom: 0.5em;
-    }
-
-    .overview-skills ul {
-        list-style-type: none;
-    }
-
-    .overview-rating {
-        margin-bottom: 1em;  
-    }
-
-    .overview-rating label {
-        font-size: 1.5em;
-    }
-
-    .overview-company p {
-        font-size: 1.5em;
-    }
-
-    .createprofile-fullname label p {
-        font-weight: bold;
-    }
-
-    .createprofile-fullname label input {
-        border: none;
-        background-color: #d3d3d3;
-        padding: 0.5em 1em;
-        font-weight: 700;
-        outline: none;
-        border-radius: 5px;
-        margin-bottom: 1em;
-        &::placeholder {
-          color: $lightAccent;
-        }
-    }
-    
-    .createprofile-description textarea {
-        border: none;
-        background-color: #d3d3d3;
-        padding: 0.5em;
-        width: 70%;
-        font-weight: 700;
-        outline: none;
-        border-radius: 5px;
-        margin: 0 auto;
-        margin-bottom: 1em;
-        &::placeholder {
-          color: $lightAccent;
-        }
-    }
-}
-
-@media only screen 
-and (min-device-width : 768px) {
-    .createprofile-header {
-        margin-bottom: .5em;
-        margin-top: .5em;
-    }
-    
-    .createprofile-label {
-        margin-bottom: 2em;
-    }
-    
-    .createprofile-img {
-        max-width: 10em;
-        margin: 0 auto;
-        margin-bottom: 1em;
-    }
-    
-    .createprofile-next {
-        width: 10em;
-        margin: 0 auto;
-        margin-bottom: 2em;
-        color: white;
-    }
-    
-    .createprofile-back {
-        width: 10em;
-        margin: 0 auto;
-        margin-bottom: 2em;
-        background-color: $secButton;
-        color: white;
-    }
-    
-    .createprofile-description label {
-        margin-bottom: 1em;
-        display: flex;
-        flex-direction: column;
-        margin: 0 auto;
-        text-align: center;
-    }
-    
-    .createprofile-description textarea {
-        border: none;
-        background-color: #d3d3d3;
-        padding: 0.5em;
-        width: 70%;
-        font-weight: 700;
-        outline: none;
-        border-radius: 5px;
-        margin: 0 auto;
-        margin-bottom: 1em;
-        &::placeholder {
-          color: $lightAccent;
-        }
-    }
+  }
 }
 
 // Conditional rendering classnames. Active för hover state och inactive för non-hover state.
