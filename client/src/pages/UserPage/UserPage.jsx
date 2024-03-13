@@ -1,14 +1,18 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { FaBriefcase } from "react-icons/fa";
 import { FaHome } from "react-icons/fa";
 import { IoIosPin } from "react-icons/io";
 import { Rating } from "../CreateProfilePage/components/Rating";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
+import fetchHelper from "../../utils/fetchHelper";
+import Image from "./assets/pfp.png";
 
 export const UserPage = () => {
-  const storedData = JSON.parse(localStorage.getItem("profileData")) || {};
-  const { profilePicture, fullName, company, position, description, skills } =
-    storedData;
+  // const storedData = JSON.parse(localStorage.getItem("profileData")) || {};
+  // const { profilePicture, fullName, company, position, description, skills } =
+  //   storedData;
+  const [userData, setUserData] = useState({});
+  const { userId } = useParams();
 
   const navigate = useNavigate();
 
@@ -16,12 +20,26 @@ export const UserPage = () => {
     navigate("/chat");
   };
 
+  useEffect(() => {
+    const fetchUserData = async () => {
+      try {
+        const response = await fetchHelper(`/user/${userId}`, "GET");
+        const data = await response.json();
+        console.log(data);
+        setUserData(data);
+      } catch (error) {
+        console.error("Error while fetching userd data: ", error);
+      }
+    };
+    fetchUserData();
+  }, [userId]);
+
   return (
     <div className="userpage-container">
       <div className="userpage-profile">
-        <img src={profilePicture} alt="profile-img" />
-        <h1>{fullName}</h1>
-        <h2>{position}</h2>
+        <img src={Image} alt="profile-img" />
+        <h1>{userData.fullName}</h1>
+        <h2>@{userData.username}</h2>
       </div>
       <div className="userpage-connect">
         <button onClick={handleNavigate}>Connect</button>
@@ -36,7 +54,7 @@ export const UserPage = () => {
               }}
             />
             <p>
-              Working as {position} at {company}
+              Working as {userData.position} at {userData.company}
             </p>
           </li>
           <li>
@@ -61,13 +79,13 @@ export const UserPage = () => {
         <div className="userpage-info-bio">
           <p>Personal bio:</p>
           <div>
-            <p>{description}</p>
+            <p>{userData.description}</p>
           </div>
         </div>
         <div className="userpage-info-skills">
           <ul>
-            {skills &&
-              skills.map((skill, index) => (
+            {userData.skills &&
+              userData.skills.map((skill, index) => (
                 <li className="overview-rating" key={index}>
                   <strong>Skill:</strong> {skill.name}
                   <Rating

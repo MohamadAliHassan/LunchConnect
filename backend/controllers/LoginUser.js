@@ -13,16 +13,24 @@ export async function loginHandler(req, res) {
     const user = await User.findOne({ username });
 
     if (!user) {
-      return res.status(404).json({ error: "User not found or invalid credentials!" });
+      return res
+        .status(404)
+        .json({ error: "User not found or invalid credentials!" });
     }
 
     const isPasswordMatch = await bcrypt.compare(password, user.password);
+    console.log(user._id);
 
     if (isPasswordMatch) {
-      const tokenPayload = { id: user.id, username: user.username, role: user.role, profileCompleted: user.profileCompleted };
+      const tokenPayload = {
+        id: user._id,
+        username: user.username,
+        role: user.role,
+        profileCompleted: user.profileCompleted,
+      };
       const token = jwtUtil.createToken(tokenPayload);
 
-      console.log(token)
+      console.log(token);
 
       return res.status(200).json({ message: "Login successful", token });
     } else {

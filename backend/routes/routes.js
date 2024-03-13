@@ -8,6 +8,7 @@ import hashPasswords from "../controllers/TestUser.js";
 import fetchCompletedUsers from "../controllers/fetchUsers.js";
 import { fetchUser } from "../controllers/getCurrentUser.js";
 import { updateProfile } from "../controllers/UpdateUser.js";
+import { fetchUserById } from "../controllers/fetchIndividualUser.js";
 
 import { checkToken } from "../middlewares/checkToken.js";
 
@@ -25,6 +26,7 @@ router.get("/users", fetchCompletedUsers);
 
 router.put("/user", updateProfile);
 
+router.get("/user/:userid", fetchUserById);
 router.get("/user", fetchUser);
 
 export default router;

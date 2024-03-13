@@ -1,15 +1,35 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { EventsConfirmModal } from "./EventsConfirmModal";
+import { useNavigate } from "react-router-dom";
+
 export const EventsForm = () => {
-  const [showConfirmModal, setshowConfirmModal] = useState(false);
+  const [showConfirmModal, setShowConfirmModal] = useState(false);
+  const [formData, setFormData] = useState({
+    title: "",
+    date: "",
+    address: "",
+    location: "",
+    capacity: "",
+  });
 
   const handleOpenConfirmModal = () => {
-    setshowConfirmModal(true);
+    setShowConfirmModal(true);
   };
+
   const handleCloseConfirmModal = () => {
-    setshowConfirmModal(false);
+    setShowConfirmModal(false);
   };
+
   const navigate = useNavigate();
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
+
   return (
     <>
       <div className="eventcontainer">
@@ -17,39 +37,63 @@ export const EventsForm = () => {
         <div className="event-form">
           <div className="event-form-control">
             <h3>Title:</h3>
-            <input type="text" name="title" />
+            <input
+              type="text"
+              name="title"
+              value={formData.title}
+              onChange={handleChange}
+            />
           </div>
           <div className="event-form-control">
             <h3>Date:</h3>
-            <input type="date" name="date" />
+            <input
+              type="date"
+              name="date"
+              value={formData.date}
+              onChange={handleChange}
+            />
           </div>
           <div className="event-form-control">
             <h3>Address:</h3>
-            <input type="text" name="date" />
+            <input
+              type="text"
+              name="address"
+              value={formData.address}
+              onChange={handleChange}
+            />
           </div>
           <div className="event-form-control">
             <h3>Location:</h3>
-            <input type="text" name="date" />
+            <input
+              type="text"
+              name="location"
+              value={formData.location}
+              onChange={handleChange}
+            />
           </div>
           <div className="event-form-control">
             <h3>Capacity:</h3>
-            <input type="text" name="date" />
+            <input
+              type="text"
+              name="capacity"
+              value={formData.capacity}
+              onChange={handleChange}
+            />
           </div>
         </div>
         <div className="Event-btns">
-          <button className="request-event">Request</button>
           <button className="cancel-event" onClick={() => navigate(-1)}>
             Cancel
           </button>
           <button className="request-event" onClick={handleOpenConfirmModal}>
             Request
           </button>
-          <button className="cancel-event">Cancel</button>
         </div>
       </div>
       <EventsConfirmModal
         handleCloseConfirmModal={handleCloseConfirmModal}
         showConfirmModal={showConfirmModal}
+        formData={formData}
       />
     </>
   );
