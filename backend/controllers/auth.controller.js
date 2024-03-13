@@ -1,6 +1,8 @@
 import bcrypt from "bcrypt";
 import User from "../models/user.model.js"
 
+import createToken from "../utils/jwtUtil.js"
+
 export const signup = async (req, res) => {
     try {
         const { username, password, confirmPassword } = req.body;
@@ -41,6 +43,12 @@ export const signup = async (req, res) => {
             profilePic: gender === "Male" ? maleProfilePic : femaleProfilePic,
             profileCompleted: false,
         })
+
+        if (newUser) {
+            createToken(newUser._id, res);
+
+            
+        }
 
         await newUser.save();
     }

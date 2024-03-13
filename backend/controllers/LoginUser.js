@@ -22,8 +22,6 @@ export async function loginHandler(req, res) {
       const tokenPayload = { id: user.id, username: user.username, role: user.role, profileCompleted: user.profileCompleted };
       const token = jwtUtil.createToken(tokenPayload);
 
-      console.log(token)
-
       return res.status(200).json({ message: "Login successful", token });
     } else {
       return res.status(401).json({ error: "Wrong username or password!" });

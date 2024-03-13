@@ -3,12 +3,8 @@ import User from "../models/user.model.js";
 
 export const fetchUser = async (req, res) => {
     try {
-        const token = req.headers.authorization
-
-        const { id } = jwtUtil.validateToken(token);
-        console.log(id)
-
-        const user = await User.findById(id);
+        const payload = res.locals.jwtPayload;
+        const user = await User.findById(payload.id);
 
         res.status(200).json({ user });
     } catch (error) {

@@ -4,8 +4,10 @@ export function checkToken(req, res, next) {
   const token = req.headers.authorization;
   if (token) {
     try {
+      console.log("tryna set payload")
       const payload = jwtUtil.validateToken(token.replace("Bearer ", ""));
       if (payload) {
+        console.log("payload set")
         res.locals.jwtPayload = payload;
       }
     } catch (error) {

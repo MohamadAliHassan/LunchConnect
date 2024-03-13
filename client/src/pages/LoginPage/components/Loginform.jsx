@@ -4,7 +4,6 @@ import { RiBankFill } from "react-icons/ri";
 import { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 
-import { TokenContext } from "../../../App";
 import fetchHelper from "../../../utils/fetchHelper";
 import { AuthContext } from "../../../context/AuthContext";
 
@@ -30,7 +29,7 @@ export const Loginform = () => {
       if (response.ok) {
         const data = await response.json();
         setAuthUser(data.user);
-        localStorage.setItem("user", JSON.stringify(data.user));
+        localStorage.setItem("chat-user", JSON.stringify(data.user));
         const userResponse = await fetchHelper("/user", "get");
 
         console.log(userResponse);

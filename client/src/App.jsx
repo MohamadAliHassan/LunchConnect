@@ -9,10 +9,6 @@ import { useLocation } from "react-router-dom";
 import { AuthContextProvider } from "./context/AuthContext";
 
 function App() {
-  const [authUser, setAuthUser] = useState(
-    JSON.parse(localStorage.getItem("user")) || null
-  );
-
   const location = useLocation();
 
   const isLandingPage = location.pathname === "/";
