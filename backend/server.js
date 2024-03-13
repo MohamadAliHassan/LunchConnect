@@ -1,6 +1,7 @@
 import express from "express";
 import cors from "cors";
 import router from "./routes/routes.js";
+import authRouter from "./routes/authRoutes.js";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
 
@@ -18,6 +19,7 @@ const port = 3000;
 
 // Use router
 app.use("/api", router);
+app.use("/api", authRouter);
 
 app.listen(port, () => {
   console.log(`Server is running on port http://localhost:${port}`);
