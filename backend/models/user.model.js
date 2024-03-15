@@ -13,7 +13,6 @@ const userSchema = new mongoose.Schema({
   fullName: {
     type: String,
     required: true,
-    unique: true,
   },
   skills: [
     {
@@ -50,10 +49,10 @@ const userSchema = new mongoose.Schema({
     enum: ["user", "admin", "partner", "superadmin"],
     required: true,
   },
-  profileCompleted : {
+  profileCompleted: {
     type: Boolean,
     required: true,
-  }
+  },
 });
 
 const User = mongoose.model("User", userSchema);

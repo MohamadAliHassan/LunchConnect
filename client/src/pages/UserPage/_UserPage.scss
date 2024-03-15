@@ -1,51 +1,57 @@
 @use "../../Sass/abstract/variables" as *;
 
 .userpage-container {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  text-align: center;
+  width: 75%;
+  //   height: 50%;
+  height: 60%;
+  background-color: $darkAccent;
+  padding: 10px;
+}
+
+@media only screen and (min-device-width: 320px) {
+  .userpage-profile img {
+    max-width: 10em;
     margin: 0 auto;
-    text-align: center;
-    width: 50%;
-    height: 80%;
+    margin-bottom: 1em;
+    margin-top: 1em;
+    border-radius: 50%;
+  }
+  .userpage-profile h1 {
+    font-size: 1.5rem;
+  }
+  .userpage-profile h2 {
+    font-size: 1rem;
+  }
+
+  .userpage-connect {
+    margin-bottom: 1em;
+  }
+
+  .userpage-connect button {
+    color: white;
+  }
+
+  .userpage-info-general {
+    list-style-type: none;
+  }
+
+  .userpage-info-bio div {
+    margin: 0 auto;
+    width: 70%;
+    border-radius: 5px;
+    padding: 0.5rem;
+    height: 10em;
     background-color: $secBackground;
+    margin-bottom: 1em;
+  }
+
+  .userpage-info-skills ul {
+    list-style-type: none;
+  }
 }
-
-@media only screen 
-and (min-device-width : 320px) {
-    .userpage-profile img {
-        max-width: 10em;
-        margin: 0 auto;
-        margin-bottom: 1em;
-        margin-top: 1em;
-        border-radius: 50%;
-    }
-    
-    .userpage-connect {
-        margin-bottom: 1em;
-    }
-
-
-    .userpage-connect button {
-        color: white;
-    }
-
-    .userpage-info-general {
-        list-style-type: none;
-    }
-
-    .userpage-info-bio div {
-        margin: 0 auto;
-        width: 50%;
-        height: 10em;
-        background-color: $darkAccent;
-        margin-bottom: 1em;
-    }
-
-    .userpage-info-skills ul {
-        list-style-type: none;
-    }
-}
-@media only screen 
-and (min-device-width : 768px) {
-
+@media only screen and (min-device-width: 768px) {
 }

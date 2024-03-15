@@ -26,7 +26,7 @@ export const RegisterForm = () => {
     };
 
     try {
-      const response = await fetchHelper("/api/register", "POST", userData);
+      const response = await fetchHelper("/register", "POST", userData);
       const data = await response.json();
 
       if (response.ok) {
@@ -105,7 +105,8 @@ export const RegisterForm = () => {
               className="bold-txt"
               onClick={() => {
                 navigate("/login");
-              }}>
+              }}
+            >
               Sign in here
             </span>
           </p>

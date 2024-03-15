@@ -11,11 +11,9 @@ export const DailyMissions = () => {
   useEffect(() => {
     const fetchMissions = async () => {
       try {
-        const response = await fetchHelper("/api/Missions", "GET");
+        const response = await fetchHelper("/Missions", "GET");
         const data = await response.json();
 
-        console.log(response);
-        console.log(data);
         if (response.ok) {
           setMissions(data);
         }

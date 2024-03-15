@@ -49,8 +49,8 @@ export const UserPage = () => {
           <li>
             <FaBriefcase
               style={{
-                width: "5%",
-                height: "5%",
+                width: "8%",
+                height: "8%",
               }}
             />
             <p>
@@ -60,8 +60,8 @@ export const UserPage = () => {
           <li>
             <FaHome
               style={{
-                width: "5%",
-                height: "5%",
+                width: "8%",
+                height: "8%",
               }}
             />
             <p>Lives in Göteborg</p>
@@ -69,8 +69,8 @@ export const UserPage = () => {
           <li>
             <IoIosPin
               style={{
-                width: "5%",
-                height: "5%",
+                width: "10%",
+                height: "10%",
               }}
             />
             <p>From Sweden</p>

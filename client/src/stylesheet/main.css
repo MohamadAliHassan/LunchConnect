@@ -468,17 +468,15 @@ form {
   align-items: center;
   justify-content: center;
   text-align: center;
-  width: 97%;
-  max-width: 450px;
-  min-width: 350px;
-  background-color: #51596a;
+  width: 90%;
+  background-color: #263546;
 }
 
 .network-tab {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  gap: 5px;
+  gap: 20px;
 }
 
 .network-listitem-container h3 {
@@ -489,7 +487,7 @@ form {
   font-size: 13px;
 }
 
-.network-list {
+.network-listitem-container img .network-list {
   padding: 1rem 0;
 }
 
@@ -517,10 +515,12 @@ form {
 }
 
 .network-listitem {
-  background-color: #263546;
-  width: 60%;
+  background-color: #51596a;
+  border-radius: 5px;
+  padding: 10px;
+  width: 65%;
   max-width: 300px;
-  height: 5em;
+  height: 5.6em;
   list-style-type: none;
   margin: 0 auto;
   margin-bottom: 1em;
@@ -561,8 +561,8 @@ form {
 }
 
 .network-listitem-container div img {
-  width: 1.3em;
-  height: 1.3em;
+  width: 1em;
+  height: 1em;
 }
 
 .home-container {
@@ -726,9 +726,10 @@ close-modal-btn {
   flex-direction: column;
   margin: 0 auto;
   text-align: center;
-  width: 50%;
-  height: 80%;
-  background-color: #51596a;
+  width: 75%;
+  height: 60%;
+  background-color: #263546;
+  padding: 10px;
 }
 
 @media only screen and (min-device-width: 320px) {
@@ -738,6 +739,12 @@ close-modal-btn {
     margin-bottom: 1em;
     margin-top: 1em;
     border-radius: 50%;
+  }
+  .userpage-profile h1 {
+    font-size: 1.5rem;
+  }
+  .userpage-profile h2 {
+    font-size: 1rem;
   }
   .userpage-connect {
     margin-bottom: 1em;
@@ -750,9 +757,11 @@ close-modal-btn {
   }
   .userpage-info-bio div {
     margin: 0 auto;
-    width: 50%;
+    width: 70%;
+    border-radius: 5px;
+    padding: 0.5rem;
     height: 10em;
-    background-color: #263546;
+    background-color: #51596a;
     margin-bottom: 1em;
   }
   .userpage-info-skills ul {
