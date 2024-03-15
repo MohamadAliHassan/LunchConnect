@@ -1,27 +1,45 @@
 {
-  "name": "lunchconnect",
+  "name": "your-project-name",
   "version": "1.0.0",
-  "description": "LunchConnect app",
-  "main": "backend/server.js",
+  "description": "Description of your project",
   "scripts": {
-    "start": "concurrently \"npm run start:client\" \"npm run start:server\"",
-    "start:client": "vite",
-    "start:server": "nodemon server/index.js",
-    "build": "npm install && npm install --prefix frontend && npm run build --prefix frontend",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "cd backend && npm start",
+    "dev": "concurrently \"npm run start:backend\" \"npm run start:frontend\"",
+    "start:backend": "cd backend && npm run start",
+    "start:frontend": "cd client && npm run dev",
+    "build": "cd client && npm run build"
   },
   "engines": {
     "npm": "9.6.6",
     "node": "18.14.0"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/MohamadAliHassan/LunchConnect.git"
-  },
-  "author": "Mohammed Ali Hassan (MohamadAliHassan)",
+  "keywords": [],
+  "author": "Your Name",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/MohamadAliHassan/LunchConnect/issues"
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "body-parser": "^1.20.2",
+    "concurrently": "^8.2.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongodb": "^6.3.0",
+    "mongoose": "^8.0.4",
+    "nodemon": "^3.0.2",
+    "socket.io": "^4.7.4"
   },
-  "homepage": "https://github.com/MohamadAliHassan/LunchConnect#readme"
+  "devDependencies": {
+    "@types/react": "^18.2.43",
+    "@types/react-dom": "^18.2.17",
+    "@vitejs/plugin-react": "^4.2.1",
+    "eslint": "^8.55.0",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.5",
+    "vite": "^5.0.8",
+    "webpack": "^5.90.1",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.0.1"
+  }
 }
