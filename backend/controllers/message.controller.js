@@ -6,7 +6,7 @@ export const sendMessage = async (req, res) => {
         const payload = res.locals.jwtPayload
         const { message } = req.body
         const { id: recieverId } = req.params;
-        const senderId = payload.id
+        const senderId = payload.userid
 
         let conversation = await Conversation.findOne({
             participants: { $all: [senderId, recieverId] }
@@ -44,7 +44,7 @@ export const getMessages = async (req, res) => {
     try {
         const payload = res.locals.jwtPayload
         const { id: userToChatId } = req.params;
-        const senderId = payload.id
+        const senderId = payload.userid
 
         const conversation = await Conversation.findOne({
             participants: { $all: [senderId, userToChatId]}

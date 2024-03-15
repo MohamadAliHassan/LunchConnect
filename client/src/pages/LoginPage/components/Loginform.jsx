@@ -1,14 +1,15 @@
 import { FaLinkedin } from "react-icons/fa";
 import { FaGoogle } from "react-icons/fa";
 import { RiBankFill } from "react-icons/ri";
-import { useState, useContext } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import fetchHelper from "../../../utils/fetchHelper";
-import { AuthContext } from "../../../context/AuthContext";
+import { useAuthContext } from "../../../Context/AuthContext";
+import sessionService from "../../../utils/sessionService";
 
 export const Loginform = () => {
-  const { setAuthUser } = useContext(AuthContext);
+  const { setAuthUser } = useAuthContext();
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [serverError, setServerError] = useState("");
@@ -28,8 +29,10 @@ export const Loginform = () => {
 
       if (response.ok) {
         const data = await response.json();
-        setAuthUser(data.user);
-        localStorage.setItem("chat-user", JSON.stringify(data.user));
+        console.log(data);
+        setAuthUser(data);
+        sessionService.setToken(data.token);
+        localStorage.setItem("chat-user", JSON.stringify(data));
         const userResponse = await fetchHelper("/user", "get");
 
         console.log(userResponse);
@@ -44,7 +47,6 @@ export const Loginform = () => {
           }
         }
       } else {
-        setServerError(data.error);
         console.error("Inloggning misslyckades");
       }
     } catch (error) {

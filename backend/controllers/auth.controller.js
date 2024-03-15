@@ -1,7 +1,7 @@
 import bcrypt from "bcrypt";
 import User from "../models/user.model.js"
 
-import createToken from "../utils/jwtUtil.js"
+import { createToken } from "../utils/jwtUtil.js"
 
 export const signup = async (req, res) => {
     try {
@@ -82,10 +82,11 @@ export const login = async (req, res) => {
         if (!user || !isPasswordCorrect) {
             return res.status(400).json({ error: "Invalid username or password" })
         }
-
-        createToken(user._id, res);
+        
+        const token = createToken(user._id, res);
 
         res.status(200).json({
+            token: token,
             _id: user._id,
             username: user.username, 
             role: user.role, 

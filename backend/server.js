@@ -4,23 +4,33 @@ import router from "./routes/routes.js";
 import authRouter from "./routes/authRoutes.js";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
+import cookieParser from "cookie-parser";
+import path from "path";
+
+import { app, server } from "./utils/socket.js"
+import { connectDB } from "./utils/connectDB.js"
+
+const PORT = process.env.PORT || 3000;
+
+const __dirname = path.resolve();
 
 dotenv.config();
 
-mongoose
-  .connect(process.env.MONGO)
-  .then(() => console.log("Database is connected"))
-  .catch(() => console.log("Failed connection to the database"));
-
-const app = express();
 app.use(express.json());
-app.use(cors({ origin: true}))
-const port = 3000;
+app.use(cookieParser());
+app.use(cors());
 
 // Use router
 app.use("/api", router);
 app.use("/api", authRouter);
 
-app.listen(port, () => {
-  console.log(`Server is running on port http://localhost:${port}`);
+app.use(express.static(path.join(__dirname, "/frontend/dist")));
+
+app.get("*", (req, res) => {
+	res.sendFile(path.join(__dirname, "frontend", "dist", "index.html"));
+});
+
+server.listen(PORT, () => {
+	connectDB();
+	console.log(`Server Running on port ${PORT}`);
 });

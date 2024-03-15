@@ -27,7 +27,6 @@ Mission.propTypes = {
   mission: PropTypes.shape({
     _id: PropTypes.string.isRequired,
     points: PropTypes.number.isRequired,
-    steps: PropTypes.number.isRequired,
     requirement: PropTypes.arrayOf(
       PropTypes.shape({
         requirementName: PropTypes.string.isRequired,

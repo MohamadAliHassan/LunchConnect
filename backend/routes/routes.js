@@ -1,7 +1,4 @@
 import express from "express";
-
-import { RegisterUser } from "../controllers/RegisterUser.js";
-import { loginHandler } from "../controllers/LoginUser.js";
 import { fetchAllAchievements } from "../controllers/achievement.fetcher.js";
 import { fetchAllMissions } from "../controllers/mission.fetcher.js";
 import { hashPasswords } from "../controllers/TestUser.js";

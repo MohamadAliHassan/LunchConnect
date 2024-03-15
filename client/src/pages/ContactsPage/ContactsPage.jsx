@@ -8,7 +8,6 @@ import { Conversation } from "./components/conversation";
 
 export const ContactsPage = () => {
   const { loading, conversations } = useGetConversation();
-  console.log("CONVERSATIONS: ", conversations);
   const navigate = useNavigate();
 
   const onNavigateHandle = () => {
