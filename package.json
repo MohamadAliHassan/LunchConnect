@@ -1,0 +1,23 @@
+{
+  "name": "lunchconnect",
+  "version": "1.0.0",
+  "description": "LunchConnect app",
+  "main": "backend/server.js",
+  "scripts": {
+    "start": "concurrently \"npm run start:client\" \"npm run start:server\"",
+    "start:client": "vite",
+    "start:server": "nodemon server/index.js",
+    "build": "npm install && npm install --prefix frontend && npm run build --prefix frontend",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MohamadAliHassan/LunchConnect.git"
+  },
+  "author": "Mohammed Ali Hassan (MohamadAliHassan)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MohamadAliHassan/LunchConnect/issues"
+  },
+  "homepage": "https://github.com/MohamadAliHassan/LunchConnect#readme"
+}
