@@ -4,7 +4,7 @@ import { AchievementsPage } from "../pages/AchievementsPage/AchievementsPage";
 import { LandingPage } from "../pages/LandingPage/LandingPage";
 import { CreateProfilePage } from "../pages/CreateProfilePage/CreateProfilePage";
 import { LoginPage } from "../pages/LoginPage/LoginPage";
-import { RegisterPage } from "../pages";
+import { RegisterPage } from "../pages/RegisterPage/RegisterPage";
 import { NetworkPage } from "../pages/NetworkPage/NetworkPage";
 import { HomePage } from "../pages/HomePage/HomePage";
 import { UserPage } from "../pages/UserPage/UserPage";
