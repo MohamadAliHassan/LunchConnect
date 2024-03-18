@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import dummyImg from "./assets/dummyImg.png";
+import dummyIMG from "./assets/dummyIMG.png";
 import { LunchPlans } from "./components/LunchPlans";
 import { Achievements } from "./components/Achievements";
 import { FavoriteMeal } from "./components/FavoriteMeal";
@@ -10,7 +10,7 @@ export const ProfilePage = () => {
   return (
     <div className="profile-container">
       <div className="profile-header">
-        <img src={dummyImg}></img>
+        <img src={dummyIMG}></img>
         <h1>Hello Albin Larsson!</h1>
       </div>
       <div className="profile-complete">
