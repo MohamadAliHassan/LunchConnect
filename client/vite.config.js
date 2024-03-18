@@ -8,7 +8,7 @@ export default defineConfig(
     server: {
       proxy: {
         "/api": {
-          target: "http://127.0.0.1:3000/",
+          target: "https://lunch-connect-v7s2.vercel.app/",
           changeOrigin: true,
           secure: false,
         },
