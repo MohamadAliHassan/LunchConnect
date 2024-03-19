@@ -1,46 +1,99 @@
 @use "../../Sass//abstract/variables" as *;
-.container {
-  display: flex;
-  flex-direction: column;
-  height: 50vh;
-  align-items: center;
-  justify-content: center;
-}
-.Logo-container {
-  margin-top: 16em;
-  margin-bottom: 1em;
+
+@media only screen and (max-width: 767px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    height: 50vh;
+    align-items: center;
+    justify-content: center;
+  }
+  .Logo-container {
+    margin-top: 16em;
+    margin-bottom: 1em;
+  }
+  
+  .Logo-container img {
+    width: 6em;
+  }
+  
+  h2 {
+    margin: 1em 0;
+  }
+  .btn-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 3em;
+  }
+  span {
+    color: $mainButton;
+  }
+  button {
+    background-color: $mainButton;
+    outline: none;
+    border: none;
+    padding: 15px 45px;
+    border-radius: 8px;
+  }
+  .SignUp-btn {
+    font-size: 17px;
+    font-weight: 600;
+    color: $fontColor;
+  }
+  .login-btn {
+    font-size: 17px;
+    font-weight: 600;
+    color: $fontColor;
+  }  
 }
 
-.Logo-container img {
-  width: 6em;
-}
-
-h2 {
-  margin: 1em 0;
-}
-.btn-container {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  margin-top: 3em;
-}
-span {
-  color: $mainButton;
-}
-button {
-  background-color: $mainButton;
-  outline: none;
-  border: none;
-  padding: 15px 45px;
-  border-radius: 8px;
-}
-.SignUp-btn {
-  font-size: 17px;
-  font-weight: 600;
-  color: $fontColor;
-}
-.login-btn {
-  font-size: 17px;
-  font-weight: 600;
-  color: $fontColor;
+@media only screen and (min-width: 768px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    height: 50vh;
+    align-items: center;
+    justify-content: center;
+  }
+  .Logo-container {
+    margin-top: 16em;
+    margin-bottom: 2em;
+  }
+  
+  .Logo-container img {
+    width: 8em;
+  }
+  
+  h1 {
+    margin: 1em 0;
+  }
+  .btn-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 3em;
+  }
+  span {
+    color: $mainButton;
+  }
+  .SignUp-btn {
+    background-color: $mainButton;
+    outline: none;
+    border: none;
+    padding: 15px 45px;
+    border-radius: 8px;
+    font-size: 1.5em;
+    color: $fontColor;
+  }
+  .login-btn {
+    background-color: $mainButton;
+    outline: none;
+    border: none;
+    padding: 15px 45px;
+    border-radius: 8px;
+    font-size: 1.5em;
+    color: $fontColor;
+  }
+  
 }

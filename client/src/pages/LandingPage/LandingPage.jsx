@@ -9,9 +9,9 @@ export const LandingPage = () => {
         <div className="Logo-container">
           <img src={lunchconnect_mini_logo} alt="Logo" />
         </div>
-        <h2>
+        <h1>
           Welcome to Lunch<span>Connect!</span>
-        </h2>
+        </h1>
         <div className="btn-container">
           <button
             type="submit"

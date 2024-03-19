@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import { Rating } from "./Rating";
+import { RiHeart3Line } from "react-icons/ri";
 
 export const FinalStep = ({ formData, onConfirm, onPrev }) => {
   const handleConfirm = () => {
@@ -8,8 +9,8 @@ export const FinalStep = ({ formData, onConfirm, onPrev }) => {
 
   return (
     <>
-      <h1 className="profile-header">Does this look right?</h1>
-      <h1 className="profile-header">Verify Details</h1>
+      <h1 className="createprofile-header">Does this look right?</h1>
+      <h1 className="createprofile-header">Verify Details</h1>
 
       <div className="formdata">
         {formData.profilePicture && (
@@ -18,19 +19,19 @@ export const FinalStep = ({ formData, onConfirm, onPrev }) => {
           </div>
         )}
         {formData.fullName && (
-          <div className="overview-pic">
-            <h2>{formData.fullName}</h2>
+          <div className="overview-fullname">
+            <h3>{formData.fullName}</h3>
           </div>
         )}
         {formData.description && (
           <div className="overview-desc">
-            <h2>Bio:</h2>
+            <h3>Bio:</h3>
             <p>{formData.description}</p>
           </div>
         )}
         {formData.skills && (
           <div className="overview-skills">
-            <h2>Skills:</h2>
+            <h3>Skills:</h3>
             <ul>
               {formData.skills.map((skill, index) => (
                 <li className="overview-rating" key={index}>
@@ -47,7 +48,7 @@ export const FinalStep = ({ formData, onConfirm, onPrev }) => {
         )}
         {formData.company && (
           <div className="overview-company">
-            <h2>Company:</h2>
+            <h3>Company:</h3>
             <p>
               {formData.company}, {formData.position}
             </p>
