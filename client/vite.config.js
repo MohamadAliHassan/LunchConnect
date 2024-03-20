@@ -23,5 +23,5 @@ export default defineConfig(revc_({
     ssr: {
       noExternal: ["react", "react-dom"],
     },
-  })
+  }})
 );
