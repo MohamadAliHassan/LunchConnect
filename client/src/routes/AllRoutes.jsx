@@ -12,7 +12,7 @@ import { EventsPage } from "../pages/EventsPage/EventsPage";
 import { ChatPage } from "../pages/ChatPage/ChatPage";
 import { ProfilePage } from "../pages/ProfilePage/ProfilePage";
 import { SettingsPage } from "../pages/SettingsPage/SettingsPage";
-import { ContactsPage } from "../pages/Contactspage/Contactspage";
+import { ContactsPage } from "../pages/ContactsPage/ContactsPage";
 import { LeaderBoardPage } from "../pages/LeaderBoardPage/LeaderBoardPage";
 import { LunchesPage } from "../pages/LunchesPage/LunchesPage";
 

@@ -6,7 +6,7 @@ import { Header } from "./components/Header";
 import { AllRoutes } from "./routes/AllRoutes";
 import { useLocation } from "react-router-dom";
 
-import { AuthContextProvider } from "./context/AuthContext";
+import { AuthContextProvider } from "./Context/AuthContext";
 
 function App() {
   const location = useLocation();
