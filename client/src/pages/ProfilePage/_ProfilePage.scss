@@ -1,94 +1,184 @@
 @use "../../Sass/abstract/variables" as *;
 
 .profile-container {
-    max-width: 850px;
-    width: 100%;
-    margin: 0 auto;
+  max-width: 850px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .profile-header {
-    text-align: center;
+  text-align: center;
 }
 
 .profile-header img {
-    width: 15em;
+  width: 15em;
 }
 
 .profile-header {
-    margin-bottom: 1em;
+  margin-bottom: 1em;
 }
 
 .profile-complete ul {
-    list-style-type: none;
+  list-style-type: none;
 }
 
 .profile-complete ul li {
-    margin-bottom: 0;
-    padding: 0px 0 !important;
-    text-align: center;
+  margin-bottom: 0;
+  padding: 0px 0 !important;
+  text-align: center;
 }
 
 .profile-achievements {
-    width: 100%;
+  width: 100%;
 }
 
 .profile-achievements-list {
-    display: flex;
-    flex-direction: row;
-    list-style-type: none;
-    width: 30em;
-    margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  width: 30em;
+  margin: 0 auto;
 }
 
 .profile-achievements-list li {
-    background-color: white;
-    min-width: 100px;
-    width: 100px;
-    height: 100px;
-    margin: 0 auto;
-    padding: 10px;
+  background-color: white;
+  min-width: 100px;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  padding: 10px;
 }
 
 .profile-plans-container {
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-    max-width: 350px;
-    height: 24em;
-    margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  max-width: 350px;
+  height: 24em;
+  margin: 0 auto;
 }
 
 .profile-plans-wrap {
-    width: 100%;
-    height: 100%;
-    margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
 }
 
 .profile-plans-description {
-    background-color: $darkAccent;
-    width: 100%;
-    height: 100%;
-    padding: 10px;
+  background-color: $darkAccent;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
 }
 
 .profile-plans-description img {
-    width: 100%;
-    height: 250px;
+  width: 100%;
+  height: 250px;
 }
 
 .profile-plans {
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-    margin-bottom: 2em;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  margin-bottom: 2em;
 }
 
 .nav-events {
-    width: 30em;
-    text-align: left;
-    margin: 0 auto;
+  width: 30em;
+  text-align: left;
+  margin: 0 auto;
 }
 
 .nav-events p {
-    font-size: 1.5em;
+  font-size: 1.5em;
+}
+@media only screen and (max-width: 767px) {
+  .profile-container {
+    max-width: 320px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .profile-header {
+    text-align: center;
+  }
+  .profile-header img {
+    width: 6em;
+  }
+  .profile-header {
+    margin-bottom: 0.7em;
+  }
+
+  .profile-complete {
+    padding: 5px 0;
+    margin: 10px 0;
+  }
+  .profile-achievements ul {
+    width: 100%;
+    gap: 5px;
+  }
+
+  .profile-plans-wrap {
+    width: 100%;
+    height: 100%;
+  }
+  .profile-plans-wrap .profile-plans-description img {
+    height: 80%;
+  }
+  .profile-plans-wrap .profile-plans-description {
+    height: 80%;
+  }
+  .profile-plans-description h3 {
+    font-size: 13px;
+  }
+  .nav-events {
+    width: 70%;
+  }
+
+  .nav-events p {
+    font-size: 20px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .profile-container {
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .profile-header {
+    text-align: center;
+  }
+  .profile-header img {
+    width: 8em;
+  }
+  .profile-header {
+    margin-bottom: 0.7em;
+  }
+  .profile-complete {
+    padding: 5px 0;
+    margin: 10px 0;
+  }
+  .profile-achievements ul {
+    width: 90%;
+    gap: 5px;
+  }
+  .profile-plans-wrap {
+    width: 100%;
+    height: 100%;
+  }
+  .profile-plans-wrap .profile-plans-description img {
+    height: 80%;
+  }
+  .profile-plans-wrap .profile-plans-description {
+    height: 80%;
+  }
+  .profile-plans-description h3 {
+    font-size: 13px;
+  }
+  .nav-events {
+    width: 70%;
+  }
+
+  .nav-events p {
+    font-size: 20px;
+  }
 }

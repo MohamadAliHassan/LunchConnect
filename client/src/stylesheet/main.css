@@ -246,6 +246,89 @@ form {
   cursor: pointer;
 }
 
+@media only screen and (max-width: 767px) {
+  .form-control {
+    margin-bottom: 10px;
+    padding-bottom: 1em;
+  }
+  .login-container {
+    height: 90vh;
+  }
+  .form-control input {
+    padding: 1em 1.5em;
+    font-weight: 500;
+    outline: none;
+    border-radius: 4px;
+  }
+  .form-control input::-moz-placeholder {
+    color: #8f9ca6;
+  }
+  .form-control input::placeholder {
+    color: #8f9ca6;
+  }
+  .login-form {
+    padding: 1.4rem 3rem;
+  }
+  .Login-btn {
+    font-size: 12px;
+    font-weight: 600;
+    padding: 1rem 2rem;
+  }
+  .social-login {
+    margin: 15px 0;
+    padding: 1.6rem;
+  }
+  .social-login .overlay-1 {
+    border-radius: 30px;
+  }
+  .social-login .overlay-2 {
+    margin: 10px 0;
+    border-radius: 30px;
+  }
+  .social-login .overlay-3 {
+    background-color: #d3d3d3;
+    border-radius: 30px;
+    color: #000;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .form-control {
+    margin-bottom: 8px;
+    padding-bottom: 1em;
+  }
+  .form-control input {
+    padding: 1em 1.5em;
+    font-weight: 500;
+    outline: none;
+    border-radius: 4px;
+  }
+  .form-control input::-moz-placeholder {
+    color: #8f9ca6;
+  }
+  .form-control input::placeholder {
+    color: #8f9ca6;
+  }
+  .login-form {
+    padding: 1.7rem 3rem;
+  }
+  .social-login {
+    margin: 15px 0;
+    padding: 1.6rem;
+  }
+  .social-login .overlay-1 {
+    border-radius: 30px;
+  }
+  .social-login .overlay-2 {
+    border-radius: 30px;
+  }
+  .social-login .overlay-3 {
+    background-color: #d3d3d3;
+    border-radius: 30px;
+  }
+  .login-container {
+    height: 90vh;
+  }
+}
 .createprofile-container {
   display: flex;
   flex-direction: column;
@@ -505,6 +588,35 @@ form {
   padding: 4.5rem 3.5rem;
 }
 
+@media only screen and (max-width: 767px) {
+  .register-container {
+    height: 90vh;
+  }
+  .register-form {
+    padding: 2rem 1.8rem;
+  }
+  .register-form .form-control input {
+    padding: 0.8rem 2rem;
+  }
+  .register-form .form-control {
+    padding: 5px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1023) {
+  .register-container {
+    height: 90vh;
+    background-color: red;
+  }
+  .register-form {
+    padding: 2.5rem 2rem;
+  }
+  .register-form .form-control input {
+    padding: 1rem 2rem;
+  }
+  .register-form .form-control {
+    padding: 6px;
+  }
+}
 .network-container {
   display: flex;
   flex-direction: column;
@@ -609,6 +721,19 @@ form {
   height: 1.3em;
 }
 
+@media only screen and (max-width: 767px) {
+  .network-container {
+    width: 90%;
+    max-width: 420px;
+    min-width: 300px;
+  }
+  .network-tab {
+    gap: 9px;
+  }
+  .network-listitem {
+    width: 65%;
+  }
+}
 @media only screen and (max-width: 767px) {
   .home-container {
     display: flex;
@@ -1220,6 +1345,92 @@ form {
 }
 
 @media only screen and (max-width: 767px) {
+  .profile-container {
+    max-width: 320px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .profile-header {
+    text-align: center;
+  }
+  .profile-header img {
+    width: 6em;
+  }
+  .profile-header {
+    margin-bottom: 0.7em;
+  }
+  .profile-complete {
+    padding: 5px 0;
+    margin: 10px 0;
+  }
+  .profile-achievements ul {
+    width: 100%;
+    gap: 5px;
+  }
+  .profile-plans-wrap {
+    width: 100%;
+    height: 100%;
+  }
+  .profile-plans-wrap .profile-plans-description img {
+    height: 80%;
+  }
+  .profile-plans-wrap .profile-plans-description {
+    height: 80%;
+  }
+  .profile-plans-description h3 {
+    font-size: 13px;
+  }
+  .nav-events {
+    width: 70%;
+  }
+  .nav-events p {
+    font-size: 20px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .profile-container {
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .profile-header {
+    text-align: center;
+  }
+  .profile-header img {
+    width: 8em;
+  }
+  .profile-header {
+    margin-bottom: 0.7em;
+  }
+  .profile-complete {
+    padding: 5px 0;
+    margin: 10px 0;
+  }
+  .profile-achievements ul {
+    width: 90%;
+    gap: 5px;
+  }
+  .profile-plans-wrap {
+    width: 100%;
+    height: 100%;
+  }
+  .profile-plans-wrap .profile-plans-description img {
+    height: 80%;
+  }
+  .profile-plans-wrap .profile-plans-description {
+    height: 80%;
+  }
+  .profile-plans-description h3 {
+    font-size: 13px;
+  }
+  .nav-events {
+    width: 70%;
+  }
+  .nav-events p {
+    font-size: 20px;
+  }
+}
+@media only screen and (max-width: 767px) {
   .eventcontainer {
     background-color: #263546;
     display: flex;
@@ -1759,4 +1970,57 @@ form {
 
 .lunchesIMG {
   width: 10rem;
+}
+
+@media only screen and (max-width: 767px) {
+  .icon-fa-left {
+    width: 85%;
+    margin: 0 auto;
+    cursor: pointer;
+  }
+  .lunches-text {
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 1.6rem;
+    font-weight: 400;
+  }
+  .lunch-overlay {
+    background-color: #263546;
+    padding: 1.6rem auto;
+    width: 90%;
+    margin: 0 auto;
+    border-radius: 5px;
+  }
+  .close-lunchbtn {
+    background-color: #840202;
+    color: #fff;
+    border-radius: 24px;
+    margin: 7px 0;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .icon-fa-left {
+    width: 80%;
+    margin: 0 auto;
+    cursor: pointer;
+  }
+  .lunches-text {
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 1.6rem;
+    font-weight: 400;
+  }
+  .lunch-overlay {
+    background-color: #263546;
+    padding: 1.6rem auto;
+    width: 60%;
+    margin: 0 auto;
+    border-radius: 5px;
+  }
+  .close-lunchbtn {
+    background-color: #840202;
+    color: #fff;
+    border-radius: 24px;
+    margin: 7px 0;
+  }
 }/*# sourceMappingURL=main.css.map */

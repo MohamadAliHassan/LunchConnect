@@ -5,12 +5,10 @@ import { Step2 } from "./components/Step2";
 import { Step3 } from "./components/Step3";
 import { Step4 } from "./components/Step4";
 import { FinalStep } from "./components/FinalStep";
-import { TokenContext } from "../../App";
 
 import fetchHelper from "../../utils/fetchHelper";
 
 export const CreateProfilePage = () => {
-  const { token, setToken } = useContext(TokenContext);
   const navigate = useNavigate();
   const [step, setStep] = useState(1);
   const [formData, setFormData] = useState({});
