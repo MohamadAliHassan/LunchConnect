@@ -4,7 +4,14 @@ import { EventsConfirmModal } from "./EventsConfirmModal";
 
 export const EventsForm = () => {
   const navigate = useNavigate();
-  const [showConfirmModal, setshowConfirmModal] = useState(false);
+  const [showConfirmModal, setShowConfirmModal] = useState(false);
+  const [formData, setFormData] = useState({
+    title: "",
+    date: "",
+    address: "",
+    location: "",
+    capacity: "",
+  });
 
   const handleOpenConfirmModal = () => {
     setShowConfirmModal(true);
@@ -13,8 +20,6 @@ export const EventsForm = () => {
   const handleCloseConfirmModal = () => {
     setShowConfirmModal(false);
   };
-
-  const navigate = useNavigate();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
