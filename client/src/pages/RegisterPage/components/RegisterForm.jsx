@@ -41,7 +41,7 @@ export const RegisterForm = () => {
   return (
     <>
       <div className="register-container">
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className="register-form">
           <h2>Register</h2>
           <div className="form-wrapper">
             <div className="form-control">
@@ -105,7 +105,8 @@ export const RegisterForm = () => {
               className="bold-txt"
               onClick={() => {
                 navigate("/login");
-              }}>
+              }}
+            >
               Sign in here
             </span>
           </p>

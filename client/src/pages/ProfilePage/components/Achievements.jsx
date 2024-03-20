@@ -18,7 +18,7 @@ export const Achievements = () => {
         </section>
         <div className="profile-achievements">
           <ul className="profile-achievements-list">
-            <IconContext.Provider value={{ color: "black", size: "100%" }}>
+            <IconContext.Provider value={{ color: "black", size: "90%" }}>
               <li>
                 <FaWalking />
               </li>

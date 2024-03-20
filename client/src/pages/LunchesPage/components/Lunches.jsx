@@ -8,7 +8,7 @@ export const Lunches = () => {
       <div className="LunchesPage-container">
         <div className="icon-fa-left">
           <FaArrowLeft
-            size={45}
+            size={40}
             onClick={() => navigate(-1)}
             style={{ cursor: "pointer" }}
           />

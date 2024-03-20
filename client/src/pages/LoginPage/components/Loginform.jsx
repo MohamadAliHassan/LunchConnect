@@ -25,6 +25,7 @@ export const Loginform = () => {
 
     try {
       const response = await fetchHelper("/login", "POST", userData);
+      console.log(response);
 
       const data = await response.json();
       if (response.ok) {
@@ -56,7 +57,7 @@ export const Loginform = () => {
   return (
     <>
       <div className="login-container">
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className="login-form">
           <p className="server-error">{serverError}</p>
           <h2>Login</h2>
           <div className="form-wrapper">
@@ -107,7 +108,8 @@ export const Loginform = () => {
               className="bold-txt"
               onClick={() => {
                 navigate("/register");
-              }}>
+              }}
+            >
               Signup here
             </span>
           </p>
