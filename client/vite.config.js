@@ -7,12 +7,12 @@ export default defineConfig(revc_({
   server: {
     proxy: {
       "/api": {
-        target: "http://127.0.0.1:3000/",
+        target: "https://lunch-connect-v7s2.vercel.app/",
         changeOrigin: true,
         secure: 'auto',
       },
       '/socket.io': {
-        target: 'ws://127.0.0.1:3000/',
+        target: 'ws://lunch-connect-v7s2.vercel.app/',
         ws: true,
         changeOrigin: true,
       },
