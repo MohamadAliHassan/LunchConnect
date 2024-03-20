@@ -1,14 +1,15 @@
 import { FaLinkedin } from "react-icons/fa";
 import { FaGoogle } from "react-icons/fa";
 import { RiBankFill } from "react-icons/ri";
-import { useState, useContext } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-import { TokenContext } from "../../../App";
 import fetchHelper from "../../../utils/fetchHelper";
+import { useAuthContext } from "../../../Context/AuthContext";
+import sessionService from "../../../utils/sessionService";
 
 export const Loginform = () => {
-  const { token, setToken } = useContext(TokenContext);
+  const { setAuthUser } = useAuthContext();
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [serverError, setServerError] = useState("");
@@ -27,11 +28,12 @@ export const Loginform = () => {
       const response = await fetchHelper("/login", "POST", userData);
       console.log(response);
 
-      const data = await response.json();
       if (response.ok) {
-        setToken(data.token);
-
-        console.log("fetching user");
+        const data = await response.json();
+        console.log(data);
+        setAuthUser(data);
+        sessionService.setToken(data.token);
+        localStorage.setItem("chat-user", JSON.stringify(data));
         const userResponse = await fetchHelper("/user", "get");
 
         console.log(userResponse);
@@ -46,7 +48,6 @@ export const Loginform = () => {
           }
         }
       } else {
-        setServerError(data.error);
         console.error("Inloggning misslyckades");
       }
     } catch (error) {

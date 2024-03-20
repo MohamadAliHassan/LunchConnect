@@ -26,7 +26,7 @@ export const RegisterForm = () => {
     };
 
     try {
-      const response = await fetchHelper("/register", "POST", userData);
+      const response = await fetchHelper("/signup", "POST", userData);
       const data = await response.json();
 
       if (response.ok) {

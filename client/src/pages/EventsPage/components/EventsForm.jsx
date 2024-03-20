@@ -1,16 +1,10 @@
-import React, { useState } from "react";
-import { EventsConfirmModal } from "./EventsConfirmModal";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { EventsConfirmModal } from "./EventsConfirmModal";
 
 export const EventsForm = () => {
-  const [showConfirmModal, setShowConfirmModal] = useState(false);
-  const [formData, setFormData] = useState({
-    title: "",
-    date: "",
-    address: "",
-    location: "",
-    capacity: "",
-  });
+  const navigate = useNavigate();
+  const [showConfirmModal, setshowConfirmModal] = useState(false);
 
   const handleOpenConfirmModal = () => {
     setShowConfirmModal(true);
@@ -82,11 +76,11 @@ export const EventsForm = () => {
           </div>
         </div>
         <div className="Event-btns">
-          <button className="cancel-event" onClick={() => navigate(-1)}>
-            Cancel
-          </button>
           <button className="request-event" onClick={handleOpenConfirmModal}>
             Request
+          </button>
+          <button className="cancel-event" onClick={() => navigate(-1)}>
+            Cancel
           </button>
         </div>
       </div>

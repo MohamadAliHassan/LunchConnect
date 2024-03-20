@@ -1,5 +1,5 @@
 //Här ska alla routes vara stored.
-import { Routes, Route } from "react-router-dom";
+import { Navigate, Routes, Route } from "react-router-dom";
 import { AchievementsPage } from "../pages/AchievementsPage/AchievementsPage";
 import { LandingPage } from "../pages/LandingPage/LandingPage";
 import { CreateProfilePage } from "../pages/CreateProfilePage/CreateProfilePage";
@@ -16,25 +16,67 @@ import { ContactsPage } from "../pages/ContactsPage/ContactsPage";
 import { LeaderBoardPage } from "../pages/LeaderBoardPage/LeaderBoardPage";
 import { LunchesPage } from "../pages/LunchesPage/LunchesPage";
 
+import { useAuthContext } from "../Context/AuthContext";
+
 export const AllRoutes = () => {
+  const { authUser } = useAuthContext();
   return (
     <>
       <Routes>
-        <Route path="/" element={<LandingPage />}></Route>
-        <Route path="/achievements" element={<AchievementsPage />}></Route>
-        <Route path="/createprofile" element={<CreateProfilePage />}></Route>
         <Route path="/login" element={<LoginPage />}></Route>
         <Route path="/register" element={<RegisterPage />}></Route>
-        <Route path="/network" element={<NetworkPage />}></Route>
-        <Route path="/home" element={<HomePage />}></Route>
-        <Route path="/user/:userId" element={<UserPage />}></Route>
-        <Route path="/chat" element={<ChatPage />}></Route>
-        <Route path="/profile" element={<ProfilePage />}></Route>
-        <Route path="/add-event" element={<EventsPage />}></Route>
-        <Route path="/settings" element={<SettingsPage />}></Route>
-        <Route path="/contacts" element={<ContactsPage />}></Route>
-        <Route path="/leaderboard" element={<LeaderBoardPage />}></Route>
-        <Route path="/lunches" element={<LunchesPage />}></Route>
+        <Route
+          path="/"
+          element={authUser ? <LandingPage /> : <Navigate to="/login" />}
+        ></Route>
+        <Route
+          path="/achievements"
+          element={authUser ? <AchievementsPage /> : <Navigate to="/login" />}
+        ></Route>
+        <Route
+          path="/createprofile"
+          element={authUser ? <CreateProfilePage /> : <Navigate to="/login" />}
+        ></Route>
+        <Route
+          path="/network"
+          element={authUser ? <NetworkPage /> : <Navigate to="/login" />}
+        ></Route>
+        <Route
+          path="/home"
+          element={authUser ? <HomePage /> : <Navigate to="/login" />}
+        ></Route>
+        <Route
+          path="/user"
+          element={authUser ? <UserPage /> : <Navigate to="/login" />}
+        ></Route>
+        <Route
+          path="/chat"
+          element={authUser ? <ChatPage /> : <Navigate to="/login" />}
+        ></Route>
+        <Route
+          path="/profile"
+          element={authUser ? <ProfilePage /> : <Navigate to="/login" />}
+        ></Route>
+        <Route
+          path="/add-event"
+          element={authUser ? <EventsPage /> : <Navigate to="/login" />}
+        ></Route>
+        <Route
+          path="/settings"
+          element={authUser ? <SettingsPage /> : <Navigate to="/login" />}
+        ></Route>
+        <Route
+          path="/contacts"
+          element={authUser ? <ContactsPage /> : <Navigate to="/login" />}
+        ></Route>
+        <Route
+          path="/leaderboard"
+          element={authUser ? <LeaderBoardPage /> : <Navigate to="/login" />}
+        ></Route>
+        <Route
+          path="/lunches"
+          element={authUser ? <LunchesPage /> : <Navigate to="/login" />}
+        ></Route>
       </Routes>
     </>
   );
