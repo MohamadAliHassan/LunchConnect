@@ -5,13 +5,19 @@ import { createToken } from "../utils/jwtUtil.js"
 
 export const signup = async (req, res) => {
     try {
-        const { username, password, confirmPassword } = req.body;
+        const { username, password } = req.body;
+
+        // temporary since the frontend does not send confirmPassword
+        const confirmPassword = password;
+
+        // temporary fix of using a undeclared variable called gender below
+        const gender = "male";
 
         if (password !== confirmPassword) {
             return res.status(400).json({ error: "Passwords don't match" })
         }
 
-        const user = await User.findOne({username});
+        const user = await User.findOne({ username });
 
         if (user) {
             return res.status(400).json({ error: "Username already exists" })
@@ -47,7 +53,7 @@ export const signup = async (req, res) => {
         if (newUser) {
             createToken(newUser._id, res);
             await newUser.save();
-            
+
             res.status(201).json({
                 _id: newUser._id,
                 username: newUser.username,
@@ -82,14 +88,14 @@ export const login = async (req, res) => {
         if (!user || !isPasswordCorrect) {
             return res.status(400).json({ error: "Invalid username or password" })
         }
-        
+
         const token = createToken(user._id, res);
 
         res.status(200).json({
             token: token,
             _id: user._id,
-            username: user.username, 
-            role: user.role, 
+            username: user.username,
+            role: user.role,
             profileCompleted: user.profileCompleted
         });
     } catch (error) {
@@ -101,7 +107,7 @@ export const login = async (req, res) => {
 export const logout = (req, res) => {
     try {
         res.cookie("jwt", "", { maxAge: 0 });
-        res.status(200).json({ message: "Logged out successfully "});
+        res.status(200).json({ message: "Logged out successfully " });
     } catch (error) {
         console.log("Error in logout controller", error.message);
         res.status(500).json({ error: "Internal Server Error" })
