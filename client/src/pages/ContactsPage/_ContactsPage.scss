@@ -1,57 +1,119 @@
 @use "../../Sass/abstract/variables" as *;
 
-.contacts-container {
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
-  align-items: center;
-  height: 50dvh;
-  justify-content: center;
-  text-align: center;
-  width: 85%;
-  background-color: $secBackground;
+@media only screen and (max-width: 767px) {
+  .contacts-container {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    align-items: center;
+    height: 50dvh;
+    justify-content: center;
+    text-align: center;
+    width: 85%;
+    background-color: $darkAccent;
+  }
+  
+  .contacts-list {
+    list-style-type: none;
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .contacts-listitem {
+    background-color: $secBackground;
+    width: 65%;
+    max-width: 500px;
+    height: 5em;
+    //   background-color: red;
+    margin: 0 auto;
+    margin-bottom: 1em;
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .contacts-listitem-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .contacts-listitem-container p,
+  .contacts-listitem-container div p {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .contacts-listitem-container div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5px;
+    margin-left: 1em;
+  }
+  
+  .contacts-listitem-container h3 {
+    margin-left: 1em;
+    font-size: 15px;
+  }  
 }
 
-.contacts-list {
-  list-style-type: none;
-  width: 100%;
-}
-
-.contacts-listitem {
-  background-color: $darkAccent;
-  width: 65%;
-  max-width: 500px;
-  height: 5em;
-  //   background-color: red;
-  margin: 0 auto;
-  margin-bottom: 1em;
-  padding: 15px;
-  display: flex;
-  flex-direction: row;
-}
-
-.contacts-listitem-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.contacts-listitem-container p,
-.contacts-listitem-container div p {
-  margin: 0;
-  padding: 0;
-}
-
-.contacts-listitem-container div {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  gap: 5px;
-  margin-left: 1em;
-}
-
-.contacts-listitem-container h3 {
-  margin-left: 1em;
-  font-size: 15px;
+@media only screen and (min-width: 768px) {
+  .contacts-container {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    align-items: center;
+    height: 50dvh;
+    justify-content: center;
+    text-align: center;
+    width: 85%;
+    background-color: $darkAccent;
+  }
+  
+  .contacts-list {
+    list-style-type: none;
+    width: 40%;
+    max-width: 262px;
+  }
+  
+  .contacts-listitem {
+    background-color: $secBackground;
+    width: 100%;
+    max-width: 500px;
+    height: 5em;
+    //   background-color: red;
+    margin: 0 auto;
+    margin-bottom: 1em;
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .contacts-listitem-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .contacts-listitem-container p,
+  .contacts-listitem-container div p {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .contacts-listitem-container div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5px;
+    margin-left: 1em;
+  }
+  
+  .contacts-listitem-container h3 {
+    margin-left: 1em;
+    font-size: 15px;
+  } 
 }
