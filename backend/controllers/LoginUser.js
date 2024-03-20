@@ -3,15 +3,16 @@ import User from "../models/user.model.js";
 import jwtUtil from "../utils/jwtUtil.js";
 
 export async function loginHandler(req, res) {
+  console.log("Hello");
   const { username, password } = req.body;
-
+  console.log(req.body);
   try {
     if (!username || !password) {
       return res.status(400).json({ error: "Missing username or password!" });
     }
 
     const user = await User.findOne({ username });
-
+    console.log(user);
     if (!user) {
       return res
         .status(404)
@@ -19,7 +20,7 @@ export async function loginHandler(req, res) {
     }
 
     const isPasswordMatch = await bcrypt.compare(password, user.password);
-    console.log(user._id);
+    console.log(isPasswordMatch);
 
     if (isPasswordMatch) {
       const tokenPayload = {
