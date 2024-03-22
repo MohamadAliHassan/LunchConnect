@@ -1,0 +1,109 @@
+@use "../../Sass/abstract/variables" as *;
+// Header section
+.Header-chat {
+  display: flex;
+  justify-content: space-between;
+  width: 85%;
+  margin: 0 auto;
+  align-items: center;
+  height: 10vh;
+}
+.bio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 10px;
+}
+.rounded {
+  background-color: green;
+  padding: 8px 8px;
+  border-radius: 50%;
+}
+.lunch-tag {
+  display: flex;
+  justify-content: end;
+  width: 92%;
+  align-items: center;
+  margin: -1.2rem 0;
+}
+// Message section
+.msg-container {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 3rem 0;
+}
+.flex-container {
+  display: flex;
+  width: 20%;
+  margin: 0 auto;
+  justify-content: center;
+  gap: 10px;
+}
+.input-msg {
+  margin: 0 auto;
+  display: flex;
+  background-color: $lightAccent;
+  color: #fff;
+  border-radius: 8px;
+  outline: none;
+  border: none;
+  padding: 0.9rem 3rem;
+}
+.msg-sendBtn {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  width: 80%;
+}
+.send-btn {
+  padding: 11px;
+  color: #fff;
+  border-radius: 50%;
+}
+.profile-img {
+  border-radius: 50%;
+  width: 15%;
+  margin: 0 10px;
+}
+
+// Modal för lunch
+.lunchModal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.lunch-control-input {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 35%;
+  padding: 10px;
+}
+.lunch-control-input label {
+  font-size: 1.4rem;
+}
+.lunch-control-input input {
+  padding: 7px 10px;
+}
+.btn-container-lunch {
+  display: flex;
+  flex-direction: column;
+  width: 35%;
+  margin: 10px auto;
+  gap: 10px;
+}
+
+.btn-container-lunch button {
+  color: #fff;
+  font-size: 15px;
+}
+.lunch-cancel-btn {
+  background-color: $secButton;
+}

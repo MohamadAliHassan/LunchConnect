@@ -1,0 +1,167 @@
+@use "../../Sass/abstract/variables" as *;
+
+@media only screen and (max-width: 767px) {
+  .eventcontainer {
+    background-color: $darkAccent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    height: 60vh;
+    width: 85%;
+    max-width: 650px;
+  }
+  .event-form-control h3 {
+    text-align: center;
+  }
+  .event-form-control {
+    padding: 10px 0;
+  }
+  
+  .event-form-control input {
+    margin: 0 auto;
+    display: flex;
+    padding: 5px;
+    border: none;
+    outline: none;
+  }
+  .Event-btns {
+    display: flex;
+    flex-direction: column;
+  }
+  .Event-btns button {
+    font-size: 15px;
+    font-weight: 600;
+    margin: 10px 0;
+  }
+  .Event-btns .cancel-event {
+    background-color: $secButton;
+    color: $fontColor;
+  }
+  .Event-btns .request-event {
+    color: $fontColor;
+  }
+  
+  // Modal confirm
+  .Confirm-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .center-modal {
+    background-color: $darkAccent;
+    padding: 20px 40px;
+    border-radius: 8px;
+    text-align: center;
+  }
+  .center-modal p {
+    font-size: 1.3rem;
+  }
+  .center-modal h3 {
+    font-weight: 600;
+    font-size: 1.5rem;
+  }
+  .modal-buttons button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto;
+    color: #fff;
+    font-size: 20px;
+  }
+  .close-btn-modal {
+    background-color: $secButton;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .eventcontainer {
+    background-color: $darkAccent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    height: 65vh;
+    width: 85%;
+    max-width: 650px;
+    font-size: 1.5em;
+  }
+  .event-form-control h3 {
+    text-align: center;
+  }
+  .event-form-control {
+    padding: 10px 0;
+  }
+  
+  .event-form-control input {
+    margin: 0 auto;
+    display: flex;
+    padding: 5px;
+    border: none;
+    outline: none;
+    font-size: .8em;
+  }
+  .Event-btns {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    display: flex;
+    flex-direction: column;
+  }
+  .Event-btns button {
+    font-size: 25px;
+    font-weight: 600;
+    margin: 10px 0;
+  }
+  .Event-btns .cancel-event {
+    background-color: $secButton;
+    color: $fontColor;
+  }
+  .Event-btns .request-event {
+    color: $fontColor;
+  }
+  
+  // Modal confirm
+  .Confirm-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .center-modal {
+    background-color: $darkAccent;
+    padding: 20px 40px;
+    border-radius: 8px;
+    text-align: center;
+  }
+  .center-modal p {
+    font-size: 1.3rem;
+  }
+  .center-modal h3 {
+    font-weight: 600;
+    font-size: 1.5rem;
+  }
+  .modal-buttons button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto;
+    color: #fff;
+    font-size: 20px;
+  }
+  .close-btn-modal {
+    background-color: $secButton;
+  }
+}

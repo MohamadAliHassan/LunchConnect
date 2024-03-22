@@ -1,0 +1,46 @@
+.register-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin-bottom: 2em;
+}
+.form-control .reg-input {
+  margin: 0 auto;
+  display: flex;
+}
+form {
+  padding: 4.5rem 3.5rem;
+}
+// Media query for phone
+@media only screen and (max-width: 767px) {
+  .register-container {
+    height: 90vh;
+  }
+  .register-form {
+    padding: 2rem 1.8rem;
+  }
+  .register-form .form-control input {
+    padding: 0.8rem 2rem;
+  }
+  .register-form .form-control {
+    padding: 5px;
+  }
+}
+
+// Media query for tablet
+@media only screen and (min-width: 768px) and (max-width: 1023) {
+  .register-container {
+    height: 90vh;
+    background-color: red;
+  }
+  .register-form {
+    padding: 2.5rem 2rem;
+  }
+  .register-form .form-control input {
+    padding: 1rem 2rem;
+  }
+  .register-form .form-control {
+    padding: 6px;
+  }
+}
