@@ -1,18 +1,16 @@
-import React from "react";
 import PropTypes from "prop-types";
 
-export const Modal = ({ handleClose }) => {
+export const Modal = ({ handleClose, mission }) => {
   return (
     <>
       <div className="modal-overlay" onClick={handleClose}>
-        <div className="modal">
-          <h2>Have you achieved this task?</h2>
+        <div className="modal" onClick={(e) => e.stopPropagation()}>
+          <h2>Have you completed this mission?</h2>
+          <h3 className="task-heading">{mission.task}</h3>
+          <p>{mission.description}</p>
           <div className="button-container">
             <button onClick={() => console.log("Ja klickades")}>Confirm</button>
-            <button
-              className="close-modal-btn"
-              onClick={() => console.log("Nej klickades")}
-            >
+            <button className="close-modal-btn" onClick={handleClose}>
               Cancel
             </button>
           </div>
@@ -23,5 +21,6 @@ export const Modal = ({ handleClose }) => {
 };
 
 Modal.propTypes = {
-  handleClose: PropTypes.object.isRequired,
+  handleClose: PropTypes.func.isRequired,
+  mission: PropTypes.object.isRequired,
 };

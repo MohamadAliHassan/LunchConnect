@@ -8,7 +8,7 @@ const missions = [
         requirementAmount: 10000,
       },
     ],
-    task: "jogging",
+    task: "Jogging",
     points: 15,
     description: "Walk 10000 steps a day for a week",
   },
