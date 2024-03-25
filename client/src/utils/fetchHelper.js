@@ -18,5 +18,9 @@ export default function fetchHelper(url, method, body) {
     fetchOptions.headers.authorization = `${token}`;
   }
 
-  return fetch("/api" + url, fetchOptions);
+  // only add /api if the url does not start with it
+  // (quick for sloppy calls in the rest of the code)
+  url.slice(0, 4) != '/api' && (url = '/api' + url);
+
+  return fetch(url, fetchOptions);
 }

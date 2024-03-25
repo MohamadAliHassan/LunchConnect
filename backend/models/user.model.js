@@ -14,6 +14,18 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  gender: {
+    type: String,
+    required: true,
+  },
+  friends: [
+    {
+      friendId: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "User"
+      }
+    }
+  ],
   skills: [
     {
       skillName: {
@@ -29,6 +41,10 @@ const userSchema = new mongoose.Schema({
     },
   ],
   description: {
+    type: String,
+    required: true,
+  },
+  country: {
     type: String,
     required: true,
   },
@@ -49,11 +65,15 @@ const userSchema = new mongoose.Schema({
     enum: ["user", "admin", "partner", "superadmin"],
     required: true,
   },
+  profilePic: {
+    type: String,
+    required: true,
+  },
   profileCompleted : {
     type: Boolean,
     required: true,
-  }
-});
+  },
+}, {timestamps: true});
 
 const User = mongoose.model("User", userSchema);
 

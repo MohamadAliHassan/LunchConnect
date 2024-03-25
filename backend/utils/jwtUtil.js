@@ -1,4 +1,4 @@
-import Jwt from "jsonwebtoken";
+import jwt from "jsonwebtoken";
 import fs from "fs";
 import path, { dirname } from "path";
 import { fileURLToPath } from "url";
@@ -10,12 +10,23 @@ const keysDir = path.join(__dirname, "../config/keys/");
 const privateKey = fs.readFileSync(keysDir + "private.pem");
 const publicKey = fs.readFileSync(keysDir + "public.pem");
 
-function createToken(payload) {
-  return Jwt.sign(payload, privateKey, { algorithm: "RS256" });
+export const createToken = (userid, res) => {
+  console.log("signing token")
+	const token = jwt.sign({ userid }, privateKey, {
+    algorithm: "RS256",
+		expiresIn: "15d",
+	});
+  console.log("token signed")
+
+  res.cookie("jwt", token, {
+    maxAge: 15 * 24 * 60 * 60 * 1000,
+    httpOnly: true,
+    sameSite: "strict",
+  })
+
+  return token;
 }
 
-function validateToken(token) {
-  return Jwt.verify(token, publicKey);
+export const validateToken = (token) => {
+  return jwt.verify(token, publicKey);
 }
-
-export default { createToken, validateToken };

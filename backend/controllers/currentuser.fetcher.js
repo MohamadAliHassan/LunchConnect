@@ -1,15 +1,11 @@
-import jwtUtil from "../utils/jwtUtil.js";
 import User from "../models/user.model.js";
 
 export const fetchUser = async (req, res) => {
     try {
-        const token = req.headers.authorization
-
-        const { id } = jwtUtil.validateToken(token);
-        console.log(id)
-
-        const user = await User.findById(id);
-
+        const payload = res.locals.jwtPayload;
+        console.log(payload)
+        const user = await User.findById(payload.userid);
+        console.log(user)
         res.status(200).json({ user });
     } catch (error) {
         console.error("Error fetching user:", error);
