@@ -1,6 +1,6 @@
 import bcrypt from "bcrypt";
 import User from "../models/user.model.js";
-import jwtUtil from "../utils/jwtUtil.js";
+import { createToken } from "../utils/jwtUtil.js";
 
 export async function loginHandler(req, res) {
   console.log("Hello");
@@ -29,7 +29,7 @@ export async function loginHandler(req, res) {
         role: user.role,
         profileCompleted: user.profileCompleted,
       };
-      const token = jwtUtil.createToken(tokenPayload);
+      const token = createToken(tokenPayload);
 
       console.log(token);
 
