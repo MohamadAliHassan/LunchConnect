@@ -1,6 +1,6 @@
 import bcrypt from "bcrypt";
 import User from "../models/user.model.js";
-import jwtUtil from "../utils/jwtUtil.js";
+import * as jwtUtil from "../utils/jwtUtil.js";
 
 export async function loginHandler(req, res) {
   console.log("Hello");
