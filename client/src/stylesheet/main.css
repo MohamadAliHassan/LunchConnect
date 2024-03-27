@@ -6,6 +6,10 @@
   box-sizing: border-box;
 }
 
+input {
+  color: #000 !important;
+}
+
 #root {
   min-height: 100vh;
   display: flex;
@@ -37,11 +41,13 @@ button {
     height: 80vh;
     background-color: #263546;
   }
+
   .achievements-header {
     margin: 0 auto;
     margin-top: 1em;
     font-size: 2em;
   }
+
   .achievements-list {
     display: grid;
     list-style-type: none;
@@ -50,6 +56,7 @@ button {
     margin: 0 auto;
     margin-top: 2em;
   }
+
   .achievements-list li {
     width: 100px;
     height: 100px;
@@ -57,17 +64,21 @@ button {
     border-width: 4px;
     border-color: white;
   }
+
   .achievement-icon {
     width: 100%;
     filter: invert(100%);
   }
+
   .achievement-modal-span {
     width: 100%;
   }
+
   .achievement-modal-icon {
     width: 50%;
   }
 }
+
 @media only screen and (max-width: 767px) {
   .container {
     display: flex;
@@ -76,25 +87,31 @@ button {
     align-items: center;
     justify-content: center;
   }
+
   .Logo-container {
     margin-top: 16em;
     margin-bottom: 1em;
   }
+
   .Logo-container img {
     width: 6em;
   }
+
   h2 {
     margin: 1em 0;
   }
+
   .btn-container {
     display: flex;
     flex-direction: column;
     gap: 2rem;
     margin-top: 3em;
   }
+
   span {
     color: #18a28e;
   }
+
   button {
     background-color: #18a28e;
     outline: none;
@@ -102,17 +119,20 @@ button {
     padding: 15px 45px;
     border-radius: 8px;
   }
+
   .SignUp-btn {
     font-size: 17px;
     font-weight: 600;
     color: #fff;
   }
+
   .login-btn {
     font-size: 17px;
     font-weight: 600;
     color: #fff;
   }
 }
+
 @media only screen and (min-width: 768px) {
   .container {
     display: flex;
@@ -121,25 +141,31 @@ button {
     align-items: center;
     justify-content: center;
   }
+
   .Logo-container {
     margin-top: 16em;
     margin-bottom: 2em;
   }
+
   .Logo-container img {
     width: 8em;
   }
+
   h1 {
     margin: 1em 0;
   }
+
   .btn-container {
     display: flex;
     flex-direction: column;
     gap: 2rem;
     margin-top: 3em;
   }
+
   span {
     color: #18a28e;
   }
+
   .SignUp-btn {
     background-color: #18a28e;
     outline: none;
@@ -149,6 +175,7 @@ button {
     font-size: 1.5em;
     color: #fff;
   }
+
   .login-btn {
     background-color: #18a28e;
     outline: none;
@@ -159,6 +186,7 @@ button {
     color: #fff;
   }
 }
+
 .login-container {
   display: flex;
   justify-content: center;
@@ -196,9 +224,11 @@ form {
   outline: none;
   border-radius: 5px;
 }
+
 .form-control input::-moz-placeholder {
   color: #8f9ca6;
 }
+
 .form-control input::placeholder {
   color: #8f9ca6;
 }
@@ -251,84 +281,105 @@ form {
     margin-bottom: 10px;
     padding-bottom: 1em;
   }
+
   .login-container {
     height: 90vh;
   }
+
   .form-control input {
     padding: 1em 1.5em;
     font-weight: 500;
     outline: none;
     border-radius: 4px;
   }
+
   .form-control input::-moz-placeholder {
     color: #8f9ca6;
   }
+
   .form-control input::placeholder {
     color: #8f9ca6;
   }
+
   .login-form {
     padding: 1.4rem 3rem;
   }
+
   .Login-btn {
     font-size: 12px;
     font-weight: 600;
     padding: 1rem 2rem;
   }
+
   .social-login {
     margin: 15px 0;
     padding: 1.6rem;
   }
+
   .social-login .overlay-1 {
     border-radius: 30px;
   }
+
   .social-login .overlay-2 {
     margin: 10px 0;
     border-radius: 30px;
   }
+
   .social-login .overlay-3 {
     background-color: #d3d3d3;
     border-radius: 30px;
     color: #000;
   }
 }
+
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
   .form-control {
     margin-bottom: 8px;
     padding-bottom: 1em;
   }
+
   .form-control input {
     padding: 1em 1.5em;
     font-weight: 500;
     outline: none;
     border-radius: 4px;
   }
+
   .form-control input::-moz-placeholder {
     color: #8f9ca6;
   }
+
   .form-control input::placeholder {
     color: #8f9ca6;
   }
+
   .login-form {
     padding: 1.7rem 3rem;
   }
+
   .social-login {
     margin: 15px 0;
     padding: 1.6rem;
   }
+
   .social-login .overlay-1 {
     border-radius: 30px;
   }
+
   .social-login .overlay-2 {
     border-radius: 30px;
   }
+
   .social-login .overlay-3 {
     background-color: #d3d3d3;
     border-radius: 30px;
   }
+
   .login-container {
     height: 90vh;
   }
 }
+
 .createprofile-container {
   display: flex;
   flex-direction: column;
@@ -346,12 +397,15 @@ form {
     margin-bottom: 0.8em;
     font-size: 1.2em;
   }
+
   .createprofile-pic {
     margin-bottom: 2em;
   }
+
   .hidden {
     display: none;
   }
+
   .createprofile-pic label {
     display: block;
     width: 8em;
@@ -362,17 +416,20 @@ form {
     border-radius: 20px;
     margin: 0 auto;
   }
+
   .createprofile-img {
     max-width: 10em;
     margin: 0 auto;
     margin-bottom: 1em;
   }
+
   .createprofile-next {
     width: 10em;
     margin: 0 auto;
     margin-bottom: 2em;
     color: white;
   }
+
   .createprofile-back {
     width: 10em;
     margin: 0 auto;
@@ -380,9 +437,11 @@ form {
     background-color: #840202;
     color: white;
   }
+
   .createprofile-description {
     margin-bottom: 2em;
   }
+
   .createprofile-description label {
     margin-bottom: 1em;
     display: flex;
@@ -390,21 +449,25 @@ form {
     margin: 0 auto;
     text-align: center;
   }
+
   .createprofile-description textarea {
     margin-top: 1em;
     width: 15em;
     margin: 0 auto;
   }
+
   .createprofile-listitem,
   .createprofile-staritem {
     list-style-type: none;
   }
+
   .createprofile-listitem label,
   .createprofile-staritem label {
     display: flex;
     flex-direction: column;
     font-size: 1.3em;
   }
+
   .createprofile-listitem label input,
   .createprofile-staritem label input {
     border: none;
@@ -417,67 +480,86 @@ form {
     margin: 0 auto;
     margin-bottom: 1em;
   }
-  .createprofile-listitem label input::-moz-placeholder, .createprofile-staritem label input::-moz-placeholder {
+
+  .createprofile-listitem label input::-moz-placeholder,
+  .createprofile-staritem label input::-moz-placeholder {
     color: #8f9ca6;
   }
+
   .createprofile-listitem label input::placeholder,
   .createprofile-staritem label input::placeholder {
     color: #8f9ca6;
   }
+
   .five-stars {
     list-style-type: none;
     display: flex;
     margin: 0 auto;
   }
+
   .five-stars li {
     margin: 5px;
   }
+
   .createprofile-add {
     color: white;
     margin-top: 1em;
     margin-bottom: 1em;
   }
+
   hr.solid {
     border-top: 3px solid #bbb;
     width: 80%;
     margin: 0 auto;
     margin-bottom: 1em;
   }
+
   .createprofile-staritem {
     margin-bottom: 1em;
   }
+
   .overview-pic img {
     width: 10em;
     border-radius: 50%;
   }
+
   .overview-desc p {
     font-size: 1.3em;
   }
+
   .overview-desc {
     margin-bottom: 1em;
   }
+
   .overview-skills h3,
   .overview-fullname h3 {
     margin-bottom: 0.5em;
   }
+
   .overview-skills ul {
     list-style-type: none;
   }
+
   .overview-rating {
     margin-bottom: 1.5em;
   }
+
   .overview-rating label {
     font-size: 1.3em;
   }
+
   .overview-company {
     margin-bottom: 1em;
   }
+
   .overview-company p {
     font-size: 1.3em;
   }
+
   .createprofile-fullname label p {
     font-weight: bold;
   }
+
   .createprofile-fullname label input {
     border: none;
     background-color: #d3d3d3;
@@ -488,12 +570,15 @@ form {
     margin-bottom: 1em;
     width: 90%;
   }
+
   .createprofile-fullname label input::-moz-placeholder {
     color: #8f9ca6;
   }
+
   .createprofile-fullname label input::placeholder {
     color: #8f9ca6;
   }
+
   .createprofile-description textarea {
     border: none;
     background-color: #d3d3d3;
@@ -505,32 +590,39 @@ form {
     margin: 0 auto;
     margin-bottom: 1em;
   }
+
   .createprofile-description textarea::-moz-placeholder {
     color: #8f9ca6;
   }
+
   .createprofile-description textarea::placeholder {
     color: #8f9ca6;
   }
 }
+
 @media only screen and (min-width: 768px) {
   .createprofile-header {
     margin-bottom: 0.5em;
     margin-top: 0.5em;
   }
+
   .createprofile-label {
     margin-bottom: 2em;
   }
+
   .createprofile-img {
     max-width: 10em;
     margin: 0 auto;
     margin-bottom: 1em;
   }
+
   .createprofile-next {
     width: 10em;
     margin: 0 auto;
     margin-bottom: 2em;
     color: white;
   }
+
   .createprofile-back {
     width: 10em;
     margin: 0 auto;
@@ -538,6 +630,7 @@ form {
     background-color: #840202;
     color: white;
   }
+
   .createprofile-description label {
     margin-bottom: 1em;
     display: flex;
@@ -545,6 +638,7 @@ form {
     margin: 0 auto;
     text-align: center;
   }
+
   .createprofile-description textarea {
     border: none;
     background-color: #d3d3d3;
@@ -556,13 +650,16 @@ form {
     margin: 0 auto;
     margin-bottom: 1em;
   }
+
   .createprofile-description textarea::-moz-placeholder {
     color: #8f9ca6;
   }
+
   .createprofile-description textarea::placeholder {
     color: #8f9ca6;
   }
 }
+
 .active {
   color: #000;
 }
@@ -592,31 +689,39 @@ form {
   .register-container {
     height: 90vh;
   }
+
   .register-form {
     padding: 2rem 1.8rem;
   }
+
   .register-form .form-control input {
     padding: 0.8rem 2rem;
   }
+
   .register-form .form-control {
     padding: 5px;
   }
 }
+
 @media only screen and (min-width: 768px) and (max-width: 1023) {
   .register-container {
     height: 90vh;
     background-color: red;
   }
+
   .register-form {
     padding: 2.5rem 2rem;
   }
+
   .register-form .form-control input {
     padding: 1rem 2rem;
   }
+
   .register-form .form-control {
     padding: 6px;
   }
 }
+
 .network-container {
   display: flex;
   flex-direction: column;
@@ -727,13 +832,16 @@ form {
     max-width: 420px;
     min-width: 300px;
   }
+
   .network-tab {
     gap: 9px;
   }
+
   .network-listitem {
     width: 65%;
   }
 }
+
 @media only screen and (max-width: 767px) {
   .home-container {
     display: flex;
@@ -742,23 +850,28 @@ form {
     height: 50vh;
     flex-direction: column;
   }
+
   .score-board {
     background-color: #263546;
     padding: 1rem 5rem;
     border-radius: 8px;
   }
+
   .Lunch-btn {
     color: #fff;
     padding: 1rem 4rem;
     margin: 20px;
     font-size: 20px;
   }
+
   .score-board p {
     font-size: 20px;
   }
+
   .home-container img {
     width: 8em;
   }
+
   .mission-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -766,11 +879,13 @@ form {
     max-width: 700px;
     margin: 0 auto;
   }
+
   .mission-task {
     text-align: center;
     height: 15em;
     margin: 0 auto;
   }
+
   .overlay {
     background-color: #263546;
     padding: 1.2rem 1rem;
@@ -782,33 +897,41 @@ form {
     flex-direction: column;
     cursor: pointer;
   }
+
   .overlay img {
     width: 55%;
     margin: 0 auto;
   }
+
   .icons-image {
     filter: invert(100);
   }
+
   .score-mission {
     margin: 0 auto;
   }
+
   .nav-events {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
   }
+
   .nav-events p {
     font-weight: 600;
   }
+
   .upcomingContainer {
     display: flex;
     flex-direction: row;
     margin-bottom: 1em;
   }
+
   .upcomingEvent {
     width: 45%;
     margin: 0 auto;
   }
+
   .overlay-event {
     background-color: #263546;
     padding: 1rem 1rem;
@@ -818,18 +941,22 @@ form {
     justify-content: flex-start;
     margin: 0 auto;
   }
+
   .description {
     display: flex;
     flex-direction: column;
   }
+
   .description img {
     max-width: 10rem;
     -o-object-fit: contain;
-       object-fit: contain;
+    object-fit: contain;
   }
+
   .description small {
     padding: 5px 0;
   }
+
   .modal-overlay {
     position: fixed;
     top: 0;
@@ -841,19 +968,23 @@ form {
     justify-content: center;
     align-items: center;
   }
+
   .task-heading {
     text-align: center;
   }
+
   .modal {
     background-color: #263546;
     padding: 20px;
     border-radius: 8px;
   }
+
   .button-container {
     display: flex;
     flex-direction: column;
     gap: 10px;
   }
+
   .button-container button {
     padding: 10px 20px;
     border: none;
@@ -863,13 +994,16 @@ form {
     border-radius: 5px;
     border: none;
   }
+
   close-modal-btn {
     background-color: #51596a;
   }
+
   .button-container button:hover {
     background-color: #0056b3;
   }
 }
+
 @media only screen and (min-width: 768px) {
   .home-container {
     display: flex;
@@ -878,23 +1012,28 @@ form {
     height: 50vh;
     flex-direction: column;
   }
+
   .score-board {
     background-color: #263546;
     padding: 1rem 5rem;
     border-radius: 8px;
   }
+
   .Lunch-btn {
     color: #fff;
     padding: 1rem 4rem;
     margin: 20px;
     font-size: 20px;
   }
+
   .score-board p {
     font-size: 20px;
   }
+
   .home-container img {
     width: 8em;
   }
+
   .mission-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -902,11 +1041,13 @@ form {
     max-width: 700px;
     margin: 0 auto;
   }
+
   .mission-task {
     text-align: center;
     height: 15em;
     margin: 0 auto;
   }
+
   .overlay {
     background-color: #263546;
     padding: 1.2rem 1rem;
@@ -918,24 +1059,30 @@ form {
     flex-direction: column;
     cursor: pointer;
   }
+
   .overlay img {
     width: 55%;
     margin: 0 auto;
   }
+
   .icons-image {
     filter: invert(100);
   }
+
   .score-mission {
     margin: 0 auto;
   }
+
   .nav-events {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
   }
+
   .nav-events p {
     font-weight: 600;
   }
+
   .upcomingContainer {
     display: flex;
     flex-direction: row;
@@ -943,11 +1090,13 @@ form {
     width: 65%;
     max-width: 700px;
   }
+
   .upcomingEvent {
     width: 45%;
     max-width: 275px;
     margin: 0 auto;
   }
+
   .overlay-event {
     background-color: #263546;
     padding: 1rem 1rem;
@@ -957,19 +1106,23 @@ form {
     justify-content: flex-start;
     margin: 0 auto;
   }
+
   .description {
     display: flex;
     flex-direction: column;
   }
+
   .description img {
     max-width: 100%;
     -o-object-fit: contain;
-       object-fit: contain;
+    object-fit: contain;
   }
+
   .description small {
     padding: 5px 0;
     font-size: 1.2em;
   }
+
   .modal-overlay {
     position: fixed;
     top: 0;
@@ -981,16 +1134,19 @@ form {
     justify-content: center;
     align-items: center;
   }
+
   .modal {
     background-color: #263546;
     padding: 20px;
     border-radius: 8px;
   }
+
   .button-container {
     display: flex;
     flex-direction: column;
     gap: 10px;
   }
+
   .button-container button {
     padding: 10px 20px;
     border: none;
@@ -1000,13 +1156,16 @@ form {
     border-radius: 5px;
     border: none;
   }
+
   close-modal-btn {
     background-color: #51596a;
   }
+
   .button-container button:hover {
     background-color: #0056b3;
   }
 }
+
 .userpage-container {
   display: flex;
   flex-direction: column;
@@ -1025,15 +1184,19 @@ form {
     margin-top: 1em;
     border-radius: 50%;
   }
+
   .userpage-connect {
     margin-bottom: 1em;
   }
+
   .userpage-connect button {
     color: white;
   }
+
   .userpage-info-general {
     list-style-type: none;
   }
+
   .userpage-info-bio div {
     margin: 0 auto;
     width: 50%;
@@ -1041,10 +1204,12 @@ form {
     background-color: #263546;
     margin-bottom: 1em;
   }
+
   .userpage-info-skills ul {
     list-style-type: none;
   }
 }
+
 .hamburger-menu,
 .first-header {
   display: flex;
@@ -1064,6 +1229,7 @@ form {
   display: flex;
   flex-direction: column;
 }
+
 .menu-icon span {
   background: #fff;
   height: 6px;
@@ -1094,12 +1260,14 @@ form {
   left: 25px;
   z-index: 1;
 }
+
 .menu-items a {
   color: white;
   text-decoration: none;
   padding: 10px 20px;
   font-size: 1.5rem;
 }
+
 .menu-items a:hover {
   background: #555;
 }
@@ -1134,6 +1302,7 @@ form {
     transform: rotate(360deg);
   }
 }
+
 .Header-chat {
   display: flex;
   justify-content: space-between;
@@ -1353,86 +1522,110 @@ form {
     width: 100%;
     margin: 0 auto;
   }
+
   .profile-header {
     text-align: center;
   }
+
   .profile-header img {
     width: 6em;
   }
+
   .profile-header {
     margin-bottom: 0.7em;
   }
+
   .profile-complete {
     padding: 5px 0;
     margin: 10px 0;
   }
+
   .profile-achievements ul {
     width: 100%;
     gap: 5px;
   }
+
   .profile-plans-wrap {
     width: 100%;
     height: 100%;
   }
+
   .profile-plans-wrap .profile-plans-description img {
     height: 80%;
   }
+
   .profile-plans-wrap .profile-plans-description {
     height: 80%;
   }
+
   .profile-plans-description h3 {
     font-size: 13px;
   }
+
   .nav-events {
     width: 70%;
   }
+
   .nav-events p {
     font-size: 20px;
   }
 }
+
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
   .profile-container {
     max-width: 500px;
     width: 100%;
     margin: 0 auto;
   }
+
   .profile-header {
     text-align: center;
   }
+
   .profile-header img {
     width: 8em;
   }
+
   .profile-header {
     margin-bottom: 0.7em;
   }
+
   .profile-complete {
     padding: 5px 0;
     margin: 10px 0;
   }
+
   .profile-achievements ul {
     width: 90%;
     gap: 5px;
   }
+
   .profile-plans-wrap {
     width: 100%;
     height: 100%;
   }
+
   .profile-plans-wrap .profile-plans-description img {
     height: 80%;
   }
+
   .profile-plans-wrap .profile-plans-description {
     height: 80%;
   }
+
   .profile-plans-description h3 {
     font-size: 13px;
   }
+
   .nav-events {
     width: 70%;
   }
+
   .nav-events p {
     font-size: 20px;
   }
 }
+
 @media only screen and (max-width: 767px) {
   .eventcontainer {
     background-color: #263546;
@@ -1445,12 +1638,15 @@ form {
     width: 85%;
     max-width: 650px;
   }
+
   .event-form-control h3 {
     text-align: center;
   }
+
   .event-form-control {
     padding: 10px 0;
   }
+
   .event-form-control input {
     margin: 0 auto;
     display: flex;
@@ -1458,22 +1654,27 @@ form {
     border: none;
     outline: none;
   }
+
   .Event-btns {
     display: flex;
     flex-direction: column;
   }
+
   .Event-btns button {
     font-size: 15px;
     font-weight: 600;
     margin: 10px 0;
   }
+
   .Event-btns .cancel-event {
     background-color: #840202;
     color: #fff;
   }
+
   .Event-btns .request-event {
     color: #fff;
   }
+
   .Confirm-modal-overlay {
     position: fixed;
     top: 0;
@@ -1484,19 +1685,23 @@ form {
     justify-content: center;
     align-items: center;
   }
+
   .center-modal {
     background-color: #263546;
     padding: 20px 40px;
     border-radius: 8px;
     text-align: center;
   }
+
   .center-modal p {
     font-size: 1.3rem;
   }
+
   .center-modal h3 {
     font-weight: 600;
     font-size: 1.5rem;
   }
+
   .modal-buttons button {
     display: flex;
     justify-content: center;
@@ -1505,10 +1710,12 @@ form {
     color: #fff;
     font-size: 20px;
   }
+
   .close-btn-modal {
     background-color: #840202;
   }
 }
+
 @media only screen and (min-width: 768px) {
   .eventcontainer {
     background-color: #263546;
@@ -1522,12 +1729,15 @@ form {
     max-width: 650px;
     font-size: 1.5em;
   }
+
   .event-form-control h3 {
     text-align: center;
   }
+
   .event-form-control {
     padding: 10px 0;
   }
+
   .event-form-control input {
     margin: 0 auto;
     display: flex;
@@ -1536,24 +1746,29 @@ form {
     outline: none;
     font-size: 0.8em;
   }
+
   .Event-btns {
     margin-top: 1em;
     margin-bottom: 1em;
     display: flex;
     flex-direction: column;
   }
+
   .Event-btns button {
     font-size: 25px;
     font-weight: 600;
     margin: 10px 0;
   }
+
   .Event-btns .cancel-event {
     background-color: #840202;
     color: #fff;
   }
+
   .Event-btns .request-event {
     color: #fff;
   }
+
   .Confirm-modal-overlay {
     position: fixed;
     top: 0;
@@ -1564,19 +1779,23 @@ form {
     justify-content: center;
     align-items: center;
   }
+
   .center-modal {
     background-color: #263546;
     padding: 20px 40px;
     border-radius: 8px;
     text-align: center;
   }
+
   .center-modal p {
     font-size: 1.3rem;
   }
+
   .center-modal h3 {
     font-weight: 600;
     font-size: 1.5rem;
   }
+
   .modal-buttons button {
     display: flex;
     justify-content: center;
@@ -1585,10 +1804,12 @@ form {
     color: #fff;
     font-size: 20px;
   }
+
   .close-btn-modal {
     background-color: #840202;
   }
 }
+
 .settings-container {
   display: flex;
   flex-direction: column;
@@ -1667,11 +1888,13 @@ form {
     width: 85%;
     background-color: #263546;
   }
+
   .contacts-list {
     list-style-type: none;
     width: 100%;
     max-width: 400px;
   }
+
   .contacts-listitem {
     background-color: #51596a;
     width: 65%;
@@ -1683,17 +1906,20 @@ form {
     display: flex;
     flex-direction: row;
   }
+
   .contacts-listitem-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
   }
+
   .contacts-listitem-container p,
   .contacts-listitem-container div p {
     margin: 0;
     padding: 0;
   }
+
   .contacts-listitem-container div {
     display: flex;
     flex-direction: row;
@@ -1701,11 +1927,13 @@ form {
     gap: 5px;
     margin-left: 1em;
   }
+
   .contacts-listitem-container h3 {
     margin-left: 1em;
     font-size: 15px;
   }
 }
+
 @media only screen and (min-width: 768px) {
   .contacts-container {
     display: flex;
@@ -1718,11 +1946,13 @@ form {
     width: 85%;
     background-color: #263546;
   }
+
   .contacts-list {
     list-style-type: none;
     width: 40%;
     max-width: 262px;
   }
+
   .contacts-listitem {
     background-color: #51596a;
     width: 100%;
@@ -1734,17 +1964,20 @@ form {
     display: flex;
     flex-direction: row;
   }
+
   .contacts-listitem-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
   }
+
   .contacts-listitem-container p,
   .contacts-listitem-container div p {
     margin: 0;
     padding: 0;
   }
+
   .contacts-listitem-container div {
     display: flex;
     flex-direction: row;
@@ -1752,11 +1985,13 @@ form {
     gap: 5px;
     margin-left: 1em;
   }
+
   .contacts-listitem-container h3 {
     margin-left: 1em;
     font-size: 15px;
   }
 }
+
 @media only screen and (max-width: 767px) {
   .Leaderboard-container {
     display: flex;
@@ -1765,17 +2000,20 @@ form {
     align-items: center;
     width: 100%;
   }
+
   .filter {
     display: flex;
     justify-content: end;
     width: 80%;
     cursor: pointer;
   }
+
   .leaderboard-overlay {
     background-color: #263546;
     margin: 2rem 0;
     width: 80%;
   }
+
   .leaderboard-desc {
     display: flex;
     justify-content: space-evenly;
@@ -1783,6 +2021,7 @@ form {
     margin: 0 auto;
     width: 100%;
   }
+
   .leaderboard-bio {
     padding: 2.4rem;
     display: flex;
@@ -1790,6 +2029,7 @@ form {
     align-items: center;
     flex-direction: column;
   }
+
   .icons-fa {
     display: flex;
     flex-direction: column;
@@ -1797,18 +2037,23 @@ form {
     align-items: center;
     padding: 10px 0;
   }
+
   .icons-fa small {
     margin: 5px 0;
   }
+
   .leader-score {
     font-size: 25px;
   }
+
   .leaderboard-image {
     width: 5rem;
   }
+
   .leaderboard-name {
     font-size: 20px;
   }
+
   .filter-modal {
     position: fixed;
     top: 50%;
@@ -1820,9 +2065,11 @@ form {
     border-radius: 8px;
     z-index: 1000;
   }
+
   .modalContent {
     text-align: center;
   }
+
   .select {
     width: 100%;
     padding: 10px;
@@ -1831,6 +2078,7 @@ form {
     border: 1px solid #ccc;
     box-sizing: border-box;
   }
+
   .filterModal-btn {
     color: #fff;
     font-weight: 500;
@@ -1838,6 +2086,7 @@ form {
     margin: 10px 0;
   }
 }
+
 @media only screen and (min-width: 768px) {
   .Leaderboard-container {
     display: flex;
@@ -1846,18 +2095,21 @@ form {
     align-items: center;
     width: 100%;
   }
+
   .filter {
     display: flex;
     justify-content: end;
     width: 80%;
     cursor: pointer;
   }
+
   .leaderboard-overlay {
     background-color: #263546;
     margin: 2rem 0;
     width: 60%;
     max-width: 620px;
   }
+
   .leaderboard-desc {
     display: flex;
     justify-content: space-evenly;
@@ -1865,6 +2117,7 @@ form {
     margin: 0 auto;
     width: 100%;
   }
+
   .leaderboard-bio {
     padding: 2.4rem 6rem;
     display: flex;
@@ -1872,6 +2125,7 @@ form {
     align-items: center;
     flex-direction: column;
   }
+
   .icons-fa {
     display: flex;
     flex-direction: column;
@@ -1879,18 +2133,23 @@ form {
     align-items: center;
     padding: 10px 0;
   }
+
   .icons-fa small {
     margin: 5px 0;
   }
+
   .leader-score {
     font-size: 25px;
   }
+
   .leaderboard-image {
     width: 5rem;
   }
+
   .leaderboard-name {
     font-size: 20px;
   }
+
   .filter-modal {
     position: fixed;
     top: 50%;
@@ -1902,9 +2161,11 @@ form {
     border-radius: 8px;
     z-index: 1000;
   }
+
   .modalContent {
     text-align: center;
   }
+
   .select {
     width: 100%;
     padding: 10px;
@@ -1913,6 +2174,7 @@ form {
     border: 1px solid #ccc;
     box-sizing: border-box;
   }
+
   .filterModal-btn {
     color: #fff;
     font-weight: 500;
@@ -1920,6 +2182,7 @@ form {
     margin: 10px 0;
   }
 }
+
 .LunchesPage-container {
   display: flex;
   flex-direction: column;
@@ -1981,12 +2244,14 @@ form {
     margin: 0 auto;
     cursor: pointer;
   }
+
   .lunches-text {
     text-align: center;
     padding: 1rem 0;
     font-size: 1.6rem;
     font-weight: 400;
   }
+
   .lunch-overlay {
     background-color: #263546;
     padding: 1.6rem auto;
@@ -1994,6 +2259,7 @@ form {
     margin: 0 auto;
     border-radius: 5px;
   }
+
   .close-lunchbtn {
     background-color: #840202;
     color: #fff;
@@ -2001,18 +2267,21 @@ form {
     margin: 7px 0;
   }
 }
+
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
   .icon-fa-left {
     width: 80%;
     margin: 0 auto;
     cursor: pointer;
   }
+
   .lunches-text {
     text-align: center;
     padding: 1rem 0;
     font-size: 1.6rem;
     font-weight: 400;
   }
+
   .lunch-overlay {
     background-color: #263546;
     padding: 1.6rem auto;
@@ -2020,10 +2289,13 @@ form {
     margin: 0 auto;
     border-radius: 5px;
   }
+
   .close-lunchbtn {
     background-color: #840202;
     color: #fff;
     border-radius: 24px;
     margin: 7px 0;
   }
-}/*# sourceMappingURL=main.css.map */
+}
+
+/*# sourceMappingURL=main.css.map */
