@@ -2,7 +2,7 @@ import io from "socket.io-client";
 import { fetchHelper } from "./fetchHelper";
 
 let socket;
-const SOCKET_URL = "http://localhost:3000";
+const SOCKET_URL = `ws://${location.host}`;
 
 export const initiateSocket = (channel, username) => {
     socket = io(SOCKET_URL, {
