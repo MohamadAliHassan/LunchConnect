@@ -14,8 +14,9 @@ export const SocketContextProvider = ({ children }) => {
   const { authUser } = useAuthContext();
 
   useEffect(() => {
+    let protocol = location.protocol.includes('https') ? 'wss' : 'ws';
     if (authUser) {
-      const socket = io("ws://", {
+      const socket = io(`${protocol}://${location.host}`, {
         query: {
           userId: authUser._id,
         },
